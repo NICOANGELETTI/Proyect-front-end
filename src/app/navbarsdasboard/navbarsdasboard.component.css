@@ -1,0 +1,19 @@
+/*DASHBOARD (LISTA DE ATRIBUTOS)*/
+.list-group {
+    --bs-list-group-bg: transparent !important;
+    --bs-list-group-border-color: transparent !important ;
+    --bs-list-group-action-hover-bg: #82a2e9 !important;
+  }
+  
+  .titulo {
+    display: flex;
+    justify-content: center;
+  }
+  .border {
+    border-radius: 2rem;
+    margin: 2rem;
+  }
+  nav.navbar.navbar-expand-lg.bg-secondary {
+    margin: 3rem;
+    border-radius: 0.8rem;
+}

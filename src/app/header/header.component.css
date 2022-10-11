@@ -1,0 +1,36 @@
+
+/*Header*/
+
+.banner {
+    border-radius:2rem;
+    margin-bottom: -15rem;
+    background-position: center !important;
+   padding: 5rem;
+  
+
+}
+
+
+.botoncarrusel{
+    margin-top: -20rem;
+    margin-left: 10rem;
+    
+}
+.botoncarrusel2{
+    margin-top: -20rem;
+    margin-left: 70rem;
+   
+}
+.botoncarrusel3{
+    margin-top: -20rem;
+    margin-left: 42rem;
+
+}
+.btn-check:active+.btn, .btn-check:checked+.btn, .btn.active, .btn.show, .btn:active {
+    color: var(--bs-btn-active-color);
+    background-color:rgb(36, 203, 108) !important;
+    border-color: white !important;
+    font-family: "Agency FB" !important; 
+    font-size: 2rem !important;
+}
+

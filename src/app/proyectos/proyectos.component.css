@@ -1,0 +1,57 @@
+.imagenproyecto {
+    width: 15rem;
+    height: 15rem;
+    margin-bottom:2rem;
+    border-radius: 1.8rem;
+   
+   
+}
+.contenedordeproyectos{
+   
+    display: flex;
+    margin: 8rem;
+    justify-content: space-between;
+}
+.boton{
+    margin:1rem;
+    color: var(--bs-btn-active-color);
+    background-color:rgb(36, 203, 108) !important;
+    border-color: white !important;
+    font-family: "Agency FB" !important; 
+    font-size: 1.8rem !important;
+}
+.contendorimagen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contenedortitulotext{
+    text-align: center;
+}
+.tituloseccion{  
+ text-align: center;
+padding: 3rem;
+margin:4rem;
+background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
+background-repeat: round;
+border-style:double;
+border-color: #4e4141;
+font-size: 4rem;
+text-align: center;
+font-family: "Agency FB";
+color: rgb(36, 203, 108);
+border-radius: 0.8rem;
+}
+.tituloproyect {
+    font-size: 4rem;
+text-align: center;
+font-family: "Agency FB";
+color: black;
+
+}
+.textoproyect{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: "Agency FB";
+    color: black;
+}

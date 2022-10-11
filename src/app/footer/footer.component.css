@@ -1,0 +1,40 @@
+/*SECCION DE FOOTER*/
+.tittlefooter{
+
+    font-family: "Agency FB";
+    font-size: 1.8rem;
+    
+  
+    color:rgb(0, 0, 0); 
+  
+  
+}
+.footer{
+    display: contents;
+    margin-left: 12rem;
+
+}
+.imagenfooter{
+    width:6rem;
+    height: 6rem;
+  
+   
+}
+.contenedorfooter{
+display: flex;
+justify-content: center;
+padding: 1rem;
+
+} 
+
+        /* ANGULAR EJERCICIOS */
+/* NG CLASS 
+.color-fondo{
+background-color: blueviolet;
+}
+.color-letra{
+color: white;
+}
+.tamaño-letra{
+font-size: 2rem;
+} */

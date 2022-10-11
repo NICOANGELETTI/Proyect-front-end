@@ -1,0 +1,28 @@
+{
+  "nombre": "Nicolasa",
+  "apellido": "Angeletti",
+  "acerca": "Me considero una persona comprometida , responsable y creativa.A la hora de solucionar problemas con mi grupo de trabajo me veo capaz de poder llegar a un acuerdo comun de una forma en que todos podamos aportar y comprometernos con el objetivo.Como Autodidacta y Ductil me defino constantemente. Me siento comodo al poder realizar las tareas y solucionar problemas por mis propios medios. Le trato de encontrar una solucion a todos las adversidades que se me puedan presentar"
+  ,
+  "titulo": "Ingeniero",
+  "educacion": [
+    {
+      "inicio": "Marzo de 22",
+      "fin": "Mayo de 22",
+      "nivel": "Se programar",
+      "img": "assets/IMG2/300-konecta.png"
+    },
+
+    {
+      "inicio": "Marzo de 22",
+      "fin": "Mayo de 22",
+      "nivel": "Se programar",
+      "img": "assets/IMG2/300-konecta.png"
+    },
+    {
+      "inicio": "Marzo de 22",
+      "fin": "Mayo de 22",
+      "nivel": "Se programar",
+      "img": "assets/IMG2/300-konecta.png"
+    }
+  ]
+}

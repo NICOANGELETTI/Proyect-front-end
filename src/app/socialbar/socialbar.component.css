@@ -1,0 +1,59 @@
+
+  
+  .icon-correo4:before {
+    content: "\ea86";
+  }
+  .icon-facebook:before {
+    content: "\ea90";
+  }
+  .icon-instagram:before {
+    content: "\ea92";
+  }
+  .icon-github:before {
+    content: "\eab0";
+  }
+  .icon-linkedin2:before {
+    content: "\eaca";
+  }
+  .icon-stackoverflow:before {
+    content: "\ead0";
+  }
+  
+
+.social-bar {
+    position: fixed;
+    left: 0;
+    top: 35%;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    z-index: 100;
+  }
+  .icon1 {
+    color: white;
+    text-decoration: none;
+    padding: 0.8rem;
+    display: flex;
+    transition: all 0.5s;
+  }
+  
+  .icon-facebook {
+    background: #2e406e;
+  }
+  .icon-github {
+    background: rgb(171, 41, 171);
+  }
+  .icon-instagram {
+    background: #3f60a5;
+  }
+  .icon-linkedin2 {
+    background: rgb(0, 106, 255);
+  }
+  .icon1:first-child {
+    border-radius: 0 1rem 0 0;
+  }
+  .icon1:last-child {
+    border-radius: 0 0 1rem 0;
+  }
+  

@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background-image:url(assets/IMG2/prueba1.png) !important;
+}
+
+/* NAV */
+.bg-secondary {
+  background: rgb(17, 78, 25);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 78, 25, 1) 0%,
+    rgba(33, 185, 66, 1) 35%,
+    rgba(41, 190, 9, 1) 100%
+  ) !important;
+}
+.container-fluid {
+  padding: 2rem;
+}
+i.fa-brands.fa-instagram.fa-2xl:hover {
+  /* REDES SOCIALES (COLOR)*/
+  color: blue;
+}
+i.fa-brands.fa-linkedin-in.fa-2xl:hover {
+  color: cornflowerblue;
+}
+i.fa-brands.fa-github.fa-2xl:hover {
+  color: blueviolet;
+}
+.list-group {
+  --bs-list-group-bg: transparent !important;
+  --bs-list-group-border-color: transparent !important ;
+  --bs-list-group-action-hover-bg: #82a2e9 !important;
+}
+/*MODAL LOGIN*/
+.btn {
+  margin-top: 0.7rem;
+}
+.container-fluid {
+  padding: 0 !important;
+}
+.border {
+  border-radius: 2rem;
+  margin: 2rem;
+}
+
+
+/*SOCIAL BAR*/
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?ig8wqs');
+  src:  url('fonts/icomoon.eot?ig8wqs#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?ig8wqs') format('truetype'),
+    url('fonts/icomoon.woff?ig8wqs') format('woff'),
+    url('fonts/icomoon.svg?ig8wqs#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-correo4:before {
+  content: "\ea86";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+.icon-stackoverflow:before {
+  content: "\ead0";
+}
+/*nuevo*/
+@media (min-width: 600px) {
+  .clase2 {
+    display: list-item;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 1000px) {
+  .clase2 {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 600px) {
+  a.btn.btn-primary.btn-lg.active.botondecontacto {
+    display: block;
+    margin: 3rem;
+  }
+}
+.contenedordeboton {
+  display: flex;
+  justify-content: center;
+}

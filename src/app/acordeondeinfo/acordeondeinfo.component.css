@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+/* Establece el color de fondo del cuerpo en azul. Establece el tipo de letra a Rubik */
+
+body {
+  background-color: #0A2344;
+  font-family: 'rubik', sans-serif;
+}
+
+/* Alinea el texto del encabezado al centro. */
+ 
+h1 {
+  text-align: center;
+}
+
+/* Establece el ancho del acordeón. Establece el margen a 90px en la parte superior e inferior y auto a la izquierda y derecha */
+
+.acordeon {
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-image: url(../../assets/IMG2/fondosecciones.jpg);
+  padding: 45px 45px;
+  border-radius: 1rem;
+  border-style:double;
+  border-color: #4e4141;
+}
+.acordeon .contenedor {
+    position: relative;
+    margin: 10px 10px;
+  }
+  
+  /* Posiciona las etiquetas en relación con el contenedor. Añade relleno en la parte superior e inferior y aumenta el tamaño de la fuente. También hace que su cursor sea un puntero */
+  
+  .acordeon .etiqueta {
+    position: relative;
+    padding: 10px 0;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+  }
+  /* Posiciona el signo más a 5px de la derecha. Lo centra utilizando la propiedad transform. */
+
+.acordeon .etiqueta::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+  
+  /* Oculta el contenido (altura: 0), disminuye el tamaño de la fuente, justifica el texto y añade la transición */
+  
+  .acordeon .contenido {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  /* Añade una línea horizontal entre los contenidos */
+  
+  .acordeon hr {
+    width: 100;
+    margin-left: 0;
+    border: 1px solid grey;
+  }
+  /* Muestra la parte de contenido cuando está activa. Establece la altura */
+
+.acordeon .contenedor.activa .contenido {
+    height: 150px;
+  }
+  
+  /* Cambia de signo positivo a negativo una vez activado */
+  
+  .acordeon .contenedor.activa .etiqueta::before {
+    content: '-';
+    font-size: 30px;
+  }
+  .label {
+    font-size: 2rem;
+    font-family: 'Agency FB';
+    color: rgb(36, 203, 108);
+}
+
+.tituloacordeon {
+    font-size: 5rem;
+    font-family: 'Agency FB';
+    color: rgb(36, 203, 108);
+}
+.content {
+   color: white;
+}

@@ -1,0 +1,36 @@
+/* NAV */
+.bg-secondary {
+  background: rgb(17, 78, 25);
+  background: linear-gradient(
+    90deg,
+    rgba(17, 78, 25, 1) 0%,
+    rgba(33, 185, 66, 1) 35%,
+    rgba(41, 190, 9, 1) 100%
+  ) !important;
+}
+.container-fluid {
+  padding: 2rem;
+}
+i.fa-brands.fa-instagram.fa-2xl:hover {
+  /* REDES SOCIALES (COLOR)*/
+  color: blue;
+}
+i.fa-brands.fa-linkedin-in.fa-2xl:hover {
+  color: cornflowerblue;
+}
+i.fa-brands.fa-github.fa-2xl:hover {
+  color: blueviolet;
+}
+.list-group {
+  --bs-list-group-bg: transparent !important;
+  --bs-list-group-border-color: transparent !important ;
+  --bs-list-group-action-hover-bg: #82a2e9 !important;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0rem !important;
+}
+nav.navbar.navbar-expand-lg.bg-secondary {
+  margin: 3rem;
+  border-radius: 0.8rem;
+}

@@ -1,0 +1,87 @@
+/*SECCION DE PERFIL (INDEX)*/
+#perfil {
+  background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
+  background-repeat:round ;
+  margin: 4rem;
+  border-radius: 0.8rem;
+  font-family: "Agency FB";
+  color: white;
+  border-style:double;
+  border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
+  border-top-color: #4e4141;
+  border-right-color:  #4e4141;
+  border-bottom-color:  #4e4141;
+  border-left-color:#4e4141;
+  border-radius: 0.8rem;
+}
+.foto-perfil {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 1.5rem;
+  padding: 1rem;
+  margin: 1rem;
+}
+.about {
+  font-family: "Agency FB";
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgb(36, 203, 108);
+  transform: rotate(-0.25turn) !important;
+  padding: 10rem;
+  margin-left: -4rem;
+}
+.about1 {
+  font-family: "Agency FB";
+  font-size: 1.8rem;
+  text-align: center;
+  color: rgb(36, 203, 108);
+  transform: rotate(-0.75turn) !important;
+  padding: 6rem;
+}
+
+/*SECCION INTERMEDIA DE CONTACTO*/
+.fotoenelperfil {
+  width: 24.2rem;
+  height: 17.6rem;
+  border-radius: 1.8rem;
+  text-align: center;
+  margin: 2rem;
+}
+.secondphoto {
+  width: 35rem;
+  height: 17.6rem;
+  text-align: center;
+}
+.botondecontacto {
+  margin-left: 44rem;
+  color: var(--bs-btn-active-color);
+  background-color: rgb(36, 203, 108) !important;
+  border-color: white !important;
+  font-family: "Agency FB" !important;
+  font-size: 2rem !important;
+  
+
+
+}
+
+.clase2 {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+@media (max-width: 600px) {
+  .clase2 {
+    display: list-item;
+    text-align: center;
+    justify-content: space-between;
+  }
+}
+
+.contenedordeboton {
+  display: flex;
+  justify-content: center;
+}
+
+.sectorintermedio {
+  margin:4rem;
+}
