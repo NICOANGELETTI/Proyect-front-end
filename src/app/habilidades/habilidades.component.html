@@ -14,19 +14,22 @@
   </div>
   
          
-<div class="borde">           
+<div class="borde">          
+  <!-- <h1 class="titulodeskill"> HARD SKILLS</h1>   -->
         <section id="Habilidades" class="habilidades">
-          
-        
-        <h1 class="titulodeskill"> HARD SKILLS</h1>
-        
-    <div class="primeras-barras"> 
-          <div>
-            <h2 class="titulodebarra">HTML</h2>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:90"></div>
+           
+         
+         
+   
+    <div class="primeras-barras" *ngFor="let habilidad of hard"> 
+          <div class="prueba">
+            <h2 class="titulodebarra">{{habilidad.nombre}}</h2>
+            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidad.porcentaje}}"></div>
           </div>
-          <div>
-            <h2 class="titulodebarra">CSS</h2>
+        </div>
+      
+          <!-- <div>
+            <h2 class="titulodebarra">{{habilidad.nombre}}</h2>                                                              
             <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:75"></div>
           </div>
           <div>
@@ -37,14 +40,14 @@
             <h2 class="titulodebarra">BOOTSTRAP</h2>
             <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:35"></div>
           </div>
-          
-    </div>
-    <div class="primeras-barras"> 
-    <div>
-      <h2 class="titulodebarra">ANGULAR</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:20"></div>
-    </div>
-    <div>
+       </div>
+    <div class="primeras-barras" *ngFor="let habilidad of habilidades"> 
+    <div class="prueba">
+      <h2 class="titulodebarra">{{habilidad.nombre}}</h2>
+      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidad.porcentaje}}"></div>
+    </div>      -->
+  
+<!--     <div>
       <h2 class="titulodebarra">MySQL</h2>
       <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:15"></div>
     </div>
@@ -55,15 +58,18 @@
     <div>
       <h2 class="titulodebarra">Dev Ops</h2>
       <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:25"></div>
-    </div>
-    </div>
-    <h1 class="titulodeskill"> SOFT SKILLS</h1>
-    <div class="primeras-barras"> 
-          <div>
-            <h2 class="titulodebarra">COMPROMISO</h2>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:100"></div>
-          </div>
-          <div>
+    </div> -->
+    <!--  </div> -->
+   
+    <!-- h1 class="titulodeskill"> SOFT SKILLS</h1>  --> 
+     <div class="primeras-barras" *ngFor="let habilidad of soft"> 
+          <div class="prueba">
+            
+            <h2 class="titulodebarra">{{habilidad.nombre}}</h2>
+            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidad.porcentaje}}"></div>
+          </div> 
+          
+          <!-- <div>
             <h2 class="titulodebarra">CREATIVIDAD</h2>
             <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85"></div>
           </div>
@@ -74,15 +80,10 @@
           <div>
             <h2 class="titulodebarra">TEAMWORK</h2>
             <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70"></div>
-          </div>
+          </div> -->
           
-    </div>
-    <div class="primeras-barras"> 
-    <div>
-      <h2 class="titulodebarra">COMUNICACION</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70"></div>
-    </div>
-    <div>
+   
+    <!-- <div>
       <h2 class="titulodebarra">LIDERAZGO</h2>
       <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:60"></div>
     </div>
@@ -93,7 +94,7 @@
     <div>
       <h2  class="titulodebarra">RESPONSABILIDAD</h2>
       <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:100"></div>
-    </div>
-    </div>
-</section>
+    </div> -->
+    
+
 </div>

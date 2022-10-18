@@ -31,6 +31,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
+    
     AppComponent,
     NavbarComponent,
     LoginComponent,
