@@ -8,9 +8,10 @@ import { PortfolioService } from '../services/portfolio.service';
 })
 export class ProyectoPortfolioapComponent implements OnInit {
 
+ 
+
+
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-}
+  }}

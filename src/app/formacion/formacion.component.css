@@ -105,6 +105,7 @@ display: flex;
     border-bottom-color:  #4e4141;
     border-left-color: #4e4141;
     border-radius: 0.8rem;
+    
 }
 
 
@@ -121,3 +122,7 @@ display: flex;
   margin:4rem;
 }
 
+.contenedor1{
+  display: flex;
+  justify-content: center;
+}

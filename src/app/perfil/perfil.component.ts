@@ -15,7 +15,9 @@ export class PerfilComponent implements OnInit {
   nombre: string = '';
   apellido:string = '' ;
   acerca:string = '' ;
-titulo: any;
+  titulo: string = '' ;
+  frase: string = '' ;
+  frase2: string = '' ;
 
   constructor(
     /* Inyectar el servicio para tener acceso en la clase de los metodos*/
@@ -29,6 +31,9 @@ titulo: any;
   this.nombre =portfolio.nombre;
   this.apellido =portfolio.apellido;
   this.acerca =portfolio.acerca;
+  this.titulo =portfolio.titulo;
+  this.frase =portfolio.frase;
+  this.frase2 =portfolio.frase2;
   });
 
   }

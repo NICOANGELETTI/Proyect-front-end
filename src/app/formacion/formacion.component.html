@@ -7,19 +7,19 @@
               <section id="Experiencia" >
                             <h1 class="verticaltitle2">EXPERIENCIA LABORAL</h1>
                                   <!-- ICONO -->
-                                 <div class="contenedor"> 
+                                 <div class="contenedor" *ngFor="let experiencia of experiencias"> 
                                      <div class="icono">
-                                         <img  class="iconos-empresa" src="../../assets/IMG2/konecta logo.jpg">
+                                         <img  class="iconos-empresa" src="{{experiencia.imagen}}">
                                   
                                       </div>
                                      <div class="info">
-                                         <p>Representante de Ventas</p>
-                                         <p>Noviembre 2021-Actualidad</p>
-                                         <p>Ventas Movistar Hogar</p>
+                                         <p>{{experiencia.titulo}}</p>
+                                         <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
+                                         <p>{{experiencia.empresa}}</p>
                                      </div>
                               
                                   </div>
-                                  <div class="contenedor"> 
+                                  <!-- <div class="contenedor"> 
                                        <div class="icono">
                                           <img  class="iconos-empresa" src="../../assets/IMG2/Nutricion Animal.jpeg">
                                   
@@ -42,7 +42,7 @@
                                       <p>Ventas y deposito de tienda 
                                       <p>de indumentaria y calzado deportivo</p>
                                    </div>
-                                  </div>
+                                  </div> -->
                </section>               
           
        
@@ -52,20 +52,20 @@
                  
               <section id="Educacion" >
                                 <h1 class="verticaltitle">EDUCACION</h1>
-                                    <div class="contenedor"> 
+                                    <div class="contenedor" *ngFor="let estudio of educacion"> 
                             
                                           <div class="icono">
-                                             <img  class="iconos-empresa iconoarg" src="../../assets/IMG2/APLogo-20-20.png">
+                                             <img  class="iconos-empresa iconoarg" src="{{estudio.imagen}}">
                                     
                                           </div>
-                                          <div class="info">
-                                            <p>Programador Web Full Stack Jr</p>
-                                            <p>Julio 2022 - Enero 2023</p>
-                                            <p>Ministerio de Desarrollo Productivo</p>
+                                          <div class="info" >
+                                            <p>{{ estudio.titulo }}</p>
+                                            <p>{{ estudio.inicio }} - {{ estudio.fin }}  </p>
+                                            <p>{{ estudio.organismo }}</p>
                                           </div>
                                 
                                     </div>
-                                <div class="contenedor"> 
+                               <!--  <div class="contenedor"> 
                                            <div class="icono">
                                                <img  class="iconos-empresa" src="../../assets/IMG2/udemy.png">
                                     
@@ -90,8 +90,8 @@
                                                    <p>Mayo 2022-Agosto 2022</p>
                                                    <p>Departamento Cultural-Facultad de Lenguas Cordoba</p>
                                               </div>
-                                
-                                 </div>
+                                 -->
+                                 
                     </section>
     </div>
     </div>
@@ -102,21 +102,23 @@
                                 <h1 class="verticaltitle ">INFO ADICIONAL</h1>
                             
                                 
-                                
-                                <div class="contenedor centrado"> 
+                            <div class="contenedor1">
+                                <div class="contenedor centrado" *ngFor="let info of informaciones"  > 
                                         <div class="icono">
-                                            <img  class="iconos-empresa" src="../../assets/IMG2/centro educacional san jorge.jpg">
+                                            <img  class="iconos-empresa" src="{{info.imagen}}">
                                     
                                         </div>
                                        <div class="info">
-                                              <p>Bachiller en Ciencias Sociales y Humanidades</p>
-                                              <p>2014-2019</p>
-                                              <p>Centro Educacional San Jorge</p>
+                                              <p>{{info.titulo}}</p>
+                                              <p>{{info.inicio}} - {{info.fin}}</p>
+                                              <p>{{info.organismo}}</p>
                                     
                                         </div>
+                                </div>
+                            </div>
+                          </section>
                                 
-                                
-                                <div class="contenedor centrado"> 
+                              <!--   <div class="contenedor centrado"> 
                                       <div class="icono">
                                            <img  class="iconos-empresa" src="../../assets/IMG2/logo-isce-cuadrado.jpg">
                                     
@@ -126,6 +128,6 @@
                                           <p>2020-Actualidad</p>
                                           <p>Instituto Superior de Comercio Exterior</p>
                                     </div>
-                                </div>
+                                </div> -->
                       </div> 
                   
