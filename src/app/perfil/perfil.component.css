@@ -46,6 +46,9 @@
   border-radius: 1.8rem;
   text-align: center;
   margin: 2rem;
+  box-shadow: 10px 15px 25px
+  rgba(0,0,0,0.50);
+  cursor:pointer;
 }
 .secondphoto {
   width: 35rem;
@@ -65,10 +68,18 @@
 }
 
 .clase2 {
+  position: relative;
+  width: 100%;
   display: flex;
   text-align: center;
   justify-content: space-between;
+  
 }
+
+
+/* background: rgba(11,103,123,0,6); */
+
+
 @media (max-width: 600px) {
   .clase2 {
     display: list-item;

@@ -8,7 +8,7 @@ import { PortfolioService } from '../services/portfolio.service';
 })
 export class ProyectosComponent implements OnInit {
   proyectos: any = [];
-  
+
 
   constructor(private portfolioService: PortfolioService) {}
 
@@ -18,6 +18,10 @@ export class ProyectosComponent implements OnInit {
       /* Almaceno en la variable de la linea 10 con todo lo que pongo aca abajo */
       /* Definir la info a mostrar */
       this.proyectos = portfolio.proyectos;
+     
     });
   }
+
+  
 }
+

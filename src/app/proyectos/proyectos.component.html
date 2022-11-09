@@ -1,17 +1,28 @@
 <h1 class="tituloseccion">Trabajos</h1>
+
+
 <div class="contenedordeproyectos" >
 
     <div class="proyecto" *ngFor="let proyecto of proyectos">
-       <div class="contendorimagen" >
+   
+
+      <div class="contendorimagen" > 
         <img class="imagenproyecto" src="{{proyecto.imagen}}">
       </div>
         <div class="contenedortitulotext"  >
         <h1 class="tituloproyect" >{{proyecto.nombre}}</h1>
         <p class="textoproyect">{{proyecto.descripcion}}</p>
-           <a href="#" class="btn btn-primary disabled boton boton" role="button" aria-disabled="true">Ver en la Web</a>
-      <!--      <a class="btn btn-secondary disabled boton boton" role="button" aria-disabled="true"></a> -->
-        </div>
+
+
+        <div class="contenedordeboton">
+           <a href="#" class="btn btn-primary btn-lg active boton" role="button" aria-pressed="true">Ver en la Web</a>
+          
+        
+         </div>
     </div>
+  </div>
+
+
     <!-- <div class="proyecto">
         <div class="contendorimagen">
         <img class="imagenproyecto" src="../../assets/IMG2/tyler-lastovich-d0Sl3AH8Tlg-unsplash.jpg">

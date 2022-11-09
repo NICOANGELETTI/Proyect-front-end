@@ -3,12 +3,12 @@
     height: 15rem;
     margin-bottom:2rem;
     border-radius: 1.8rem;
-   
+    padding:0.8rem;
    
 }
 .contenedordeproyectos{
-   
-    display: flex;
+
+   display: flex;
     margin: 8rem;
     justify-content: space-between;
 }
@@ -27,6 +27,7 @@
 }
 .contenedortitulotext{
     text-align: center;
+    
 }
 .tituloseccion{  
  text-align: center;
@@ -48,10 +49,23 @@ text-align: center;
 font-family: "Agency FB";
 color: black;
 
+
 }
 .textoproyect{
     font-size: 1.5rem;
     text-align: center;
     font-family: "Agency FB";
     color: black;
+    padding: 1rem;
+    
+}
+.proyecto {
+    box-shadow: 10px 15px 35px
+  rgba(0,0,0,0.50);
+  margin:1rem;
+  background-color: rgb(189, 174, 174);
+  border-radius: 0.5rem;
+  border-style: double;
+  
+ 
 }
