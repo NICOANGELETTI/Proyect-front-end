@@ -2,16 +2,23 @@
 /*Header*/
 
 .banner {
-    border-radius:2rem;
+
     margin-bottom: -15rem;
     background-position: center !important;
    padding: 5rem;
   
 
+  
+
+}
+.imagen-banner{
+    margin:10rem;
+    width: 100rem !important;
+    height: 50rem !important;
 }
 
 
-.botoncarrusel{
+/* .botoncarrusel{
     margin-top: -20rem;
     margin-left: 10rem;
     
@@ -34,3 +41,4 @@
     font-size: 2rem !important;
 }
 
+ */
