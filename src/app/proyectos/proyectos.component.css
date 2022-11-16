@@ -30,18 +30,12 @@
     
 }
 .tituloseccion{  
- text-align: center;
-padding: 3rem;
-margin:4rem;
-background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
-background-repeat: round;
-border-style:double;
-border-color: #4e4141;
-font-size: 4rem;
-text-align: center;
-font-family: "Agency FB";
-color: rgb(36, 203, 108);
-border-radius: 0.8rem;
+ 
+    color: rgb(255, 255, 255);
+    font-family: "Agency FB" ;
+    text-align: center;
+    font-size: 5rem;
+    margin-top:8rem;
 }
 .tituloproyect {
     font-size: 4rem;
@@ -69,3 +63,17 @@ color: black;
   
  
 }
+.linea{
+   margin-left: 11rem;
+
+}
+
+.linea2{
+  
+    color:white;
+    }
+    .contenedorlinea{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }

@@ -7,8 +7,9 @@
   box-sizing: border-box;
 }
 body {
-  background-image:url(assets/IMG2/prueba1.png) !important;
-  zoom: 85%;
+  background:linear-gradient(  rgb(0, 0, 0), rgb(81, 81, 76));
+  
+  zoom: 75%;
 }
 
 /* NAV */

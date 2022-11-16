@@ -126,3 +126,22 @@ display: flex;
   display: flex;
   justify-content: center;
 }
+.formacion{
+  /*  margin-left: 5rem; */
+   color: white;
+   font-family: "Agency FB" ;
+   text-align: center;
+   font-size: 5rem;
+   margin-top:8rem;
+ }
+
+ .linea{
+
+  color:white;
+  }
+  .contenedorlinea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:15rem;
+  }

@@ -2,11 +2,6 @@
 
 /* Establece el color de fondo del cuerpo en azul. Establece el tipo de letra a Rubik */
 
-body {
-  background-color: #0A2344;
-  font-family: 'rubik', sans-serif;
-}
-
 /* Alinea el texto del encabezado al centro. */
  
 h1 {

@@ -99,15 +99,11 @@ div[role="progressbar"]::before {
 
 .Skills {
   
-  background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
-  border-radius: 1rem;
-  border-style:double;
-  border-color: #4e4141;
-  font-size: 4rem;
+  color: white;
+  font-family: "Agency FB" ;
   text-align: center;
-  padding: 2rem;
-  font-family: "Agency FB";
-  color: rgb(36, 203, 108);
+  font-size: 5rem;
+  margin-top:8rem;
  
 }
 .fotoenelperfil {
@@ -133,7 +129,13 @@ div[role="progressbar"]::before {
     margin:4rem;
   }
 }
-.prueba {
- 
- 
-}
+.linea{
+
+  color:white;
+  }
+  .contenedorlinea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:15rem;
+  }
