@@ -27,14 +27,11 @@ padding: 1rem;
 
 } 
 
-        /* ANGULAR EJERCICIOS */
-/* NG CLASS 
-.color-fondo{
-background-color: blueviolet;
-}
-.color-letra{
-color: white;
-}
-.tamaño-letra{
+.textFooter{
+
+ color: white;
+font-family: "Agency FB" ;
+text-align: center;
 font-size: 2rem;
-} */
+
+}

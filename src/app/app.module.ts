@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { PortfolioService } from './services/portfolio.service';
 
-
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './modals/login/login.component';
@@ -16,9 +15,8 @@ import { FormacionComponent } from './formacion/formacion.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { ErrorComponent } from './error/error.component';
 import { IntroComponent } from './intro/intro.component';
-import { ProyectoPortfolioapComponent } from './proyecto.portfolioap/proyecto.portfolioap.component';
+
 import { BodydasboardComponent } from './bodydasboard/bodydasboard.component';
 import { NavbarsdasboardComponent } from './navbarsdasboard/navbarsdasboard.component';
 import { LogoutComponent } from './modals/logout/logout.component';
@@ -28,10 +26,12 @@ import { SocialbardashboardComponent } from './socialbardashboard/socialbardashb
 import { FormContactComponent } from './form-contact/form-contact.component';
 import { AcordeondeinfoComponent } from './acordeondeinfo/acordeondeinfo.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
+import { Error404Component } from './error404/error404.component';
+import { IndexComponent } from './index/index.component';
+
 
 @NgModule({
   declarations: [
-    
     AppComponent,
     NavbarComponent,
     LoginComponent,
@@ -42,9 +42,7 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     HabilidadesComponent,
     FooterComponent,
     DashboardComponent,
-    ErrorComponent,
     IntroComponent,
-    ProyectoPortfolioapComponent,
     NavbarsdasboardComponent,
     LogoutComponent,
     BodydasboardComponent,
@@ -54,16 +52,11 @@ import { ProyectosComponent } from './proyectos/proyectos.component';
     FormContactComponent,
     AcordeondeinfoComponent,
     ProyectosComponent,
-    
-
-
+    Error404Component,
+    IndexComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule
-  ],
-  providers: [PortfolioService] ,
-  bootstrap: [AppComponent]
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  providers: [PortfolioService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
