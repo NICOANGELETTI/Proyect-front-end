@@ -15,7 +15,7 @@ import { FormacionComponent } from './formacion/formacion.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { IntroComponent } from './intro/intro.component';
+
 
 import { BodydasboardComponent } from './bodydasboard/bodydasboard.component';
 import { NavbarsdasboardComponent } from './navbarsdasboard/navbarsdasboard.component';
@@ -28,6 +28,8 @@ import { AcordeondeinfoComponent } from './acordeondeinfo/acordeondeinfo.compone
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { Error404Component } from './error404/error404.component';
 import { IndexComponent } from './index/index.component';
+import { EducacionComponent } from './educacion/educacion.component';
+import { ExperienciaComponent } from './experiencia/experiencia.component';
 
 
 @NgModule({
@@ -42,7 +44,6 @@ import { IndexComponent } from './index/index.component';
     HabilidadesComponent,
     FooterComponent,
     DashboardComponent,
-    IntroComponent,
     NavbarsdasboardComponent,
     LogoutComponent,
     BodydasboardComponent,
@@ -54,6 +55,8 @@ import { IndexComponent } from './index/index.component';
     ProyectosComponent,
     Error404Component,
     IndexComponent,
+    EducacionComponent,
+    ExperienciaComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [PortfolioService],

@@ -39,7 +39,7 @@
       "inicio": "Mayo 2022",
       "fin": "Agosto 2022",
       "titulo": "Nivel 2-Lengua Extranjera Inglesa",
-      "organismo": "Departamento Cultural-Facultad de Lenguas Cordoba",
+      "organismo": "Facultad de Lenguas Cordoba",
       "imagen": "/assets/IMG2/logo depa cultural.jpg"
     }
    
@@ -50,7 +50,7 @@
       "id": 4,
       "inicio": "2014",
       "fin": "2019",
-      "titulo": "Bachiller en Ciencias Sociale y humanidades",
+      "titulo": "Bachiller en Ciencias Sociales y humanidades",
       "organismo": "Centro Educacional San Jorge",
       "imagen": "/assets/IMG2/centro educacional san jorge.jpg"
     },
@@ -63,7 +63,7 @@
       "imagen": "/assets/IMG2/logo-isce-cuadrado.jpg"
     }
   ],
-  "experiencias": [
+  "trabajos": [
     {
       "id": 1,
       "inicio": "Noviembre 2021",

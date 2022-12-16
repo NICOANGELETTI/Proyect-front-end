@@ -5,10 +5,11 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 body {
-  background:linear-gradient(  rgb(0, 0, 0), rgb(81, 81, 76));
-  
+  background: linear-gradient(rgb(0, 0, 0), rgb(81, 81, 76));
+
   zoom: 75%;
 }
 
@@ -52,23 +53,23 @@ i.fa-brands.fa-github.fa-2xl:hover {
   margin: 2rem;
 }
 
-
 /*SOCIAL BAR*/
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?ig8wqs');
-  src:  url('fonts/icomoon.eot?ig8wqs#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?ig8wqs') format('truetype'),
-    url('fonts/icomoon.woff?ig8wqs') format('woff'),
-    url('fonts/icomoon.svg?ig8wqs#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?ig8wqs");
+  src: url("fonts/icomoon.eot?ig8wqs#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?ig8wqs") format("truetype"),
+    url("fonts/icomoon.woff?ig8wqs") format("woff"),
+    url("fonts/icomoon.svg?ig8wqs#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;

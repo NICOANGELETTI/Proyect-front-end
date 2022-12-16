@@ -1,29 +1,5 @@
 
- <!--SECCION DE EXPERIENCIA LABORAL-->
-
-<div class="contenedorlinea">
- <hr  class="linea" size="20px" width="70%" />
-</div>
- <h1 class="formacion">FORMACION</h1>
- <div class="borde">
-    <div id="contenedor">
-        
-              <section id="Experiencia" >
-                            <h1 class="verticaltitle2">EXPERIENCIA LABORAL</h1>
-                                  <!-- ICONO -->
-                                 <div class="contenedor" *ngFor="let experiencia of experiencias"> 
-                                     <div class="icono">
-                                         <img  class="iconos-empresa" src="{{experiencia.imagen}}">
-                                  
-                                      </div>
-                                     <div class="info">
-                                         <p>{{experiencia.titulo}}</p>
-                                         <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
-                                         <p>{{experiencia.empresa}}</p>
-                                     </div>
-                              
-                                  </div>
-                                  <!-- <div class="contenedor"> 
+            <!-- <div class="contenedor"> 
                                        <div class="icono">
                                           <img  class="iconos-empresa" src="../../assets/IMG2/Nutricion Animal.jpeg">
                                   
@@ -47,29 +23,29 @@
                                       <p>de indumentaria y calzado deportivo</p>
                                    </div>
                                   </div> -->
-               </section>               
-          
        
-                           
-      
-                <!--SECCION DE EDUCACION-->           
-                 
-              <section id="Educacion" >
-                                <h1 class="verticaltitle">EDUCACION</h1>
-                                    <div class="contenedor" *ngFor="let estudio of educacion"> 
-                            
-                                          <div class="icono">
-                                             <img  class="iconos-empresa iconoarg" src="{{estudio.imagen}}">
-                                    
-                                          </div>
-                                          <div class="info" >
-                                            <p>{{ estudio.titulo }}</p>
-                                            <p>{{ estudio.inicio }} - {{ estudio.fin }}  </p>
-                                            <p>{{ estudio.organismo }}</p>
-                                          </div>
-                                
-                                    </div>
-                               <!--  <div class="contenedor"> 
+
+
+
+
+        <!--SECCION DE EDUCACION-->
+
+        <section id="Educacion">
+            <h1 class="verticaltitle">EDUCACION</h1>
+            <div class="contenedor" *ngFor="let estudio of educacion">
+
+                <div class="icono">
+                    <img class="iconos-empresa iconoarg" src="{{estudio.imagen}}">
+
+                </div>
+                <div class="info">
+                    <p>{{ estudio.titulo }}</p>
+                    <p>{{ estudio.inicio }} - {{ estudio.fin }} </p>
+                    <p>{{ estudio.organismo }}</p>
+                </div>
+
+            </div>
+            <!--  <div class="contenedor"> 
                                            <div class="icono">
                                                <img  class="iconos-empresa" src="../../assets/IMG2/udemy.png">
                                     
@@ -95,43 +71,6 @@
                                                    <p>Departamento Cultural-Facultad de Lenguas Cordoba</p>
                                               </div>
                                  -->
-                                 
-                    </section>
-    </div>
-    </div>
-                              
-                                  <!--SECCION DE INFO ADICIONAL ACADEMICA-->
-                    <div class="borde">
-                          <section id="infoadicional">
-                                <h1 class="verticaltitle ">INFO ADICIONAL</h1>
-                            
-                                
-                            <div class="contenedor1">
-                                <div class="contenedor centrado" *ngFor="let info of informaciones"  > 
-                                        <div class="icono">
-                                            <img  class="iconos-empresa" src="{{info.imagen}}">
-                                    
-                                        </div>
-                                       <div class="info">
-                                              <p>{{info.titulo}}</p>
-                                              <p>{{info.inicio}} - {{info.fin}}</p>
-                                              <p>{{info.organismo}}</p>
-                                    
-                                        </div>
-                                </div>
-                            </div>
-                          </section>
-                                
-                              <!--   <div class="contenedor centrado"> 
-                                      <div class="icono">
-                                           <img  class="iconos-empresa" src="../../assets/IMG2/logo-isce-cuadrado.jpg">
-                                    
-                                       </div>
-                                     <div class="info">
-                                          <p>Tecnico Superior en Comercio Exterior</p>
-                                          <p>2020-Actualidad</p>
-                                          <p>Instituto Superior de Comercio Exterior</p>
-                                    </div>
-                                </div> -->
-                      </div> 
-                  
+
+        </section>
+

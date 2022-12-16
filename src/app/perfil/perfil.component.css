@@ -136,7 +136,18 @@ color:white;
   justify-content: center;
   align-items: center;
 }
-
+.icon-linkedin2:hover{
+  color: white;
+}
+.icon-facebook:hover{
+  color: white;
+}
+.icon-github:hover{
+  color: white;
+}
+.icon-instagram:hover{
+  color: white;
+}
 .icon-linkedin2:before{
   
   display: flex;

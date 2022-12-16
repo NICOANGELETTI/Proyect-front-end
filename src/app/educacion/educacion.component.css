@@ -1,0 +1,221 @@
+
+/*SECCION DE EDUCACION*/ 
+#Educacion{
+    display: flex;
+    justify-content: space-between;
+    margin:2rem;
+    border-radius: 0.8rem;
+    color: white;
+    
+    
+
+    
+}
+
+
+
+
+
+  /*SECCION DE INFO ADICIONAL ACADEMICA*/
+  
+#infoadicional {
+    background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
+    background-repeat:round ;
+    margin:4rem;
+    border-radius: 0.8rem;
+    color: white;
+    border-style:double;
+    border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border-top-color: #4e4141;
+    border-right-color:  #4e4141;
+    border-bottom-color:  #4e4141;
+    border-left-color: #4e4141;
+    border-radius: 0.8rem;
+    padding: 2rem;
+    
+}
+
+
+#contenedor{
+    background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
+    background-repeat:round ;
+    border-style:double;
+    border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border-top-color: #4e4141;
+    border-right-color:  #4e4141;
+    border-bottom-color:  #4e4141;
+    border-left-color: #4e4141;
+    border-radius: 0.8rem;
+    
+}
+
+.contenedor1{
+  display: flex;
+  justify-content: center;
+}
+.formacion{
+  /*  margin-left: 5rem; */
+   color: white;
+   font-family: "Agency FB" ;
+   text-align: center;
+   font-size: 5rem;
+   margin-top:8rem;
+ }
+
+ .linea{
+
+  color:white;
+  }
+  .contenedorlinea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:15rem;
+  }
+  
+
+
+
+
+  /*SECCION DE INFO ADICIONAL ACADEMICA*/
+  
+#infoadicional {
+    background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
+    background-repeat:round ;
+    margin:4rem;
+    border-radius: 0.8rem;
+    color: white;
+    border-style:double;
+    border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border-top-color: #4e4141;
+    border-right-color:  #4e4141;
+    border-bottom-color:  #4e4141;
+    border-left-color: #4e4141;
+    border-radius: 0.8rem;
+    
+}
+
+
+#contenedor{
+    
+    background-image:url(../../assets/IMG2/fondosecciones.jpg) !important;
+    background-repeat:round ;
+    border-style:double;
+    border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
+    border-top-color: #4e4141;
+    border-right-color:  #4e4141;
+    border-bottom-color:  #4e4141;
+    border-left-color: #4e4141;
+    border-radius: 0.8rem;
+    margin:4rem;
+}
+
+.contenedor1{
+  display: flex;
+  justify-content: center;
+}
+.formacion{
+  /*  margin-left: 5rem; */
+   color: white;
+   font-family: "Agency FB" ;
+   text-align: center;
+   font-size: 5rem;
+   margin-top:8rem;
+ }
+
+ .linea{
+
+  color:white;
+  }
+  .contenedorlinea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:15rem;
+  }
+  /* SECCION DE EXPERIENCIA LABORAL*/
+
+
+#Experiencia{
+    display: flex;
+    justify-content: space-between;
+    margin:2rem;
+    border-radius: 0.8rem;
+    color: white;
+    
+    
+}
+
+  .iconos-empresa {
+    width: 8rem ;
+    height: 8rem;
+    border-radius: 1rem;
+    
+  }
+.contenedor{
+display: flex;
+
+
+}
+.info{
+    margin:1rem;
+   font-family:  "Agency FB";
+   font-size: 1.5rem;
+   text-transform: uppercase;
+    
+}
+
+.icono{
+    padding: 1rem;
+}
+.iconoarg{
+    background: black;
+}
+.academica {
+    display: flex;
+    justify-content: center;
+}
+.centrado{
+    justify-content: center;
+}
+
+.verticaltitle{
+    font-family:"Agency FB";
+    font-size: 1.8rem;
+     text-align: center;
+    color:rgb(36, 203, 108); 
+ 
+    
+  
+
+}
+.verticaltitle2{
+    display: flex;
+    justify-content: center;
+    font-family:"Agency FB";
+    font-size: 3rem;
+    text-align: center;
+    color:rgb(36, 203, 108); 
+    padding: 2rem;
+   
+  
+}
+#contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 1rem;
+    padding: 1rem;
+    justify-content: space-evenly;
+  
+    
+  }
+  
+  #contenedor > div {
+    width: 50%;
+  }
+
+.borde{
+    display: flex;
+    justify-content: space-around;
+}

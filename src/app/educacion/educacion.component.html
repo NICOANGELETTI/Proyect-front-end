@@ -1,0 +1,61 @@
+
+   <!--SECCION DE EDUCACION-->
+
+<h1 class="verticaltitle2">EDUCACION</h1>
+
+<div class="borde">
+    
+    <div id="contenedor">
+   <section id="Educacion">
+    
+    <div class="contenedor" *ngFor="let estudio of educacion">
+
+        <div class="icono">
+            <img class="iconos-empresa" src="{{estudio.imagen}}">
+
+        </div>
+        <div class="info">
+            <p>{{ estudio.titulo }}</p>
+            <p>{{ estudio.inicio }} - {{ estudio.fin }} </p>
+            <p>{{ estudio.organismo }}</p>
+        </div>
+
+    </div>
+</section>
+</div>
+</div>
+
+<!--SECCION DE INFO ADICIONAL ACADEMICA-->
+<h1 class="verticaltitle2">INFO ADICIONAL</h1>
+<div class="borde">
+    <section id="infoadicional">
+       
+
+
+        
+            <div class="contenedor" *ngFor="let info of informaciones">
+                <div class="icono">
+                    <img class="iconos-empresa" src="{{info.imagen}}">
+
+                </div>
+                <div class="info">
+                    <p>{{info.titulo}}</p>
+                    <p>{{info.inicio}} - {{info.fin}}</p>
+                    <p>{{info.organismo}}</p>
+
+                
+            </div>
+        </div>
+    </section>
+
+    <!--   <div class="contenedor centrado"> 
+                                      <div class="icono">
+                                           <img  class="iconos-empresa" src="../../assets/IMG2/logo-isce-cuadrado.jpg">
+                                    
+                                       </div>
+                                     <div class="info">
+                                          <p>Tecnico Superior en Comercio Exterior</p>
+                                          <p>2020-Actualidad</p>
+                                          <p>Instituto Superior de Comercio Exterior</p>
+                                    </div>
+                                </div> -->

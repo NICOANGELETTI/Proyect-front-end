@@ -1,0 +1,32 @@
+<div class="contenedorlinea">
+    <hr class="linea" size="20px" width="70%" />
+</div>
+<h1 class="formacion" id="formacion">FORMACION</h1>
+
+
+
+<h1 class="verticaltitle2">EXPERIENCIA LABORAL</h1>
+
+
+<div class="borde">
+    
+    <div id="contenedor">
+        
+        <section id="Experiencia">
+          
+            <!-- ICONO -->
+            <div class="contenedor" *ngFor="let experiencia of trabajos">
+                <div class="icono">
+                    <img class="iconos-empresa" src="{{experiencia.imagen}}">
+
+                </div>
+                <div class="info">
+                    <p>{{experiencia.titulo}}</p>
+                    <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
+                    <p>{{experiencia.empresa}}</p>
+                </div>
+
+            </div>
+            
+        </section>
+    

@@ -1,26 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
-import { Experiencia } from '../model/experiencia';
-import { ExperienciaService } from '../services/experiencia.service';
+import { Educacion } from '../model/educacion';
 
 @Component({
-  selector: 'app-formacion',
-  templateUrl: './formacion.component.html',
-  styleUrls: ['./formacion.component.css'],
+  selector: 'app-educacion',
+  templateUrl: './educacion.component.html',
+  styleUrls: ['./educacion.component.css']
 })
-export class FormacionComponent implements OnInit {
+export class EducacionComponent implements OnInit {
+
   informaciones: any = [];
-  trabajos: any = [];
+  
   educacion: any = [];
   id: string = '';
   inicio: string = '';
   fin: string = '';
   titulo: string = '';
-  empresa: string = '';
   organismo: string = '';
   imagen: string = '';
 
-  experiencias: Experiencia[] = [];
+  experiencias: Educacion[] = [];
   //Video Express 18
   constructor(private portfolioService: PortfolioService) {}
 
@@ -32,16 +31,7 @@ export class FormacionComponent implements OnInit {
       /* Almaceno en la variable de la linea 10 con todo lo que pongo aca abajo */
       /* Definir la info a mostrar */
       this.educacion = portfolio.educacion;
-      this.trabajos = portfolio.trabajos;
       this.informaciones = portfolio.informaciones;
     });
   }
 }
-//Llamamos el metodo
-//Video Express 18
-/* public cargarExperiencia(): void {
-    this.sExperiencia.list().subscribe((data) => {
-      this.experiencias = data;
-    });
-  }
-}       */

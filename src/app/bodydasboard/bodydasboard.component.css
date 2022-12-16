@@ -1,6 +1,5 @@
 /*DASHBOARD (LISTA DE ATRIBUTOS)*/
 
-
 .list-group {
   margin: 3rem;
   --bs-list-group-bg: transparent !important;
@@ -13,26 +12,25 @@
   justify-content: center;
   padding: 1rem;
   font-family: "Agency FB";
-  color: black;
+  color: rgb(255, 255, 255);
   font-size: 1.8rem;
 }
 .border {
   border-radius: 2rem;
   margin: 2rem;
 }
-.container-fluid{
-    color: white;
-    padding: 1rem;
-  }
-  .atributos{
-    
-    font-family: "Agency FB";
-    color: black;
-    font-size: 1.8rem;
-  }
+.container-fluid {
+  color: white;
+  padding: 1rem;
+}
+.atributos {
+  font-family: "Agency FB";
+  color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+}
 
-  .boton{
-    font-family: "Agency FB";
-    color:rgb(36, 203, 108) !important;
-    font-size: 1.5rem;
-  }
+.boton {
+  font-family: "Agency FB";
+  color: white !important;
+  font-size: 1.5rem;
+}

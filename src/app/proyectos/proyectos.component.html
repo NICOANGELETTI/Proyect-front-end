@@ -1,35 +1,34 @@
-
 <div class="contenedorlinea">
-  <hr  class="linea2" size="20px" width="70%" />
+  <hr class="linea2" size="20px" width="70%" id="proyectos" />
 </div>
 
 <h1 class="tituloseccion">Trabajos</h1>
 
 
-<div class="contenedordeproyectos" >
+<div class="contenedordeproyectos">
 
-    <div class="proyecto" *ngFor="let proyecto of proyectos">
-   
+  <div class="proyecto" *ngFor="let proyecto of proyectos">
 
-      <div class="contendorimagen" > 
-        <img class="imagenproyecto" src="{{proyecto.imagen}}">
+
+    <div class="contendorimagen">
+      <img class="imagenproyecto" src="{{proyecto.imagen}}">
+    </div>
+    <div class="contenedortitulotext">
+      <h1 class="tituloproyect">{{proyecto.nombre}}</h1>
+      <hr class="linea" size="8px" width="50%" />
+      <p class="textoproyect">{{proyecto.descripcion}}</p>
+
+
+      <div class="contenedordeboton">
+        <a href="#" class="btn btn-primary btn-lg active boton" role="button" aria-pressed="true">Ver en la Web</a>
+
+
       </div>
-        <div class="contenedortitulotext"  >
-        <h1 class="tituloproyect" >{{proyecto.nombre}}</h1>
-        <hr  class="linea" size="8px" width="50%" />
-        <p class="textoproyect">{{proyecto.descripcion}}</p>
-
-
-        <div class="contenedordeboton">
-           <a href="#" class="btn btn-primary btn-lg active boton" role="button" aria-pressed="true">Ver en la Web</a>
-          
-        
-         </div>
     </div>
   </div>
 
 
-    <!-- <div class="proyecto">
+  <!-- <div class="proyecto">
         <div class="contendorimagen">
         <img class="imagenproyecto" src="../../assets/IMG2/tyler-lastovich-d0Sl3AH8Tlg-unsplash.jpg">
         </div>
@@ -40,7 +39,7 @@
             Nihil consectetur itaque ipsum recusandae.</p>
           <a class="btn btn-primary disabled boton" role="button" aria-disabled="true">Ver en la Web</a>
           <a class="btn btn-secondary disabled boton" role="button" aria-disabled="true">Link</a> -->
-    <!-- </div>
+  <!-- </div>
 </div>
     <div class="proyecto">
         <div class="contendorimagen">
@@ -53,7 +52,7 @@
             Nihil consectetur itaque ipsum recusandae.</p>
            <a class="btn btn-primary disabled boton" role="button" aria-disabled="true">Ver en la Web</a>
             <a class="btn btn-secondary disabled boton" role="button" aria-disabled="true">Link</a> -->
- <!--    </div>
+  <!--    </div>
   </div>
 
 
