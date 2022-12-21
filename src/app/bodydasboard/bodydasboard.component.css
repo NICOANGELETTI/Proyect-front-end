@@ -1,10 +1,11 @@
 /*DASHBOARD (LISTA DE ATRIBUTOS)*/
 
 .list-group {
-  margin: 3rem;
+  margin: 2rem;
   --bs-list-group-bg: transparent !important;
   --bs-list-group-border-color: transparent !important ;
   --bs-list-group-action-hover-bg: #82a2e9 !important;
+
 }
 
 .titulo {
@@ -20,13 +21,15 @@
   margin: 2rem;
 }
 .container-fluid {
+  display: flex;
+  justify-content: center;
   color: white;
   padding: 1rem;
 }
 .atributos {
   font-family: "Agency FB";
   color: rgb(255, 255, 255);
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 .boton {

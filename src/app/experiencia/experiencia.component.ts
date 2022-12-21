@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
 import { Experiencia } from '../model/experiencia';
+import { ExperienciaService} from '../services/experiencia.service';
 
 @Component({
   selector: 'app-experiencia',
@@ -9,27 +10,20 @@ import { Experiencia } from '../model/experiencia';
 })
 export class ExperienciaComponent implements OnInit {
 
-
-  trabajos: any = [];
-  inicio: string = '';
-  fin: string = '';
-  titulo: string = '';
-  empresa: string = '';
-  imagen: string = '';
-
   experiencias: Experiencia[] = [];
-  constructor(private portfolioService: PortfolioService) {}
-
-  //Video Express 18
-  //constructor(private sExperiencia: ExperienciaService) {}
+  constructor(private sExperiencia: ExperienciaService) {}
+ 
+ 
   ngOnInit(): void {
-    this.portfolioService.getDatos().subscribe((portfolio) => {
-      console.log(portfolio);
-      /* Almaceno en la variable de la linea 10 con todo lo que pongo aca abajo */
-      /* Definir la info a mostrar */
-    
-      this.trabajos = portfolio.trabajos;
-     
-    });
+   this.cargarExperiencia();
   }
+  //Metodo cargar experiencia de tipo VOID(Sin retorno). 
+  //sExperiencia es el alias.This se utiliza para referenciar fuera del metodo.
+  //experiencias hace referencia al alias de la lista Experiencia[] = []; data es un alias. entonces
+  //esa lista nos va traer informacion (data) que se le vamos a mandar a experiencias (Experiencia[] = [];)
+  //Luego mandamos al ngOnInit como mostramos arriba.
+  cargarExperiencia():void { 
+    this.sExperiencia.list().subscribe(data => {this.experiencias=data} 
+       );  }
+
 }

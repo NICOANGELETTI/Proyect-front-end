@@ -1,0 +1,15 @@
+.atributos {
+    font-family: "Agency FB";
+    color: rgb(3, 3, 3);
+    font-size: 3rem;
+  }
+
+  .tituloModal{
+    font-family: "Agency FB";
+    color: rgb(3, 3, 3);
+    font-size: 4rem !important;
+  } 
+
+  .modal-content {
+ background-color:rgb(36, 203, 108) !important;;
+  }

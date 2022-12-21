@@ -11,7 +11,6 @@ import { LoginComponent } from './modals/login/login.component';
 import { RedesComponent } from './redes/redes.component';
 import { HeaderComponent } from './header/header.component';
 import { PerfilComponent } from './perfil/perfil.component';
-import { FormacionComponent } from './formacion/formacion.component';
 import { HabilidadesComponent } from './habilidades/habilidades.component';
 import { FooterComponent } from './footer/footer.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -30,6 +29,12 @@ import { Error404Component } from './error404/error404.component';
 import { IndexComponent } from './index/index.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AgregarExperienciaComponent } from './modals/experiencia-add/agregar-experiencia.component';
+import { AgregarProyectoComponent } from './modals/proyecto-add/agregar-proyecto.component';
+import { AgregarHabilidadesComponent } from './modals/habilidades-add/agregar-habilidades.component';
+import { AgregarPerfilComponent } from './modals/perfil-add/agregar-perfil.component';
+import { EducacionAddComponent } from './modals/educacion-add/educacion-add.component';
 
 
 @NgModule({
@@ -40,7 +45,6 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
     RedesComponent,
     HeaderComponent,
     PerfilComponent,
-    FormacionComponent,
     HabilidadesComponent,
     FooterComponent,
     DashboardComponent,
@@ -57,8 +61,14 @@ import { ExperienciaComponent } from './experiencia/experiencia.component';
     IndexComponent,
     EducacionComponent,
     ExperienciaComponent,
+    AgregarExperienciaComponent,
+    AgregarProyectoComponent,
+    AgregarHabilidadesComponent,
+    AgregarPerfilComponent,
+    EducacionAddComponent,
+  
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule , ReactiveFormsModule],
   providers: [PortfolioService],
   bootstrap: [AppComponent],
 })

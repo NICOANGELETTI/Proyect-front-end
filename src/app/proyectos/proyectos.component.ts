@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
+import { Proyectos } from '../model/proyectos';
+import { ProyectosService } from '../services/proyectos.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -7,21 +9,16 @@ import { PortfolioService } from '../services/portfolio.service';
   styleUrls: ['./proyectos.component.css'],
 })
 export class ProyectosComponent implements OnInit {
-  proyectos: any = [];
+  proyecto: Proyectos[] = [];
 
-
-  constructor(private portfolioService: PortfolioService) {}
+  constructor(private sProyectos: ProyectosService) {}
 
   ngOnInit(): void {
-    this.portfolioService.getDatos().subscribe((portfolio) => {
-      console.log(portfolio);
-      /* Almaceno en la variable de la linea 10 con todo lo que pongo aca abajo */
-      /* Definir la info a mostrar */
-      this.proyectos = portfolio.proyectos;
-     
+    this.cargarProyecto();
+  }
+  cargarProyecto(): void {
+    this.sProyectos.list().subscribe((data) => {
+      this.proyecto = data;
     });
   }
-
-  
 }
-

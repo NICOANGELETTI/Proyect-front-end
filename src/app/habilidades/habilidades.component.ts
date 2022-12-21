@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../services/portfolio.service';
+import { Habilidades } from '../model/habilidades';
+import { HabilidadesService} from '../services/habilidades.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -7,24 +9,19 @@ import { PortfolioService } from '../services/portfolio.service';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent implements OnInit {
-hard : any = [] ;
-soft : any = [] ;
-  
 
-  constructor(private portfolioService: PortfolioService) { }
 
+  constructor(private sHabilidades:HabilidadesService) { }
+  habilidad: Habilidades[] = [];
   ngOnInit(): void {
-    this.portfolioService.getDatos().subscribe(portfolio => {
-      console.log(portfolio);
-      /* Almaceno en la variable de la linea 10 con todo lo que pongo aca abajo */
-      /* Definir la info a mostrar */
-      this.hard =portfolio.hard;
-      this.soft =portfolio.soft;
+   
      
-      
-      });
-    
-      }
-    }
+    this.cargarHabilidad();
+  }
+  cargarHabilidad():void { 
+    this.sHabilidades.list().subscribe(data => {this.habilidad=data} 
+       );  }
+
+}
 
 
