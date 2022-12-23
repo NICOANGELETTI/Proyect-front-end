@@ -1,45 +1,99 @@
 <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5 tituloModal" id="staticBackdropLabel">Experiencia Laboral</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 tituloModal" id="staticBackdropLabel">Experiencia Laboral</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+    <form  [formGroup]="formExp" (ngSubmit)="crearExp()" novalidate #form="ngForm">
+        <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Experiencia</h1>
+
+        <div>
+          <div>
+            <label for="formFileSm" class="form-label atributos">Empresa</label>
+            <input  type="text" class="form-control" id="empresaExp" name="empresaExp" formControlName="empresa">
+            <div *ngIf="empresaExp?.errors && empresaExp?.touched">
+              <div *ngIf="empresaExp?.hasError('required')" class="alert alert-danger" role="alert">
+                Debe ingresar la empresa en el campo
+              </div>
             </div>
-            <div class="modal-body">
+            
+          </div>
+          <div>
+            <label for="formFileSm" class="form-label atributos">Url Logo de la Empresa</label>
+            <input type="text" class="form-control" id="imagenExp" name="urlExp" formControlName="url_imagen">
+            <div *ngIf="urlExp?.errors && urlExp?.touched">
+              <div *ngIf="urlExp?.hasError('required')" class="alert alert-danger" role="alert">
+                Debe ingresar la imagen de la Institución.
+              </div>
+            </div>
 
-                <div>
+          </div>
+          <div>
+            <label for="formFileSm" class="form-label atributos">Puesto</label>
+            <input type="text" class="form-control" id="puestoExp" name="puestoExp" formControlName="puesto">
+            <div *ngIf="puestoExp?.errors && puestoExp?.touched">
+              <div *ngIf="puestoExp?.hasError('required')" class="alert alert-danger" role="alert">
+                Debe ingresar el puesto en la Institución.
+              </div>
+            </div>
 
-                    <div>
-                        <label for="formFileSm" class="form-label atributos">Url Logo de la Empresa</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
+          </div>
+          <div>
+            <label for="formFileSm" class="form-label atributos">Inicio</label>
+            <input type="text" class="form-control" id="inicioExp" name="inicioExp" formControlName="inicio">
+            <div *ngIf="inicioExp?.errors && inicioExp?.touched">
+              <div *ngIf="inicioExp?.hasError('required')" class="alert alert-danger" role="alert">
+                Debe ingresar el inicio del empleo.
+              </div>
+            </div>
+
+          </div>
+          <div>
+            <label for="formFileSm" class="form-label atributos">Fin</label>
+            <input  type="text" class="form-control" id="finExp" name="finExp" formControlName="fin">
+
+            <div *ngIf="finExp?.errors && finExp?.touched">
+              <div *ngIf="finExp?.hasError('required')" class="alert alert-danger" role="alert">
+                Debe ingresar el fin del empleo.
+              </div>
+            </div>
+          </div>
+      
+          <div class="modal-footer">
+ 
+            <button [disabled]="empresaExp?.hasError('required') ||
+           
+            puestoExp?.hasError('required') ||
+             urlExp?.hasError('required') ||
+              inicioExp?.hasError('required') ||
+               finExp?.hasError('required')"type="submit" class="btn btn-primary">Guardar Experiencia</button>
+          </div>
+        </div>
+        <div>
+          <div>
+            <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Experiencia</h1>
+
+            <div class="selectEliminar">
 
 
-                    </div>
-                    <div>
-                        <label for="formFileSm" class="form-label atributos">Puesto</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
+              <select name="Estado" class="eduEliminar">
 
+                <option class="atributos">Exp 1</option>
 
-                    </div>
-                    <div>
-                        <label for="formFileSm" class="form-label atributos">Inicio</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
-                        
-                  
-                      </div>
-                      <div>
-                        <label for="formFileSm" class="form-label atributos">Fin</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
-                        
-                  
-                      </div>
-                      <div>
-                        <label for="formFileSm" class="form-label atributos">Descripcion del Puesto</label>
-                        <textarea class="form-control form-control-lg" id="formFileSm" type="text"></textarea>
-                         </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
-                      </div>
-                </div>
+                <option class="atributos ">Exp 2</option>
+
+                <option class="atributos ">Exp 3</option>
+
+              </select>
+
+            </div>
+            <div class="botonEliminar">
+              <button type="submit" class="btn btn-primary ">Eliminar Experiencia</button>
+            </div>
+          </div>
+        </div>
+        
+        </form>

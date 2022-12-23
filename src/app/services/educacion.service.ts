@@ -10,6 +10,16 @@ export class EducacionService {
   url = 'http://localhost:8080/educacion/'
   constructor(private httpClient:HttpClient) { }
 
+//Esto lo agregue del portfolio de Paz
+  educacionModal : Educacion = {
+  
+    titulo: '',
+    inicio: '',
+    fin: '',
+    institucion: '',
+    url_imagen:'',
+  }
+
   //Todos los metodos del controller de educacion en Netbeans
 
 

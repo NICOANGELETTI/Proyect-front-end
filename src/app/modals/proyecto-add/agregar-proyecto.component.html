@@ -7,35 +7,81 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-
+          <form [formGroup]="formProyect" (ngSubmit)="crearProyect()" novalidate #form="ngForm">
                 <div>
-
+                    <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Proyectos</h1>
                     <div>
-                        <label for="formFileSm" class="form-label atributos">URL Imagen del Proyecto</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
+                        <label for="urlImagenProyect" class="form-label atributos">URL Imagen del Proyecto</label>
+                        <input type="text" class="form-control" id="urlImagenProyect" name="urlImagenProyect" formControlName="urlImagen">
+                        <div *ngIf="urlImagenProyect?.errors && urlImagenProyect?.touched "
+                        class="alert alert-danger">Agrega la Url de la imagen</div>
 
+                    </div>
 
                     </div>
                     <div>
-                        <label for="formFileSm" class="form-label atributos">Titulo del Proyecto</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
-
-
-                    </div>
+                        <label for="tituloProyect" class="form-label atributos">Titulo del Proyecto</label>
+                        <input type="text" class="form-control" id="tituloProyect" name="tituloProyect" formControlName="titulo">
+                        <div *ngIf="tituloProyect?.errors && tituloProyect?.touched "
+                        class="alert alert-danger">Agrega un titulo del proyecto
+                                     </div>
+                                 </div>
+                   
                     <div>
-                        <label for="formFileSm" class="form-label atributos">Descripcion del Proyecto</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
-                        
+                        <label for="descripcionProyect" class="form-label atributos">Descripcion del Proyecto</label>
+                        <input type="text" class="form-control" id="descripcionProyect" name="descripcionProyect" formControlName="descripcion">
+                        <div *ngIf="descripcionProyect?.errors && descripcionProyect?.touched "
+                        class="alert alert-danger">Agrega una descripcion del proyecto
+                                     </div>
                   
                       </div>
                       <div>
-                        <label for="formFileSm" class="form-label atributos">URL del proyecto</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text">
-                        
+                        <label for="urlProyecto" class="form-label atributos">URL del proyecto</label>
+                        <input type="text" class="form-control" id="urlProyecto" name="urlProyecto" formControlName="urlProyect">
+                        <div *ngIf="urlProyecto?.errors && urlProyecto?.touched "
+                        class="alert alert-danger">Agrega una URL del proyecto
+                                     </div>
                   
                       </div>
 
                       <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-primary">Guardar Cambios</button>
+                    
+                        <button type="submit" class="btn btn-primary" [disabled]="tituloProyect?.hasError('required') || 
+                        urlImagenProyect?.hasError('required') || descripcionProyect?.hasError('required') || 
+                        urlProyecto?.hasError('required') ">Guardar Cambios</button>
                       </div>
+
+                      
+                      <div>
+                        <div>
+                            <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Proyecto</h1>
+                            
+                            <div class="selectEliminar">
+            
+            
+                        <select name="Estado" class="eduEliminar">
+            
+                            <option class="atributos">Pro 1</option>
+            
+                            <option class="atributos ">Produ 2</option>
+            
+                            <option class="atributos ">Pro 3</option>
+            
+                          </select>
+                        
+            </div>
+                    <div class="botonEliminar">
+                            <button type="submit" class="btn btn-primary ">Eliminar Educacion</button>
+                    </div>
+            </div>
+            </div>
+           
+            
+        </form>
+                      
+                                    
+                                 
+                       
+            
+                    
+                   

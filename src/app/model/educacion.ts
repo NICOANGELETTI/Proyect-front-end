@@ -1,6 +1,6 @@
 export class Educacion {
 
-    id!:number; 
+    id?:number; 
     
     url_imagen: string;
 
