@@ -169,4 +169,7 @@ p{
     align-items: center;
     padding-top:15rem;
   }
-
+.alert.alert-danger.campo{
+  width: 30rem;
+  
+}

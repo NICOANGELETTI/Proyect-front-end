@@ -1,33 +1,58 @@
-  
+<!-- Modal -->
 
-      <!-- Modal -->
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Login</h5>
 
-            </div>
-            <div class="modal-body">
-              <div class="mb-3 row">
-                <label for="floatinginput"></label>
-                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="floatingInput" placeholder="email@dominio.com">
-                </div>
+<form [formGroup]="formLogin" (ngSubmit)="onEnviar($event)">
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+
+        </div>
+        <div class="modal-body">
+          <div class="mb-3 row">
+            <label for="floatinginput"></label>
+            <div class="col-sm-10">
+              <input type="email" formControlName="usuario" class="form-control" id="floatingInput"
+                placeholder="email@dominio.com">
+
+              <!-- Gracias al getter que configuramos en el controlador -->
+              <div *ngIf="Mail?.errors  && Mail?.touched">
+                <p *ngIf="Mail?.hasError('required')" class="alert alert-danger">
+                  El email es requerido.
+                </p>
+                <p *ngIf="Mail?.hasError('email')" class="alert alert-danger">
+                  El formato del email debe ser válido.
+                </p>
               </div>
-              <div class="mb-3 row">
-                <label for="floatingpaswword"></label>
-                <div class="col-sm-10">
-                  <input for="inputPassword" class="form-control" id="floatingpassword" placeholder="password"
-                    type="password">
-                </div>
+            </div>
+          </div>
+
+          <div class="mb-3 row">
+            <label for="floatingpaswword"></label>
+            <div class="col-sm-10">
+              <input for="inputPassword" formControlName="contraseña" class="form-control" id="floatingpassword"
+                placeholder="password" type="password">
+
+              <!-- Gracias al getter que configuramos en el controlador -->
+              <div *ngIf="Password?.errors  && Password?.touched" class="alert alert-danger">
+                <p *ngIf="Password?.hasError('required')">
+                  La contraseña es requerida.
+                </p>
+
+                <p *ngIf="Password?.errors?.['minlength']">
+                  La contraseña debe ser de 8 o más caracteres.
+                </p>
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-              <button type="button" class="btn btn-primary">Iniciar</button>
-            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
           </div>
         </div>
       </div>
- 
+    </div>
+  </div>
+
+</form>

@@ -29,7 +29,7 @@ import { Error404Component } from './error404/error404.component';
 import { IndexComponent } from './index/index.component';
 import { EducacionComponent } from './educacion/educacion.component';
 import { ExperienciaComponent } from './experiencia/experiencia.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AgregarExperienciaComponent } from './modals/experiencia-add/agregar-experiencia.component';
 import { AgregarProyectoComponent } from './modals/proyecto-add/agregar-proyecto.component';
 import { AgregarHabilidadesComponent } from './modals/habilidades-add/agregar-habilidades.component';
@@ -68,7 +68,7 @@ import { EducacionAddComponent } from './modals/educacion-add/educacion-add.comp
     EducacionAddComponent,
   
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule , ReactiveFormsModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule , ReactiveFormsModule,FormsModule],
   providers: [PortfolioService],
   bootstrap: [AppComponent],
 })
