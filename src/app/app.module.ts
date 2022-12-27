@@ -6,36 +6,34 @@ import { AppRoutingModule } from './app-routing.module';
 import { PortfolioService } from './services/portfolio.service';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarComponent } from './componentes/navbar/navbar.component';
 import { LoginComponent } from './modals/login/login.component';
-import { RedesComponent } from './redes/redes.component';
-import { HeaderComponent } from './header/header.component';
-import { PerfilComponent } from './perfil/perfil.component';
-import { HabilidadesComponent } from './habilidades/habilidades.component';
-import { FooterComponent } from './footer/footer.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { RedesComponent } from './componentes/redes/redes.component';
+import { HeaderComponent } from './componentes/header/header.component';
+import { PerfilComponent } from './componentes/perfil/perfil.component';
+import { HabilidadesComponent } from './componentes/habilidades/habilidades.component';
+import { FooterComponent } from './componentes/footer/footer.component';
+import { DashboardComponent } from './componentes/dashboard/dashboard.component';
 
-
-import { BodydasboardComponent } from './bodydasboard/bodydasboard.component';
-import { NavbarsdasboardComponent } from './navbarsdasboard/navbarsdasboard.component';
+import { BodydasboardComponent } from './componentes/bodydasboard/bodydasboard.component';
+import { NavbarsdasboardComponent } from './componentes/navbarsdasboard/navbarsdasboard.component';
 import { LogoutComponent } from './modals/logout/logout.component';
-import { RedesdashboardComponent } from './redesdashboard/redesdashboard.component';
-import { SocialbarComponent } from './socialbar/socialbar.component';
-import { SocialbardashboardComponent } from './socialbardashboard/socialbardashboard.component';
-import { FormContactComponent } from './form-contact/form-contact.component';
-import { AcordeondeinfoComponent } from './acordeondeinfo/acordeondeinfo.component';
-import { ProyectosComponent } from './proyectos/proyectos.component';
-import { Error404Component } from './error404/error404.component';
-import { IndexComponent } from './index/index.component';
-import { EducacionComponent } from './educacion/educacion.component';
-import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { RedesdashboardComponent } from './componentes/redesdashboard/redesdashboard.component';
+import { SocialbarComponent } from './componentes/socialbar/socialbar.component';
+import { SocialbardashboardComponent } from './componentes/socialbardashboard/socialbardashboard.component';
+import { FormContactComponent } from './componentes/form-contact/form-contact.component';
+import { AcordeondeinfoComponent } from './componentes/acordeondeinfo/acordeondeinfo.component';
+import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
+import { Error404Component } from './componentes/error404/error404.component';
+import { IndexComponent } from './componentes/index/index.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { AgregarExperienciaComponent } from './modals/experiencia-add/agregar-experiencia.component';
 import { AgregarProyectoComponent } from './modals/proyecto-add/agregar-proyecto.component';
 import { AgregarHabilidadesComponent } from './modals/habilidades-add/agregar-habilidades.component';
 import { AgregarPerfilComponent } from './modals/perfil-add/agregar-perfil.component';
 import { EducacionAddComponent } from './modals/educacion-add/educacion-add.component';
-
 
 @NgModule({
   declarations: [
@@ -66,9 +64,14 @@ import { EducacionAddComponent } from './modals/educacion-add/educacion-add.comp
     AgregarHabilidadesComponent,
     AgregarPerfilComponent,
     EducacionAddComponent,
-  
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule , ReactiveFormsModule,FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule,
+  ],
   providers: [PortfolioService],
   bootstrap: [AppComponent],
 })
