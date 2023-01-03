@@ -15,11 +15,32 @@ export class EducacionComponent implements OnInit {
   ngOnInit(): void {
     this.cargarEducacion();
   }
+
+
+
+  //Cargamos metodos
+
+      //Guardamos habilidad
   cargarEducacion(): void {
     this.sEducacion.list().subscribe((data) => {
       this.estudios = data;
     });
   }
+
+
+      //Borramos educacion
+
+        delete(id:number){
+          if(id != undefined){
+            this.sEducacion.delete(id).subscribe(data =>{
+              //alert("Estudio Eliminado Correctamente")
+              this.cargarEducacion();
+            }, err => {
+              alert("no se pudo eliminar la experiencia")
+            }
+            )
+          }
+        }
 }
 
-//Video Express 18
+

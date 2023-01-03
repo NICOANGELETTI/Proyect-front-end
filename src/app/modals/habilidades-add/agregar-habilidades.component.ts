@@ -10,6 +10,8 @@ import { HabilidadesService } from 'src/app/services/habilidades.service';
 })
 export class AgregarHabilidadesComponent implements OnInit {
   formSkills: FormGroup;
+  nombre: '';
+  porcentaje: '' ;
 
   constructor(
     private sHabilidades: HabilidadesService,

@@ -13,7 +13,9 @@
 
                     <div>
                         <label for="formFileSm" class="form-label atributos">Nombre de la Habilidad</label>
-                        <input class="form-control form-control-lg" id="formFileSm" type="text"  name="nombreSkill"  id="input-nombre" formControlName="nombre">
+                        <input class="form-control form-control-lg" id="formFileSm" type="text"  name="nombreSkill"  id="input-nombre" formControlName="nombre"
+                        [(ngModel)]="nombre" [ngClass]="{'is-invalid': nombreSkill?.errors && nombreSkill?.touched,
+                        'is-valid': !nombreSkill?.errors && nombreSkill?.touched}">
                         <div *ngIf="nombreSkill?.errors && nombreSkill?.touched">
                             <div *ngIf="nombreSkill?.hasError('required')" class="alert alert-danger" role="alert">
                                 Debe ingresar el nombre de la habilidad.
@@ -24,7 +26,8 @@
                         <div>
                             <label for="formFileSm" class="form-label atributos">Porcentaje</label>
                             <input type="number" class="form-control form-control-lg" name="porcentaje"
-                                id="input-porcentaje" formControlName="porcentaje">
+                                id="input-porcentaje" formControlName="porcentaje"   [(ngModel)]="porcentaje" [ngClass]="{'is-invalid': porcentajeSkill?.errors && porcentajeSkill?.touched,
+                                'is-valid': !porcentajeSkill?.errors && porcentajeSkill?.touched}">
                             <div *ngIf="porcentajeSkill?.errors && porcentajeSkill?.touched">
                                 <div *ngIf="porcentajeSkill?.hasError('required')" class="alert alert-danger"
                                     role="alert">

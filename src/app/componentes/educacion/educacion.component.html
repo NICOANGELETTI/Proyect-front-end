@@ -7,24 +7,31 @@
     
     <div id="contenedor">
    <section id="Educacion">
-    <!-- 
-    <div class="contenedor" *ngFor="let estudio of educacion">
+    
+    <div class="contenedor" *ngFor="let estudio of estudios">
 
         <div class="icono">
-            <img class="iconos-empresa" src="{{estudio.imagen}}">
+            <img class="iconos-empresa" src="{{estudio.url_imagen}}">
 
         </div>
-        <div class="info">
-            <p>{{ estudio.titulo }}</p>
+        <div class="info"> 
+            <p>{{estudio.titulo}}</p>
             <p>{{ estudio.inicio }} - {{ estudio.fin }} </p>
-            <p>{{ estudio.organismo }}</p>
+            <p>{{ estudio.institucion }}</p>
         </div>
 
+       
     </div>
+    <!-- #71 Arg Programo
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+        
+        <button class="btn btn-primary" type="button">Eliminar<i class= "fa-solid" (click)="delete(estudio.id)"></i></button>
+      </div>
+    -->
 </section>
 </div>
 </div>
--->
+
 <!--SECCION DE INFO ADICIONAL ACADEMICA
 <h1 class="verticaltitle2">INFO ADICIONAL</h1>
 <div class="borde">

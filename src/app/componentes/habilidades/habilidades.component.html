@@ -3,6 +3,9 @@
 <div class="contenedorlinea">
   <hr class="linea" size="20px" width="70%" />
 </div>
+
+
+
 <div class=" clase2" id="habilidades">
   <img class=fotoenelperfil src="../../assets/IMG2/pexels-lucas-fonseca-2239655.jpg">
   <div class="Skillscontenedor">
@@ -17,88 +20,100 @@
 
 
 <div class="borde">
+
+
+
   <!-- <h1 class="titulodeskill"> HARD SKILLS</h1>   -->
   <section id="Habilidades" class="habilidades">
 
 
 
-<!--
-    <div class="primeras-barras" *ngFor="let habilidad of hard">
+
+    <div class="primeras-barras" *ngFor="let Skill of habilidad">
       <div class="prueba">
-        <h2 class="titulodebarra">{{habilidad.nombre}}</h2>
+        <h2 class="titulodebarra">{{Skill.habilidad}}</h2>
         <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-          style="--value:{{habilidad.porcentaje}}"></div>
+          style="--value:{{Skill.porcentaje}}"></div>
       </div>
     </div>
--->
-    <!-- <div>
-            <h2 class="titulodebarra">{{habilidad.nombre}}</h2>                                                              
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:75"></div>
-          </div>
-          <div>
-            <h2 class="titulodebarra">JAVA SCRIPT</h2>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:25"></div>
-          </div>
-          <div>
-            <h2 class="titulodebarra">BOOTSTRAP</h2>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:35"></div>
-          </div>
-       </div>
-    <div class="primeras-barras" *ngFor="let habilidad of habilidades"> 
-    <div class="prueba">
-      <h2 class="titulodebarra">{{habilidad.nombre}}</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:{{habilidad.porcentaje}}"></div>
-    </div>      -->
 
-    <!--     <div>
-      <h2 class="titulodebarra">MySQL</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:15"></div>
+    <!-- DATA BINDING EN PORCENTAJE
+  [style.widht.%]="Skill.porcentaje"-->
+
+
+  <!--
+    <div *ngFor="let Skill of habilidad">
+      <h2 class="titulodebarra">{{Skill.habilidad}}</h2>
+      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:75"></div>
     </div>
     <div>
-      <h2 class="titulodebarra">JAVA</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:20"></div>
-    </div>
-    <div>
-      <h2 class="titulodebarra">Dev Ops</h2>
+      <h2 class="titulodebarra">{{Skill.habilidad}}</h2>
       <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:25"></div>
-    </div> -->
-    <!--  </div> -->
+    </div>
+    <div>
+      <h2 class="titulodebarra">BOOTSTRAP</h2>
+      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:35"></div>
+    </div>-->
 
-    <!-- h1 class="titulodeskill"> SOFT SKILLS</h1>  
-    <div class="primeras-barras" *ngFor="let habilidad of soft">
+
+
+
+
+ <!--
+    <div class="primeras-barras" *ngFor="let  Skill of habilidad">
       <div class="prueba">
-
-        <h2 class="titulodebarra">{{habilidad.nombre}}</h2>
+        <h2 class="titulodebarra">{{Skill.habilidad}}</h2>
         <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-          style="--value:{{habilidad.porcentaje}}"></div>
+          style="--value:{{Skill.porcentaje}}"></div>
       </div>
--->
-      <!-- <div>
-            <h2 class="titulodebarra">CREATIVIDAD</h2>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85"></div>
-          </div>
-          <div>
-            <h2 class="titulodebarra">SKILLS DIGITALES</h2>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:60"></div>
-          </div>
-          <div>
-            <h2 class="titulodebarra">TEAMWORK</h2>
-            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70"></div>
-          </div> -->
+      <div>
+        <h2 class="titulodebarra">MySQL</h2>
+        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:15"></div>
+      </div>
+      <div>
+        <h2 class="titulodebarra">JAVA</h2>
+        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:20"></div>
+      </div>
+      <div>
+        <h2 class="titulodebarra">Dev Ops</h2>
+        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:25"></div>
+      </div> -->
 
 
-      <!-- <div>
-      <h2 class="titulodebarra">LIDERAZGO</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:60"></div>
-    </div>
-    <div>
-      <h2 class="titulodebarra">FLEXIBILIDAD</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:100"></div>
-    </div>
-    <div>
-      <h2  class="titulodebarra">RESPONSABILIDAD</h2>
-      <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:100"></div>
-    </div> -->
 
 
-    
+      <!--h1 class="titulodeskill"> SOFT SKILLS</h1>  
+      <div class="primeras-barras" *ngFor="let Skill of habilidad">
+        <div class="prueba">
+
+          <h2 class="titulodebarra">{{Skill.nombre}}</h2>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+            style="--value:{{Skill.porcentaje}}"></div>
+        </div>
+
+        <div>
+          <h2 class="titulodebarra">CREATIVIDAD</h2>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:85"></div>
+        </div>
+        <div>
+          <h2 class="titulodebarra">SKILLS DIGITALES</h2>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:60"></div>
+        </div>
+        <div>
+          <h2 class="titulodebarra">TEAMWORK</h2>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70"></div>
+        </div>
+
+
+        <div *ngFor="let Skill of habilidad">
+          <h2 class="titulodebarra">LIDERAZGO</h2>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:60"></div>
+        </div>
+        <div>
+          <h2 class="titulodebarra">FLEXIBILIDAD</h2>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:100"></div>
+        </div>
+        <div>
+          <h2 class="titulodebarra">RESPONSABILIDAD</h2>
+          <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:100"></div>
+        </div>-->

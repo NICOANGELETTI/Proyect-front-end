@@ -13,7 +13,12 @@ export class AgregarExperienciaComponent implements OnInit {
 
   formExp: FormGroup;
 
-
+ //Instanciar
+    puesto: '';
+    inicio: '';
+    fin: '';
+    empresa: '';
+    url_imagen: '';
 
   constructor(private sExperiencia: ExperienciaService, private formBuilder: FormBuilder) {
     this.formExp = this.formBuilder.group({
@@ -56,4 +61,7 @@ export class AgregarExperienciaComponent implements OnInit {
       alert("Se ha producido un error, intente nuevamente");
     });
   }
+  limpiar():void {
+    this.formExp.reset();
+  } 
 }

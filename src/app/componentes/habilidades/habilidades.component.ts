@@ -14,9 +14,15 @@ export class HabilidadesComponent implements OnInit {
   ngOnInit(): void {
     this.cargarHabilidad();
   }
+
+
+  
   cargarHabilidad(): void {
     this.sHabilidades.list().subscribe((data) => {
       this.habilidad = data;
     });
   }
+
+
+  
 }

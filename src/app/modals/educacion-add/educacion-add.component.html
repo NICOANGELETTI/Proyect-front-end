@@ -1,101 +1,113 @@
-
 <div class="modal fade" id="staticBackdrop6" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5 tituloModal" id="staticBackdropLabel">Educacion</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
             </div>
 
-    <form [formGroup]="form" (ngSubmit)="crearNuevoCurso()" name="educacionForm">
 
-    
-            <div class="modal-body">
-
-                <div>
-                    <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Educacion</h1>
-                    <div>
-                        <label for="tituloCurso" class="form-label atributos">Titulo</label>
-                                                                                    <!--Express 18-->
-                        <input class="form-control form-control-lg" formControlName="titulo" id="titulo" type="text" name="tituloCurso"
-                        required formControlName="titulo">
-                        <div *ngIf="tituloCurso?.errors && tituloCurso?.touched"
-                        class="alert alert-danger">Este Campo es requerido</div>
-
-                       
-                    </div>
-                    <div>
-                        <label for="institucionCurso" class="form-label atributos">Institucion</label>
-                        <input class="form-control form-control-lg"  formControlName="institucion" id="institucion" type="text" name="institucionCurso"
-                        required formControlName="institucion">
-                        <div *ngIf="institucionCurso?.errors && institucionCurso?.touched"
-                        class="alert alert-danger">Este Campo es requerido</div>
-
-                    </div>
-                    <div>
-                        <label for="inicioCurso" class="form-label atributos">Inicio</label>
-                        <input class="form-control form-control-lg" formControlName="inicio" id="inicio" type="text" name="inicioCurso"
-                        required formControlName="inicio">
-                        <div *ngIf="inicioCurso?.errors && inicioCurso?.touched"
-                        class="alert alert-danger">Este Campo es requerido</div>
+            <!--Formulario de Educacion-->
+            <form [formGroup]="form" (ngSubmit)="OnCreate()" name="educacionForm">
 
 
-                    </div>
-                    <div>
-                        <label for="finCurso" class="form-label atributos">Fin</label>
-                        <input class="form-control form-control-lg" formControlName="fin" id="fin" type="text" name="finCurso"
-                        required formControlName="fin">
-                        <div *ngIf="finCurso?.errors && finCurso?.touched"
-                        class="alert alert-danger">Este Campo es requerido</div>
 
-                    </div>
-                    <div>
-                        <label for="urlCurso" class="form-label atributos">URL de Imagen Institucion</label>
-                        <input class="form-control form-control-lg"formControlName="url_imagen" id="url_imagen" type="text" name="urlCurso"
-                        required formControlName="url_imagen">
-                        <div *ngIf="urlCurso?.errors && urlCurso?.touched "
-                        class="alert alert-danger">Este Campo es requerido</div>
+                <div class="modal-body">
 
-                    </div>
-                    <div class="modal-footer">
-                        
-                        <button type="submit" [disabled]="tituloCurso?.hasError('required') 
+                    <div> <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                        <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Educacion</h1>
+                        <div>
+                            <label for="titulo" class="form-label atributos">Titulo</label>
+                            <!--Express 18-->
+                            <input class="form-control form-control-lg" formControlName="titulo" id="titulo" type="text"
+                                name="tituloCurso" required formControlName="titulo" [(ngModel)]="titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
+                                'is-valid': !tituloCurso?.errors && tituloCurso?.touched}">
+                               
+                            
+                                <div *ngIf="tituloCurso?.errors && tituloCurso?.touched"  class="alert alert-danger">
+                                    
+                                    Este Campo es requerido</div>
+
+                        </div>
+                        <div>
+                            <!--En cada input ponemos un ngModel y un ngIf(errors) para poder Conectar con base de datos-->
+                            <label for="institucion" class="form-label atributos">Institucion</label>
+                            <input class="form-control form-control-lg" formControlName="institucion" id="institucion"
+                                type="text" name="institucionCurso" required formControlName="institucion"
+                                [(ngModel)]="institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
+                                'is-valid': !institucionCurso?.errors && institucionCurso?.touched}">
+                            <div *ngIf="institucionCurso?.errors && institucionCurso?.touched"
+                                class="alert alert-danger">Este Campo es requerido</div>
+
+                        </div>
+                        <div>
+                            <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                            <label for="inicio" class="form-label atributos">Inicio</label>
+                            <input class="form-control form-control-lg" formControlName="inicio" id="inicio" type="text"
+                                name="inicioCurso" required formControlName="inicio" [(ngModel)]="inicio" [ngClass]="{'is-invalid': inicioCurso?.errors && inicioCurso?.touched,
+                                'is-valid': !inicioCurso?.errors && inicioCurso?.touched}">
+                            <div *ngIf="inicioCurso?.errors && inicioCurso?.touched" class="alert alert-danger">Este
+                                Campo es requerido</div>
+
+
+                        </div>
+                        <div>
+                            <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                            <label for="fin" class="form-label atributos">Fin</label>
+                            <input class="form-control form-control-lg" formControlName="fin" id="fin" type="text"
+                                name="finCurso" required formControlName="fin" [(ngModel)]="fin" [ngClass]="{'is-invalid': finCurso?.errors && finCurso?.touched,
+                                'is-valid': !finCurso?.errors && finCurso?.touched}">
+                            <div *ngIf="finCurso?.errors && finCurso?.touched" class="alert alert-danger">Este Campo es
+                                requerido</div>
+
+                        </div>
+                        <div>
+                            <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                            <label for="url" class="form-label atributos">URL de Imagen Institucion</label>
+                            <input class="form-control form-control-lg" formControlName="url_imagen" id="url_imagen"
+                                type="text" name="urlCurso" required formControlName="url_imagen"
+                                [(ngModel)]="url_imagen" [ngClass]="{'is-invalid': urlCurso?.errors && urlCurso?.touched,
+                                'is-valid': !urlCurso?.errors && urlCurso?.touched}">
+                            <div *ngIf="urlCurso?.errors && urlCurso?.touched " class="alert alert-danger">Este Campo es
+                                requerido</div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+                            <button type="submit" [disabled]="tituloCurso?.hasError('required') 
                         || inicioCurso?.hasError('required') || finCurso?.hasError('required') 
-                        || institucionCurso?.hasError('required') || urlCurso?.hasError('required')" 
-                        class="btn btn-primary">Agregar Educacion</button>
-                      </div>
-
+                        || institucionCurso?.hasError('required') || urlCurso?.hasError('required')"
+                                class="btn btn-primary">Agregar Educacion</button>
+                        </div>
                 </div>
-                    <div>
-            <div>
-                <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Educacion</h1>
-                
-                <div class="selectEliminar">
-
-
-            <select name="Estado" class="eduEliminar">
-
-                <option class="atributos">Edu 1</option>
-
-                <option class="atributos ">Edu 2</option>
-
-                <option class="atributos ">Edu 3</option>
-
-              </select>
+                </div>
+                </form>
+                   
             
-</div>
-        <div class="botonEliminar">
-                <button type="submit" class="btn btn-primary ">Eliminar Educacion</button>
-        </div>
-</div>
-</div>
-</div>
+                
+            
+                   <!--
+                    <div>
+                        <div>
+                            <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Educacion</h1>
 
-          
-</form>
-                     
-           
+                            <div class="selectEliminar">
 
-        
-       
+
+                                <select name="Estado" class="eduEliminar">
+
+                                    <option class="atributos">Edu 1</option>
+
+                                    <option class="atributos ">Edu 2</option>
+
+                                    <option class="atributos ">Edu 3</option>
+
+                                </select>
+
+                            </div>
+                            <div class="botonEliminar">
+                                <button type="submit" class="btn btn-primary ">Eliminar Educacion</button>
+                            </div>
+                            -->
+         

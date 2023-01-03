@@ -6,25 +6,24 @@
 
 
 <div class="contenedordeproyectos">
-<!--
-  <div class="proyecto" *ngFor="let proyecto of proyectos">
+
+  <div class="proyecto" *ngFor="let trabajo of proyecto">
 
 
     <div class="contendorimagen">
-      <img class="imagenproyecto" src="{{proyecto.imagen}}">
+      <img class="imagenproyecto" src="{{trabajo.urlImagen}}">
     </div>
     <div class="contenedortitulotext">
-      <h1 class="tituloproyect">{{proyecto.nombre}}</h1>
+      <h1 class="tituloproyect">{{trabajo.titulo}}</h1>
       <hr class="linea" size="8px" width="50%" />
-      <p class="textoproyect">{{proyecto.descripcion}}</p>
+      <p class="textoproyect">{{trabajo.descripcion}}</p>
 
 
       <div class="contenedordeboton">
-        <a href="#" class="btn btn-primary btn-lg active boton" role="button" aria-pressed="true">Ver en la Web</a>
+        <a href="{{trabajo.urlProyect}}" class="btn btn-primary btn-lg active boton" role="button" aria-pressed="true">Ver en la Web</a>
 
 
       </div>
     </div>
-  </div>-->
-
-
+  </div>
+  

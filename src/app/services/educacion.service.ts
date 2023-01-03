@@ -20,7 +20,7 @@ export class EducacionService {
     url_imagen:'',
   }
 
-  //Todos los metodos del controller de educacion en Netbeans
+  
 
 
 

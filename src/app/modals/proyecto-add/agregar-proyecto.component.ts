@@ -11,6 +11,12 @@ import { ProyectosService } from 'src/app/services/proyectos.service';
 export class AgregarProyectoComponent implements OnInit {
 
   formProyect: FormGroup;
+  titulo:'';
+  urlImagen:'';
+  descripcion:'';
+  urlProyect:'';
+  
+
   constructor(private sProyecto: ProyectosService, private formBuilder: FormBuilder) {
     this.formProyect = this.formBuilder.group({
       titulo: ['', [Validators.required]],

@@ -1,8 +1,9 @@
 <!--SECCION DE PERFIL-->
-<div>
-        <img class="foto-perfil" src="../../assets/IMG2/Foto Perfil portfolio.jpeg">
-        <p class="info">{{nombre}} {{apellido}}</p>
-        <p class="info"> {{titulo}} </p>
+<div *ngFor="let atributo of perfil">
+        <img class="foto-perfil" src={{atributo.url_imagenPerfil}}>
+        <p class="info">{{atributo.nombre}} {{atributo.apellido}}</p>
+        <p class="info"> {{atributo.tituloDeveloper
+          }} </p>
 
 
       <div class="contenedorRedes">
@@ -17,7 +18,7 @@
     </div>
         <h1 class="sobremi">SOBRE MI</h1>
         <p class="aboutme">
-          {{acerca}}
+          {{atributo.acercade}}
 
 
        <!--  <h3 class="frase1"> <i>{{frase}}</i></h3> -->
