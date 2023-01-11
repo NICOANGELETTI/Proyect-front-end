@@ -1,10 +1,10 @@
 export class Educacion {
 
-    id?:number; 
-    
-    url_imagen: string;
+    //id?:number; 
 
     titulo:string; 
+    
+    url_imagen: string;
 
     inicio:string;
     

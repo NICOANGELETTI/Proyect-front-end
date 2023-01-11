@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 
 import { PortfolioService } from './services/portfolio.service';
@@ -34,6 +34,8 @@ import { AgregarProyectoComponent } from './modals/proyecto-add/agregar-proyecto
 import { AgregarHabilidadesComponent } from './modals/habilidades-add/agregar-habilidades.component';
 import { AgregarPerfilComponent } from './modals/perfil-add/agregar-perfil.component';
 import { EducacionAddComponent } from './modals/educacion-add/educacion-add.component';
+import { PersonaService } from './services/persona.service';
+import { InterceptorService } from './services/interceptor.service';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,8 @@ import { EducacionAddComponent } from './modals/educacion-add/educacion-add.comp
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [PortfolioService],
+  providers: [PortfolioService, 
+              PersonaService,{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

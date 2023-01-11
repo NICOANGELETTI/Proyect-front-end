@@ -11,6 +11,15 @@ export class ExperienciaService {
   url = 'http://localhost:8080/experiencia/'
   constructor(private httpClient:HttpClient) { }
 
+  experienciaModal : Experiencia = {
+  
+    puesto: '',
+    inicio: '',
+    fin: '',
+    empresa: '',
+    url_imagen:'',
+  }
+
     //Todos los metodos del controller de experiencia en Netbeans
     //List,Create,detail,delete,update
 
@@ -19,7 +28,7 @@ export class ExperienciaService {
       return this.httpClient.get<Experiencia[]>(this.url + 'lista')
     }  
     public create(experiencia: Experiencia):Observable<any>{
-      return this.httpClient.post<any>(this.url + 'create' , experiencia);
+      return this.httpClient.post<any>(this.url + 'nueva/experiencia' , experiencia);
     }
     public update(experiencia: Experiencia):Observable<any>{
       return this.httpClient.put<any>(this.url + 'update' , experiencia);

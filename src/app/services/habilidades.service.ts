@@ -26,3 +26,4 @@ export class HabilidadesService {
     return this.httpClient.delete<any>(this.url + 'delete/habilidad/${id}');
     }
 }
+ 

@@ -9,7 +9,7 @@
 
 
             <!--Formulario de Educacion-->
-            <form [formGroup]="form" (ngSubmit)="OnCreate()" name="educacionForm">
+            <form [formGroup]="form" (ngSubmit)="crearNuevaExperiencia()" name="educacionForm">
 
 
 
@@ -78,7 +78,7 @@
                             <button type="submit" [disabled]="tituloCurso?.hasError('required') 
                         || inicioCurso?.hasError('required') || finCurso?.hasError('required') 
                         || institucionCurso?.hasError('required') || urlCurso?.hasError('required')"
-                                class="btn btn-primary">Agregar Educacion</button>
+                                class="btn btn-primary" >Agregar Educacion</button>
                         </div>
                 </div>
                 </div>

@@ -9,8 +9,7 @@
 }
 
 .titulo {
-  display: flex;
-  justify-content: center;
+
   padding: 1rem;
   font-family: "Agency FB";
   color: rgb(255, 255, 255);
@@ -22,10 +21,10 @@
 }
 .container-fluid {
   display: flex;
-  justify-content: center;
+  
   color: white;
   padding: 1rem;
-}
+} 
 .atributos {
   font-family: "Agency FB";
   color: rgb(255, 255, 255);

@@ -1,10 +1,11 @@
 <!-- Modal -->
 
 
-<form [formGroup]="formLogin" (ngSubmit)="onEnviar($event)">
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
+<form  [formGroup]="formLogin" (ngSubmit)="onEnviar($event)">
+  <div class="modal fade fondo "  id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   
+    <div class="modal-dialog" >
+      <div class="modal-content ">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Login</h5>
 
@@ -13,8 +14,9 @@
           <div class="mb-3 row">
             <label for="floatinginput"></label>
             <div class="col-sm-10">
-              <input type="email" formControlName="usuario" class="form-control" id="floatingInput"
-                placeholder="email@dominio.com">
+              <input type="email" pattern="[^ @]*@[^ @]" class="form-control" placeholder="email@dominio.com"
+                name="email" id="nombre" formControlName="email" [(ngModel)]="persona.email" [ngClass]="{'is-invalid': Mail?.errors && Mail?.touched,
+                'is-valid': !Mail?.errors && Mail?.touched}">
 
               <!-- Gracias al getter que configuramos en el controlador -->
               <div *ngIf="Mail?.errors  && Mail?.touched">
@@ -31,10 +33,12 @@
           <div class="mb-3 row">
             <label for="floatingpaswword"></label>
             <div class="col-sm-10">
-              <input for="inputPassword" formControlName="contraseña" class="form-control" id="floatingpassword"
-                placeholder="password" type="password">
+              <input for="inputPassword" formControlName="clave" class="form-control" id="clave" placeholder="password"
+                type="password" [(ngModel)]="persona.clave" [ngClass]="{'is-invalid': Password?.errors && Password?.touched,
+                'is-valid': !Password?.errors && Password?.touched}">
 
-              <!-- Gracias al getter que configuramos en el controlador -->
+              <!-- Gracias al getter que configuramos 
+                en el controlador -->
               <div *ngIf="Password?.errors  && Password?.touched" class="alert alert-danger">
                 <p *ngIf="Password?.hasError('required')">
                   La contraseña es requerida.
@@ -48,7 +52,8 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-            <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+            <button type="submit" class="btn btn-primary ">Iniciar Sesion</button>
+
           </div>
         </div>
       </div>

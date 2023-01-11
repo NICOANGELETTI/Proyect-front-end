@@ -7,13 +7,13 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="formExp" (ngSubmit)="crearExp()" novalidate #form="ngForm">
+        <form [formGroup]="formExp" (ngSubmit)="crearNuevoCurso()" novalidate #form="ngForm">
           <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Experiencia</h1>
 
           <div>
             <div>
-              <label for="formFileSm" class="form-label atributos">Empresa</label>
-              <input type="text" class="form-control" id="empresaExp" name="empresaExp" formControlName="empresa"
+              <label for="empresa" class="form-label atributos">Empresa</label>
+              <input type="text" class="form-control" id="empresa" name="empresaExp" formControlName="empresa"
                 [(ngModel)]="empresa" [ngClass]="{'is-invalid': empresaExp?.errors && empresaExp?.touched,
                'is-valid': !empresaExp?.errors && empresaExp?.touched}">
               <div *ngIf="empresaExp?.errors && empresaExp?.touched">
@@ -24,8 +24,8 @@
 
             </div>
             <div>
-              <label for="formFileSm" class="form-label atributos">Url Logo de la Empresa</label>
-              <input type="text" class="form-control" id="imagenExp" name="urlExp" formControlName="url_imagen"
+              <label for="url_imagen" class="form-label atributos">Url Logo de la Empresa</label>
+              <input type="text" class="form-control" id="url_imagen" name="urlExp" formControlName="url_imagen"
                 [(ngModel)]="url_imagen" [ngClass]="{'is-invalid': urlExp?.errors && urlExp?.touched,
                'is-valid': !urlExp?.errors && urlExp?.touched}">
               <div *ngIf="urlExp?.errors && urlExp?.touched">
@@ -36,8 +36,8 @@
 
             </div>
             <div>
-              <label for="formFileSm" class="form-label atributos">Puesto</label>
-              <input type="text" class="form-control" id="puestoExp" name="puestoExp" formControlName="puesto"
+              <label for="puesto" class="form-label atributos">Puesto</label>
+              <input type="text" class="form-control" id="puesto" name="puestoExp" formControlName="puesto"
                 [(ngModel)]="puesto" [ngClass]="{'is-invalid': puestoExp?.errors && puestoExp?.touched,
             'is-valid': !puestoExp?.errors && puestoExp?.touched}">
               <div *ngIf="puestoExp?.errors && puestoExp?.touched">
@@ -48,8 +48,8 @@
 
             </div>
             <div>
-              <label for="formFileSm" class="form-label atributos">Inicio</label>
-              <input type="text" class="form-control" id="inicioExp" name="inicioExp" formControlName="inicio"
+              <label for="inicio" class="form-label atributos">Inicio</label>
+              <input type="text" class="form-control" id="inicio" name="inicioExp" formControlName="inicio"
               [(ngModel)]="inicio" [ngClass]="{'is-invalid': inicioExp?.errors && inicioExp?.touched,
               'is-valid': !inicioExp?.errors && inicioExp?.touched}">
               <div *ngIf="inicioExp?.errors && inicioExp?.touched">
@@ -60,8 +60,8 @@
 
             </div>
             <div>
-              <label for="formFileSm" class="form-label atributos">Fin</label>
-              <input type="text" class="form-control" id="finExp" name="finExp" formControlName="fin"
+              <label for="fin" class="form-label atributos">Fin</label>
+              <input type="text" class="form-control" id="fin" name="finExp" formControlName="fin"
               [(ngModel)]="fin" [ngClass]="{'is-invalid': finExp?.errors && finExp?.touched,
               'is-valid': !finExp?.errors && finExp?.touched}">
 

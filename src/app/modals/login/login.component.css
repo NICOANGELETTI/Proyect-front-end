@@ -2,3 +2,7 @@
     height: 3.5rem;
     width: 15rem;
 }
+
+.fondo{
+    background-image: url(../../../assets/IMG2/fondo_login3.jpg);
+}
