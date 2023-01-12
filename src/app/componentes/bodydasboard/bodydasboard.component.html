@@ -6,21 +6,283 @@
         <div>
           <div class="list-group">
            
+            <!--Bootstrap-->
+            <div class="d-flex align-items-start">
+              <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="nav-link active atributos" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Perfil</button>
+                <button class="nav-link atributos" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Experiencia</button>
+                <button class="nav-link atributos" id="v-pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#v-pills-mesagges" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" >Proyectos</button>
+                <button class="nav-link atributos" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Educacion</button>
+                <button class="nav-link atributos" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Habilidades</button>
+              </div>
+              <div class="tab-content " id="v-pills-tabContent">
+                
+                <!--PERFIL-->
+                <div class="tab-pane fade show active add" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                  
+                 <div class="agregar">
+                  <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><i class="fa-solid fa-plus"></i></button>
+                  <app-perfil-add></app-perfil-add>
+                 </div>
+                 <ol class="lista">
+            
+          
+                  <div class="botoncito">
+                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                       <app-perfil-add></app-perfil-add>
+                 </div> 
+                 <div class="botoncito">
+                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+                   <app-perfil-add></app-perfil-add>
+               </div> 
+                 
+             
+             </ol>
+
+                </div>
+
+
+
+                <!--EXPERIENCIA-->
+       <div class="tab-pane fade add" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab" tabindex="0">
+          <div class="agregar">
+                <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-plus"></i></button>
+                <app-experiencia-add></app-experiencia-add>
+          </div>
+        <ol class="lista">
+            
+          
+             <div class="botoncito">
+                  <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                  <app-experiencia-add></app-experiencia-add>
+            </div> 
+            <div class="botoncito">
+              <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+              <app-experiencia-add></app-experiencia-add>
+          </div> 
+            
+        
+        </ol>
+        <ol class="lista">
+            
+          
+          <div class="botoncito">
+               <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+               <app-experiencia-add></app-experiencia-add>
+         </div> 
+         <div class="botoncito">
+           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+           <app-experiencia-add></app-experiencia-add>
+       </div> 
+         
+     
+     </ol>
+     <ol class="lista">
+            
+          
+      <div class="botoncito">
+           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+           <app-experiencia-add></app-experiencia-add>
+     </div> 
+     <div class="botoncito">
+       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+       <app-experiencia-add></app-experiencia-add>
+   </div> 
+     
+ 
+ </ol>
+     
+               
+
+                </div>
+
+
+                <!--Proyectos-->
+                <div class="tab-pane fade add" id="v-pills-mesagges" role="tabpanel" aria-labelledby="v-pills-mesagges-tab" tabindex="0">
+
+
+                <div class="agregar">
+                  <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop5"><i class="fa-solid fa-plus"></i></button>
+                  <app-proyecto-add></app-proyecto-add>
+                </div>
+                <ol class="lista">
+            
+          
+                  <div class="botoncito">
+                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                       <app-proyecto-add></app-proyecto-add>
+                 </div> 
+                 <div class="botoncito">
+                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+                   <app-proyecto-add></app-proyecto-add>
+               </div> 
+                 
+             
+             </ol>
+             <ol class="lista">
+            
+          
+              <div class="botoncito">
+                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                   <app-proyecto-add></app-proyecto-add>
+             </div> 
+             <div class="botoncito">
+               <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+               <app-proyecto-add></app-proyecto-add>
+           </div> 
+             
+         
+         </ol>
+         <ol class="lista">
+            
+          
+          <div class="botoncito">
+               <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+               <app-proyecto-add></app-proyecto-add>
+         </div> 
+         <div class="botoncito">
+           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+           <app-proyecto-add></app-proyecto-add>
+       </div> 
+         
+     
+     </ol>
+                </div>
+
+
+
+                <!--Educacion-->
+                <div class="tab-pane fade add" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab" tabindex="0">
+
+
+                <div class="agregar">
+                  <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop6"><i class="fa-solid fa-plus"></i></button>
+                  <app-educacion-add></app-educacion-add>
+                </div>
+                <ol class="lista">
+            
+          
+                  <div class="botoncito">
+                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                       <app-educacion-add></app-educacion-add>
+                 </div> 
+                 <div class="botoncito">
+                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+                   <app-educacion-add></app-educacion-add>
+               </div> 
+                 
+             
+             </ol>
+             <ol class="lista">
+            
+          
+              <div class="botoncito">
+                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                   <app-educacion-add></app-educacion-add>
+             </div> 
+             <div class="botoncito">
+               <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+               <app-educacion-add></app-educacion-add>
+           </div> 
+             
+         
+         </ol>
+         <ol class="lista">
+            
+          
+          <div class="botoncito">
+               <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+               <app-educacion-add></app-educacion-add>
+         </div> 
+         <div class="botoncito">
+           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+           <app-educacion-add></app-educacion-add>
+       </div> 
+         
+     
+     </ol>
+
+
+
+                </div>
+                
+                
+                
+                
+                
+                <!--Habilidades-->
+                <div class="tab-pane fade add" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab" tabindex="0">
+              <div class="agregar">
+                <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop4"><i class="fa-solid fa-plus"></i></button>
+                 <app-habilidades-add></app-habilidades-add>
+        
+                </div>
+        
+        
+                <ol class="lista">
+            
+          
+                  <div class="botoncito">
+                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                       <app-habilidades-add></app-habilidades-add>
+                 </div> 
+                 <div class="botoncito">
+                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+                   <app-habilidades-add></app-habilidades-add>
+               </div> 
+                 
+             
+             </ol>
+             <ol class="lista">
+            
+          
+              <div class="botoncito">
+                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                   <app-habilidades-add></app-habilidades-add>
+             </div> 
+             <div class="botoncito">
+               <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+               <app-habilidades-add></app-habilidades-add>
+           </div> 
+             
+         
+         </ol>
+         <ol class="lista">
+            
+          
+          <div class="botoncito">
+               <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+               <app-habilidades-add></app-habilidades-add>
+         </div> 
+         <div class="botoncito">
+           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+           <app-habilidades-add></app-habilidades-add>
+       </div> 
+         
+     
+     </ol>
+            
+        
+          </div>
+            </div>
+
+
   
-       
+       <!--
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Perfil</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Experiencia</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">Educacion</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">Habilidades</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">Proyectos</button>
-           <!-- Button trigger modal -->
+            Button trigger modal --> 
+           <!--
         <app-educacion-add></app-educacion-add>
         <app-experiencia-add></app-experiencia-add>
         <app-proyecto-add></app-proyecto-add>
         <app-habilidades-add></app-habilidades-add>
         <app-perfil-add></app-perfil-add>
 
-          </div>
+          </div>-->
         </div>
 
 

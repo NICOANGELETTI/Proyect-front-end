@@ -7,7 +7,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-          <form [formGroup]="formProyect" (ngSubmit)="crearProyect()" novalidate #form="ngForm">
+          <form [formGroup]="formProyect" (ngSubmit)="crearNuevoProyecto()" novalidate #form="ngForm">
                 <div>
                     <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Proyectos</h1>
                     <div>
@@ -59,7 +59,7 @@
                         urlProyecto?.hasError('required') ">Guardar Cambios</button>
                       </div>
 
-                      
+                <!--
                       <div>
                         <div>
                             <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Proyecto</h1>
@@ -84,7 +84,7 @@
             </div>
             </div>
            
-            
+            -->
         </form>
                       
                                     

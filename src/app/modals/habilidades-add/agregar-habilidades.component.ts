@@ -10,15 +10,15 @@ import { HabilidadesService } from 'src/app/services/habilidades.service';
 })
 export class AgregarHabilidadesComponent implements OnInit {
   formSkills: FormGroup;
-  nombre: '';
-  porcentaje: '' ;
+  habilidad: '';
+  porcentaje: number ;
 
   constructor(
     private sHabilidades: HabilidadesService,
     private formBuilder: FormBuilder
   ) {
     this.formSkills = this.formBuilder.group({
-      nombre: ['', [Validators.required]],
+      habilidad: ['', [Validators.required]],
       porcentaje: ['', [Validators.required]],
     });
   }
@@ -29,18 +29,22 @@ export class AgregarHabilidadesComponent implements OnInit {
   }
 
   get nombreSkill() {
-    return this.formSkills.get("nombre");
+    return this.formSkills.get("habilidad");
   }
 
-  crearHabilidades(): void {
-    this.sHabilidades.create(this.formSkills.value).subscribe(
-      (data) => {
-        alert('Nueva habilidad dura agregada');
-        window.location.reload();
-      },
-      (err) => {
-        alert('Se ha producido un error, intente nuevamente');
-      }
-    );
+  //Copie desde el repo de Josman
+  crearNuevaHabilidad():void {
+    /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
+    
+    this.sHabilidades.create(this.formSkills.value).subscribe(data => {
+      alert("Nueva Habilidad agregada");
+      window.location.reload();
+    }, error => {
+      alert("Se ha producido un error, intente nuevamente");
+    });
   }
+  limpiar():void {
+    this.formSkills.reset();
+  } 
+
 }

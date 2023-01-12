@@ -3,7 +3,7 @@ export class Habilidades {
     
     habilidad: string;
 
-    porcentaje:number; 
+    porcentaje: number; 
 
     
     

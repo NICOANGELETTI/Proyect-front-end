@@ -44,12 +44,21 @@ export class AgregarProyectoComponent implements OnInit {
   get urlProyecto() {
     return this.formProyect.get("urlProyect");
   }
-  crearProyect(): void {
+  //Copie desde el repo de Josman
+  crearNuevoProyecto():void {
+    /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
+    
     this.sProyecto.create(this.formProyect.value).subscribe(data => {
-      alert("Nuevo proyecto agregado");
+      alert("Nuevo Proyecto agregado");
       window.location.reload();
-    }, err => {
+    }, error => {
       alert("Se ha producido un error, intente nuevamente");
     });
   }
+  limpiar():void {
+    this.formProyect.reset();
+  } 
+
+
 }
+ 

@@ -26,13 +26,32 @@
   padding: 1rem;
 } 
 .atributos {
+ 
   font-family: "Agency FB";
   color: rgb(255, 255, 255);
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .boton {
   font-family: "Agency FB";
   color: white !important;
   font-size: 1.5rem;
+}
+.add{
+  margin: 6rem;
+  margin-left: 55rem;
+  margin-top: 2rem;
+}
+.lista{
+  display: flex;
+
+
+}
+.botoncito{
+  padding: 0.5rem;
+}
+.agregar{
+  display: flex;
+  justify-content: center;
+  margin-left: 2rem;
 }
