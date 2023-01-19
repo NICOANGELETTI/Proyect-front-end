@@ -74,8 +74,11 @@ import { InterceptorService } from './services/interceptor.service';
     ReactiveFormsModule,
     FormsModule,
   ],
-  providers: [PortfolioService, 
-              PersonaService,{provide: HTTP_INTERCEPTORS,useClass: InterceptorService, multi:true}],
+  providers: [
+    PortfolioService,
+    PersonaService,
+    { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,15 +1,16 @@
-
- 
-
-   <!--REDES SOCIALES
+<!--REDES SOCIALES
   <ul class="list-group list-group-horizontal">
   <li class="list-group-item"> <i class="fa-brands fa-instagram fa-2xl" ></i>   <a href="https://www.instagram.com/nicoangeletti25/"></a>
 
 <li class="list-group-item"><i class="fa-brands fa-linkedin-in fa-2xl" ></i>
   <li class="list-group-item"><i class="fa-brands fa-github fa-2xl"></i>-->
- <!-- Button trigger modal -->
- <li class="list-group-item">
-  <i class="fa-solid fa-user-lock fa-2xl" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-   
-   </li>
-   
+<!-- Button trigger modal -->
+
+<li class="list-group-item">
+
+  <i class="fa-solid fa-user-lock fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+    ></i>
+  <button type=button class="fa-solid fa-right-from-bracket fa-2xl" type="button" data-bs-toggle="modal"
+    data-bs-target="#exampleModal" (click)="onLogOut()" *ngIf="isLogged"></button>
+
+</li>

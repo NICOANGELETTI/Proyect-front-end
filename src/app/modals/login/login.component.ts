@@ -3,7 +3,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { Router } from '@angular/router';
 import { Persona } from 'src/app/model/persona';
+import { Login } from 'src/app/model/login';
 import { AuthserviceService } from '../../AuthService/authservice.service';
+import { LoginUsuario } from '../../model/login-usuario';
+import { TokenService } from '../../services/token.service';
+import { AuthService } from '../../services/auth.service';
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,20 +17,53 @@ import { AuthserviceService } from '../../AuthService/authservice.service';
 })
 export class LoginComponent implements OnInit {
   formLogin: FormGroup;
-  persona: Persona = new Persona('', '', '', '', '', '', '');
+  isLogged = false;
+  isLogginFail = false;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
+  password: string;
+  roles: string[] = [];
+  errMsj!: string;
 
   constructor(
-    private ruta: Router,
-    private formBuilder: FormBuilder,
-    private autService: AutenticacionService
+    private tokenService: TokenService,
+    private authService: AuthService,
+    private router: Router,
+
+    private formBuilder: FormBuilder
   ) {
     this.formLogin = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      clave: ['', [Validators.required, Validators.minLength(8)]],
+      nombreUsuario1: ['', [Validators.required, Validators.email]],
+      password1: ['', [Validators.required, Validators.minLength(8)]],
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+      this.isLogginFail = false;
+      this.roles = this.tokenService.getAuthorities();
+    }
+  }
+  onLogin(): void{
+    this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
+    this.authService.login(this.loginUsuario).subscribe(data =>{
+        this.isLogged = true;
+        this.isLogginFail = false;
+        this.tokenService.setToken(data.token);
+        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setAuthorities(data.authorities);
+        this.roles = data.authorities;
+        this.router.navigate(['/dashboard'])
+      }, err =>{
+        this.isLogged = false;
+        this.isLogginFail = true;
+        this.errMsj = err.error.mensaje;
+        console.log(this.errMsj);
+        
+      })
+  }
+  
 
   get Password() {
     return this.formLogin.get('contraseña');
@@ -41,17 +80,6 @@ export class LoginComponent implements OnInit {
   get MailValid() {
     return false;
   }
-
-  onEnviar(event: Event) {
-    event.preventDefault;
-    this.autService.loginPersona(this.formLogin.value).subscribe((data) => {
-      console.log('DATA: ' + JSON.stringify(data));
-    });
-    
-    this.ruta.navigate(['/dashboard']);
-    
-  }
-  
 }
 /* 
 // Detenemos la propagación o ejecución del compotamiento submit de un form

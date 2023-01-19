@@ -6,15 +6,18 @@ import { IndexComponent } from './componentes/index/index.component';
 import { EducacionAddComponent } from './modals/educacion-add/educacion-add.component';
 import { GuardGuard } from './services/guard.guard';
 import { LoginComponent } from './modals/login/login.component';
+import { EducacionComponent } from './componentes/educacion/educacion.component';
+import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 
 const routes: Routes = [
-  { path: '', component: IndexComponent , canActivate: [GuardGuard] }, //Si no pongo nada me manda a "/" que es index.html
-  { path: 'index', component: IndexComponent },
-  { path: 'dashboard', component: DashboardComponent }, // Si pongo dashboard me manda a Dashboard.component
-  {  path: '**',  component: Error404Component, },
-  {path: 'educacion/nuevo/estudio', component: EducacionAddComponent},
-  {path: 'login', component: LoginComponent},
+  { path: '', component: IndexComponent }, //Si no pongo nada me manda a "/" que es index.html
 
+  {
+    path: 'dashboard',
+    component: DashboardComponent,
+    canActivate: [GuardGuard],
+  }, // Si pongo dashboard me manda a Dashboard.component
+  { path: '**', component: Error404Component },
 ];
 
 @NgModule({

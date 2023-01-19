@@ -9,11 +9,15 @@ import { EducacionService } from '../../services/educacion.service';
   styleUrls: ['./educacion.component.css'],
 })
 export class EducacionComponent implements OnInit {
+
   estudios: Educacion[] = [];
+
+  
   constructor(private sEducacion: EducacionService) {}
 
   ngOnInit(): void {
     this.cargarEducacion();
+
   }
 
 
@@ -23,13 +27,14 @@ export class EducacionComponent implements OnInit {
       //Guardamos habilidad
   cargarEducacion(): void {
     this.sEducacion.list().subscribe((data) => {
-      this.estudios = data;
+      console.log(this.estudios)
+      
     });
   }
-
+}
 
       //Borramos educacion
-
+/*
         delete(id:number){
           if(id != undefined){
             this.sEducacion.delete(id).subscribe(data =>{
@@ -41,6 +46,6 @@ export class EducacionComponent implements OnInit {
             )
           }
         }
-}
+}*/
 
 
