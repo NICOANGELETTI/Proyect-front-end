@@ -25,12 +25,11 @@ export class EducacionComponent implements OnInit {
   //Cargamos metodos
 
       //Guardamos habilidad
-  cargarEducacion(): void {
-    this.sEducacion.list().subscribe((data) => {
-      console.log(this.estudios)
-      
-    });
-  }
+      cargarEducacion(): void {
+        this.sEducacion.list().subscribe((data) => {
+          this.estudios = data;
+        });
+      }
 }
 
       //Borramos educacion

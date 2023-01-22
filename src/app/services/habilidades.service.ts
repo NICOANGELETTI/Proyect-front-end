@@ -14,7 +14,7 @@ export class HabilidadesService {
     
    
   public list():Observable<Habilidades[]> {
-    return this.httpClient.get<Habilidades[]>(this.url + 'ver/habilidades')
+    return this.httpClient.get<Habilidades[]>(this.url + 'lista')
     }  
     public create(Habilidades: Habilidades):Observable<any>{
     return this.httpClient.post<any>(this.url + 'nueva/habilidad' , Habilidades);

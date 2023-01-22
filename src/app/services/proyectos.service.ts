@@ -11,7 +11,7 @@ export class ProyectosService {
   constructor(private httpClient: HttpClient) {}
 
   public list(): Observable<Proyectos[]> {
-    return this.httpClient.get<Proyectos[]>(this.url + 'ver/proyectos');
+    return this.httpClient.get<Proyectos[]>(this.url + 'lista');
   }
   public create(Proyectos: Proyectos): Observable<any> {
     return this.httpClient.post<any>(this.url + 'nuevo/proyecto', Proyectos);

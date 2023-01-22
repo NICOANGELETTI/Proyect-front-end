@@ -110,7 +110,7 @@ export class EducacionAddComponent implements OnInit {
     }       
   }*/
   //FUNCIONA!
-  crearNuevaExperiencia():void {
+  cargarEducacion():void {
     /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
     
     this.sEducacion.agregarEstudio(this.form.value).subscribe(data => {

@@ -1,36 +1,35 @@
-
-   <!--SECCION DE EDUCACION-->
+<!--SECCION DE EDUCACION-->
 
 <h1 class="verticaltitle2">EDUCACION</h1>
 
 <div class="borde">
-    
+
     <div id="contenedor">
-   <section id="Educacion">
-    
-    <div class="contenedor" *ngFor="let estudio of estudios">
+        <section id="Educacion" *ngFor="let estudio of estudios">
 
-        <div class="icono">
-            <img class="iconos-empresa" [src]="estudio.url_imagen">
+            <div class="contenedor" >
 
-        </div>
-        <div class="info"  > 
-            <p>{{estudio.titulo}} </p>
-            <p>{{ estudio.inicio }} - {{ estudio.fin }} </p>
-            <p>{{ estudio.institucion }}</p>
-        </div>
+                <div class="icono">
+                    <img class="iconos-empresa" [src]="estudio.url_imagen">
 
-       
-    </div>
-    
-    <!-- #71 Arg Programo
+                </div>
+                <div class="info">
+                    <p>{{estudio.titulo}} </p>
+                    <p>{{ estudio.inicio }} - {{ estudio.fin }} </p>
+                    <p>{{ estudio.institucion }}</p>
+                </div>
+
+
+            </div>
+
+            <!-- #71 Arg Programo
     <div class="d-grid gap-2 d-md-flex justify-content-md-end">
         
         <button class="btn btn-primary" type="button">Eliminar<i class= "fa-solid" (click)="delete(estudio.id)"></i></button>
       </div>
     -->
-</section>
-</div>
+        </section>
+    </div>
 </div>
 
 <!--SECCION DE INFO ADICIONAL ACADEMICA

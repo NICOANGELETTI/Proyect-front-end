@@ -11,7 +11,7 @@ import { HabilidadesService } from 'src/app/services/habilidades.service';
 export class AgregarHabilidadesComponent implements OnInit {
   formSkills: FormGroup;
   habilidad: '';
-  porcentaje: number ;
+  porcentaje: number;
 
   constructor(
     private sHabilidades: HabilidadesService,
@@ -25,26 +25,28 @@ export class AgregarHabilidadesComponent implements OnInit {
 
   ngOnInit(): void {}
   get porcentajeSkill() {
-    return this.formSkills.get("porcentaje");
+    return this.formSkills.get('porcentaje');
   }
 
   get nombreSkill() {
-    return this.formSkills.get("habilidad");
+    return this.formSkills.get('habilidad');
   }
 
   //Copie desde el repo de Josman
-  crearNuevaHabilidad():void {
+  crearNuevaHabilidad(): void {
     /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
-    
-    this.sHabilidades.create(this.formSkills.value).subscribe(data => {
-      alert("Nueva Habilidad agregada");
-      window.location.reload();
-    }, error => {
-      alert("Se ha producido un error, intente nuevamente");
-    });
-  }
-  limpiar():void {
-    this.formSkills.reset();
-  } 
 
+    this.sHabilidades.create(this.formSkills.value).subscribe(
+      (data) => {
+        alert('Nueva Habilidad agregada');
+        window.location.reload();
+      },
+      (error) => {
+        alert('Se ha producido un error, intente nuevamente');
+      }
+    );
+  }
+  limpiar(): void {
+    this.formSkills.reset();
+  }
 }

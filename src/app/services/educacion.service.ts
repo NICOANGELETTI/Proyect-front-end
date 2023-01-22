@@ -22,7 +22,7 @@ export class EducacionService {
   }*/
 
   public list(): Observable<Educacion[]> {
-    return this.httpClient.get<Educacion[]>(this.url + 'ver/estudios');
+    return this.httpClient.get<Educacion[]>(this.url + 'lista');
   }
   public agregarEstudio(educacion: Educacion): Observable<any> {
     return this.httpClient.post<any>(this.url + 'nuevo/estudio', educacion);
