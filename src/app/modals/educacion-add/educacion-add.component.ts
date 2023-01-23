@@ -10,10 +10,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./educacion-add.component.css'],
 })
 export class EducacionAddComponent implements OnInit {
-  
+  estudios: Educacion[] = [];
   url: string = 'http://localhost:8080/educacion';
   form: FormGroup;
   //Instanciar
+  id: '';
   titulo: '';
   inicio: '';
   fin: '';
@@ -27,6 +28,7 @@ export class EducacionAddComponent implements OnInit {
     private router : Router
   ) {
     this.form = this.formBuilder.group({
+      id: [''],
       titulo: ['', [Validators.required]],
       inicio: ['', [Validators.required]],
       fin: ['', [Validators.required]],
@@ -93,7 +95,7 @@ export class EducacionAddComponent implements OnInit {
         this.form.reset();
       })
   }*/
-  
+
 
   //Copie desde el repo de Josman
  /*OnCreate() :void {
@@ -120,6 +122,9 @@ export class EducacionAddComponent implements OnInit {
       alert("Se ha producido un error, intente nuevamente");
     });
   }
+
+
+
   limpiar():void {
     this.form.reset();
   } 

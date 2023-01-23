@@ -4,15 +4,18 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title fs-5 tituloModal" id="staticBackdropLabel">Educacion</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="limpiar()"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"
+                    (click)="limpiar()"></button>
             </div>
 
 
             <!--Formulario de Educacion-->
             <form [formGroup]="form" (ngSubmit)="cargarEducacion()" name="educacionForm">
-
-
-
+                <div *ngFor="let estudio of estudios">
+                    <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0">
+                        <i class="fa-solid fa-trash"></i>
+                    </button>
+                </div>
                 <div class="modal-body">
 
                     <div> <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
@@ -23,11 +26,11 @@
                             <input class="form-control form-control-lg" formControlName="titulo" id="titulo" type="text"
                                 name="tituloCurso" required formControlName="titulo" [(ngModel)]="titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
                                 'is-valid': !tituloCurso?.errors && tituloCurso?.touched}">
-                               
-                            
-                                <div *ngIf="tituloCurso?.errors && tituloCurso?.touched"  class="alert alert-danger">
-                                    
-                                    Este Campo es requerido</div>
+
+
+                            <div *ngIf="tituloCurso?.errors && tituloCurso?.touched" class="alert alert-danger">
+
+                                Este Campo es requerido</div>
 
                         </div>
                         <div>
@@ -74,20 +77,20 @@
 
                         </div>
                         <div class="modal-footer">
-                            <button type="submit" class="btn btn-primary" (click)="limpiar()">Limpiar</button>
+
                             <button type="submit" [disabled]="tituloCurso?.hasError('required') 
                         || inicioCurso?.hasError('required') || finCurso?.hasError('required') 
                         || institucionCurso?.hasError('required') || urlCurso?.hasError('required')"
-                                class="btn btn-primary" >Agregar Educacion</button>
+                                class="btn btn-primary">Agregar Educacion</button>
                         </div>
+                    </div>
                 </div>
-                </div>
-                </form>
-                   
-            
-                
-            
-                   <!--
+            </form>
+
+
+
+
+            <!--
                     <div>
                         <div>
                             <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Educacion</h1>
@@ -110,4 +113,3 @@
                                 <button type="submit" class="btn btn-primary ">Eliminar Educacion</button>
                             </div>
                             -->
-         
