@@ -30,7 +30,7 @@ export class EducacionService {
   public search(id: number): Observable<Educacion> {
     return this.httpClient.get<Educacion>(this.url + 'buscar/estudio/{id}');
   }
-  public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.url + 'delete/estudio/${id}');
+  public borrar(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.url + `delete/estudio/${id}`);
   }
 }

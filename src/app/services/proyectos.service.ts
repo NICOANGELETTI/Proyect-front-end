@@ -19,7 +19,7 @@ export class ProyectosService {
   /* public search(id: number):Observable<Proyectos>{
     return this.httpClient.get<Proyectos>(this.url + '/buscar/proyecto/{id}');
     }*/
-  public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.url + 'delete/proyectos/${id}');
+  public borrar(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.url + `delete/proyecto/${id}`);
   }
 }

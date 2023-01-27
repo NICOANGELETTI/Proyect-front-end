@@ -19,7 +19,12 @@ export class PerfilComponent implements OnInit {
   ngOnInit(): void {
     //Esto es almacenar en la variable de instancia los datos recuperados por el Servicio
     
-      //this.cargarPerfil();
+      this.cargarPerfil();
+    }
+    cargarPerfil(): void {
+      this.sPersona.list().subscribe((data) => {
+        this.perfil = data;
+      });
     }
     };
   

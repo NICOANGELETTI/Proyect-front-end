@@ -1,6 +1,6 @@
 export class Experiencia {
    
-   // id!:number; 
+    id:number; 
     
     puesto: string;
 
@@ -15,13 +15,15 @@ export class Experiencia {
 
   
 
-    constructor(puesto:string , inicio:string 
+    constructor(id: number,puesto:string , inicio:string 
         ,fin:string,empresa:string,url_imagen:string){
+            
             this.puesto = puesto;
             this.inicio = inicio;
             this.fin = fin;
             this.empresa = empresa;
             this.url_imagen =url_imagen;
+            this.id = id;
         }
 }
 

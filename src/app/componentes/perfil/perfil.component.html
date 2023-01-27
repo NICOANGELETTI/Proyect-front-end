@@ -1,57 +1,55 @@
 <!--SECCION DE PERFIL-->
 <div *ngFor="let atributo of perfil">
-        <img class="foto-perfil" src={{atributo.url_imagenPerfil}}>
-        <p class="info">{{atributo.nombre}} {{atributo.apellido}}</p>
-        <p class="info"> {{atributo.tituloDeveloper
-          }} </p>
+  <img class="foto-perfil" src={{atributo.urlimagenPerfil}}>
+  <p class="info">{{atributo.nombre}} {{atributo.apellido}}</p>
+  <p class="info"> {{ atributo.tituloDeveloper }} </p>
 
 
-      <div class="contenedorRedes">
-        <a href="https://www.linkedin.com/in/nicolas-angeletti-3b72b1220/" class="icon icon-linkedin2" target="_blank"></a>
-        <a href="https://www.facebook.com/nico.enzoangeletti" class="icon icon-facebook" target="_blank"></a>
-        <a href="https://www.instagram.com/nicoangeletti25/" class="icon icon-instagram" target="_blank"></a>
-        <a href="https://github.com/NICOANGELETTI" class="icon icon-github" target="_blank"></a>
-    
-      </div>
-        <div class="contenedorlinea">
-        <hr  class="linea" size="20px" width="70%" />
-    </div>
-        <h1 class="sobremi">SOBRE MI</h1>
-        <p class="aboutme">
-          {{atributo.acercade}}
+  <div class="contenedorRedes">
+    <a href="https://www.linkedin.com/in/nicolas-angeletti-3b72b1220/" class="icon icon-linkedin2" target="_blank"></a>
+    <a href="https://www.facebook.com/nico.enzoangeletti" class="icon icon-facebook" target="_blank"></a>
+    <a href="https://www.instagram.com/nicoangeletti25/" class="icon icon-instagram" target="_blank"></a>
+    <a href="https://github.com/NICOANGELETTI" class="icon icon-github" target="_blank"></a>
+
+  </div>
+  <div class="contenedorlinea">
+    <hr class="linea" size="20px" width="70%" />
+  </div>
+  <h1 class="sobremi">SOBRE MI</h1>
+  <p class="aboutme">
+    {{atributo.acercade}}
 
 
-       <!--  <h3 class="frase1"> <i>{{frase}}</i></h3> -->
+    <!--  <h3 class="frase1"> <i>{{frase}}</i></h3> -->
 
 
-        <!-- <div><b class="sobremi">{{frase2}}</b></div> -->
+    <!-- <div><b class="sobremi">{{frase2}}</b></div> -->
 
-      </div>
-   
+</div>
+
 
 
 <!--SECCION iNTERMEDIA DE CONTACTO-->
 <section class="sectorintermedio">
   <div class="contenedordeboton">
-    <a href="#contacto" class="btn btn-primary btn-lg active botondecontacto" role="button" aria-pressed="true">CONTACTO</a>
+    <a href="#contacto" class="btn btn-primary btn-lg active botondecontacto" role="button"
+      aria-pressed="true">CONTACTO</a>
   </div>
   <div class="clase2">
-<div>
-    <img class=fotoenelperfil src="../../assets/IMG2/perfil1.jpg">
-  
-  </div>
     <div>
-   
+      <img class=fotoenelperfil src="../../assets/IMG2/perfil1.jpg">
+
+    </div>
+    <div>
+
       <img class="fotoenelperfil secondphoto" src="../../assets/IMG2/linus-mimietz-gvptKmonylk-unsplash.jpg">
-    
+
     </div>
 
-  <div>
-    
-    <img class="fotoenelperfil " src="../../assets/IMG2/perfil2.jpg">
-    
-</div>
+    <div>
+
+      <img class="fotoenelperfil " src="../../assets/IMG2/perfil2.jpg">
+
+    </div>
   </div>
 </section>
-
-

@@ -1,24 +1,29 @@
 export class Educacion {
+  id: number;
 
-    //id?:number; 
+  titulo: string;
 
-    titulo:string; 
-    
-    url_imagen: string;
+  url_imagen: string;
 
-    inicio:string;
-    
-    fin:string;
+  inicio: string;
 
-    institucion:string; 
+  fin: string;
 
-    constructor(url_imagen:string , titulo:string 
-        ,inicio:string,fin:string,institucion:string){
-            this.url_imagen = url_imagen;
-            this.titulo = titulo;
-            this.inicio = inicio;
-            this.fin = fin;
-            this.institucion = institucion;
-            
-        }
+  institucion: string;
+
+  constructor(
+    id: number,
+    url_imagen: string,
+    titulo: string,
+    inicio: string,
+    fin: string,
+    institucion: string
+  ) {
+    this.id = id;
+    this.url_imagen = url_imagen;
+    this.titulo = titulo;
+    this.inicio = inicio;
+    this.fin = fin;
+    this.institucion = institucion;
+  }
 }

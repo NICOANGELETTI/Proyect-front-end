@@ -37,24 +37,45 @@
                         data-bs-target="#staticBackdrop"><i class="fa-solid fa-plus"></i></button>
                       <app-perfil-add></app-perfil-add>
                     </div>
-                    <ol class="lista">
+                    <div *ngFor="let atributo of perfil">
+                      <img class="foto-perfil" src={{atributo.urlimagenPerfil}}>
+                      <p class="info">{{atributo.nombre}} {{atributo.apellido}}</p>
+                      <p class="info"> {{atributo.tituloDeveloper
+                        }} </p>
 
 
-                      <div class="botoncito">
-                        <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                          data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <app-perfil-add></app-perfil-add>
+
+                      <div class="contenedorlinea">
+                        <hr class="linea" size="20px" width="70%" />
                       </div>
-                      <div class="botoncito">
-                        <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                          data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
-                        <app-perfil-add></app-perfil-add>
-                      </div>
+                      <h1 class="sobremi">SOBRE MI</h1>
+                      <p class="aboutme">
+                        {{atributo.acercade}}
+                    </div>
+
+                    <!--  <h3 class="frase1"> <i>{{frase}}</i></h3> -->
 
 
-                    </ol>
+                    <!-- <div><b class="sobremi">{{frase2}}</b></div> -->
 
                   </div>
+                  <ol class="lista">
+
+
+                    <div class="botoncito">
+                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+
+                    </div>
+                    <div class="botoncito">
+                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
+
+                    </div>
+
+
+                  </ol>
+
 
 
 
@@ -64,38 +85,40 @@
                     <div class="agregar">
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop2"><i class="fa-solid fa-plus"></i></button>
-                      <app-experiencia-add></app-experiencia-add>
+                      
                     </div>
                     <div class="contenedor" *ngFor="let experiencia of experiencias">
                       <div class="icono">
-                          <img class="iconos-empresa" src="{{experiencia.url_imagen}}">
-      
+                        <img class="iconos-empresa" src="{{experiencia.url_imagen}}">
+
                       </div>
                       <div class="info">
-                          <p>{{experiencia.puesto}}</p>
-                          <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
-                          <p>{{experiencia.empresa}}</p>
+                        <p>{{experiencia.puesto}}</p>
+                        <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
+                        <p>{{experiencia.empresa}}</p>
                       </div>
+                      
                       <ol class="lista">
 
 
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-                          <app-experiencia-add></app-experiencia-add>
+
                         </div>
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
-                          <app-experiencia-add></app-experiencia-add>
+                            data-bs-target="#staticBackdrop2" (click)="borrarExp(experiencia.id)"><i
+                              class="fa-solid fa-trash"></i></button>
+
                         </div>
-  
-  
+
+
                       </ol>
-                  </div> 
-                    
-                
-                
+                    </div>
+
+
+
 
 
 
@@ -122,134 +145,142 @@
                         <h1 class="tituloproyect">{{trabajo.titulo}}</h1>
                         <hr class="linea" size="8px" width="50%" />
                         <p class="textoproyect">{{trabajo.descripcion}}</p>
-                  
+
                         <p class="textoproyect">{{trabajo.urlProyect}}</p>
-                       
+
                       </div>
-                    <ol class="lista">
+                      <ol class="lista">
 
 
-                      <div class="botoncito">
-                        <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                          data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-                        <app-proyecto-add></app-proyecto-add>
-                      </div>
-                      <div class="botoncito">
-                        <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                          data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
-                        <app-proyecto-add></app-proyecto-add>
-                      </div>
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                          <app-proyecto-add></app-proyecto-add>
+                        </div>
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" (click)="borrarTrab(trabajo.id)"
+                            data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i
+                              class="fa-solid fa-trash"></i></button>
+                          <app-proyecto-add></app-proyecto-add>
+                        </div>
 
 
-                    </ol>
-                  
-                  </div>
+                      </ol>
+
+                    </div>
                   </div>
 
 
 
                   <!--Educacion-->
-                
-                   
-                      <div class="tab-pane fade add elcointener" id="v-pills-messages" role="tabpanel"
-                        aria-labelledby="v-pills-messages-tab" tabindex="0">
 
 
-                        <!--Boton de agregar-->
-                        <div class="agregar">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop6"><i class="fa-solid fa-plus"></i></button>
-                          <app-educacion-add></app-educacion-add>
+                  <div class="tab-pane fade add elcointener" id="v-pills-messages" role="tabpanel"
+                    aria-labelledby="v-pills-messages-tab" tabindex="0">
+
+
+                    <!--Boton de agregar-->
+                    <div class="agregar">
+                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop6"><i class="fa-solid fa-plus"></i></button>
+                      <app-educacion-add></app-educacion-add>
+                    </div>
+
+                    <div class="contenedor" *ngFor="let estudio of estudios">
+
+                      <div class="icono">
+                        <img class="iconos-empresa atributo" [src]="estudio.url_imagen">
+
+
+
+                        <div class="info">
+
+                          <p class="atributo">{{estudio.titulo}} </p>
+
+                          <p class="atributo">{{ estudio.inicio }} - {{ estudio.fin }} </p>
+
+                          <p class="atributo">{{ estudio.institucion }}</p>
+
                         </div>
 
-                        <div class="contenedor" *ngFor="let estudio of estudios">
-
-                          <div class="icono">
-                            <img class="iconos-empresa atributo" [src]="estudio.url_imagen">
 
 
-
-                            <div class="info">
-
-                              <p class="atributo">{{estudio.titulo}} </p>
-
-                              <p class="atributo">{{ estudio.inicio }} - {{ estudio.fin }} </p>
-
-                              <p class="atributo">{{ estudio.institucion }}</p>
-
-                            </div>
-                            <ol class="lista">
-                            <!--Boton de borrar-->
-                            <div class="botoncito">
-                              <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
-
-                            </div>
-                          
-                          <!--Boton de editar-->
-                          <div class="botoncito">
-                            <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                              data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-
-                          </div>
-                          
-                        </ol>
                       </div>
-        </div>
-        
-        </div>
-        
-                      <!--Habilidades-->
-                      <div class="tab-pane fade add section row" id="v-pills-settings" role="tabpanel"
-                        aria-labelledby="v-pills-settings-tab" tabindex="0">
-                        <div class="agregar">
-                          <!--Boton de agregar-->
+
+                      <!--Boton de editar-->
+                      <ol class="lista">
+
+
+                        <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop4"><i class="fa-solid fa-plus"></i></button>
+                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+
+                        </div>
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2" (click)="borrarEdu(estudio.id)"><i
+                              class="fa-solid fa-trash"></i></button>
+
+                        </div>
+
+
+                      </ol>
+
+                    </div>
+                  </div>
+
+
+                  <!--Habilidades-->
+                  <div class="tab-pane fade add section row" id="v-pills-settings" role="tabpanel"
+                    aria-labelledby="v-pills-settings-tab" tabindex="0">
+                    <div class="agregar">
+                      <!--Boton de agregar-->
+                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop4"><i class="fa-solid fa-plus"></i></button>
+                      <app-habilidades-add></app-habilidades-add>
+
+                    </div>
+
+                    <div class="primeras-barras habilidad" *ngFor="let Skill of habilidad">
+                      <div class="prueba">
+                        <h2 class="titulodebarra">{{Skill.habilidad}}</h2>
+                        <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+                          style="--value:{{Skill.porcentaje}}"></div>
+                      </div>
+                      <ol class="lista">
+
+
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
                           <app-habilidades-add></app-habilidades-add>
-
                         </div>
-
-                        <div class="primeras-barras habilidad" *ngFor="let Skill of habilidad">
-                          <div class="prueba">
-                            <h2 class="titulodebarra">{{Skill.habilidad}}</h2>
-                            <div role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
-                              style="--value:{{Skill.porcentaje}}"></div>
-                          </div>
-                          <ol class="lista">
-
-
-                            <div class="botoncito">
-                              <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-                              <app-habilidades-add></app-habilidades-add>
-                            </div>
-                            <div class="botoncito">
-                              <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                                data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
-                              <app-habilidades-add></app-habilidades-add>
-                            </div>
-
-
-                          </ol>
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2" (click)="borrarSkill(Skill.id)"><i class="fa-solid fa-trash"></i></button>
+                          <app-habilidades-add></app-habilidades-add>
                         </div>
 
 
-
-
-                      </div>
+                      </ol>
                     </div>
 
 
+
+
                   </div>
-                  <!--
+                </div>
+
+
+              </div>
+              <!--
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Perfil</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Experiencia</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop6">Educacion</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop4">Habilidades</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop5">Proyectos</button>
             Button trigger modal -->
-                  <!--
+              <!--
         <app-educacion-add></app-educacion-add>
         <app-experiencia-add></app-experiencia-add>
         <app-proyecto-add></app-proyecto-add>
@@ -257,12 +288,12 @@
         <app-perfil-add></app-perfil-add>
 
           </div>-->
-                </div>
+            </div>
 
 
 
 
-                <!-- JavaScript Bundle with Popper -->
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
-                  integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
-                  crossorigin="anonymous"></script>
+            <!-- JavaScript Bundle with Popper -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+              crossorigin="anonymous"></script>

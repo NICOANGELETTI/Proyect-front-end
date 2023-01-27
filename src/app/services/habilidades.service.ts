@@ -22,8 +22,8 @@ export class HabilidadesService {
    /* public search(id: number):Observable<Habilidades>{
     return this.httpClient.get<Habilidades>(this.url + '/buscar/habilidad/{id}');
     }*/
-    public delete(id: number):Observable<any>{
-    return this.httpClient.delete<any>(this.url + 'delete/habilidad/${id}');
+    public borrar(id: number):Observable<any>{
+    return this.httpClient.delete<any>(this.url + `delete/habilidad/${id}`);
     }
 }
  

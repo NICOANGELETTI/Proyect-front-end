@@ -10,13 +10,7 @@ export class ExperienciaService {
   url = 'http://localhost:8080/experiencia/';
   constructor(private httpClient: HttpClient) {}
 
-  experienciaModal: Experiencia = {
-    puesto: '',
-    inicio: '',
-    fin: '',
-    empresa: '',
-    url_imagen: '',
-  };
+
 
   //Todos los metodos del controller de experiencia en Netbeans
   //List,Create,detail,delete,update
@@ -34,7 +28,7 @@ export class ExperienciaService {
   public update(experiencia: Experiencia): Observable<any> {
     return this.httpClient.put<any>(this.url + 'update', experiencia);
   }
-  public delete(id: number): Observable<any> {
-    return this.httpClient.delete<any>(this.url + 'delete/estudio/${id}');
+  public borrar(id: number): Observable<any> {
+    return this.httpClient.delete<any>(this.url + `delete/experiencia/${id}`);
   }
 }

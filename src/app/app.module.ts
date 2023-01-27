@@ -37,6 +37,8 @@ import { EducacionAddComponent } from './modals/educacion-add/educacion-add.comp
 import { PersonaService } from './services/persona.service';
 import { InterceptorService } from './services/interceptor.service';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -66,6 +68,8 @@ import { InterceptorService } from './services/interceptor.service';
     AgregarHabilidadesComponent,
     AgregarPerfilComponent,
     EducacionAddComponent,
+
+
   ],
   imports: [
     BrowserModule,

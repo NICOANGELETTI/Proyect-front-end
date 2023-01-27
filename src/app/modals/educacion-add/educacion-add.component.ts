@@ -128,8 +128,6 @@ export class EducacionAddComponent implements OnInit {
   limpiar():void {
     this.form.reset();
   } 
-
-
 }
 /* 
 onCreate() :void {
