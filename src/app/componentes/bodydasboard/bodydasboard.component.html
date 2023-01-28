@@ -63,8 +63,11 @@
 
 
                     <div class="botoncito">
-                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#modaleditPerf"><i class="fa-solid fa-pen-to-square"></i>
+                     
+                      </button>
+                      <app-edit-perfil></app-edit-perfil>
+                     
 
                     </div>
                     <div class="botoncito">
@@ -85,7 +88,7 @@
                     <div class="agregar">
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop2"><i class="fa-solid fa-plus"></i></button>
-                      
+                      <app-experiencia-add></app-experiencia-add>
                     </div>
                     <div class="contenedor" *ngFor="let experiencia of experiencias">
                       <div class="icono">
@@ -103,7 +106,8 @@
 
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
+                          data-bs-target="#modaleditexp"><i class="fa-solid fa-pen-to-square"></i></button>
+                          <app-edit-experiencia></app-edit-experiencia>
 
                         </div>
                         <div class="botoncito">
@@ -153,10 +157,11 @@
 
 
                         <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-                          <app-proyecto-add></app-proyecto-add>
-                        </div>
+                        
+                              <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#modaleditProy">
+                                <i class="fa-solid fa-pen-to-square"></i></button>
+                                <app-edit-proyecto></app-edit-proyecto>
+                         </div>
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" (click)="borrarTrab(trabajo.id)"
                             data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i
@@ -213,8 +218,9 @@
 
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-
+                           data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"></i></button>
+                         
+                          <app-edit-educacion></app-edit-educacion>
                         </div>
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
@@ -251,9 +257,10 @@
 
 
                         <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-pen-to-square"></i></button>
-                          <app-habilidades-add></app-habilidades-add>
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#modaleditHab"><i class="fa-solid fa-pen-to-square"></i>
+                            
+                          </button>
+                         <app-edit-habilidades></app-edit-habilidades>
                         </div>
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"

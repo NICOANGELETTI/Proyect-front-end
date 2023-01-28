@@ -36,6 +36,11 @@ import { AgregarPerfilComponent } from './modals/perfil-add/agregar-perfil.compo
 import { EducacionAddComponent } from './modals/educacion-add/educacion-add.component';
 import { PersonaService } from './services/persona.service';
 import { InterceptorService } from './services/interceptor.service';
+import { EditEducacionComponent } from './modals/edit-educacion/edit-educacion.component';
+import { EditExperienciaComponent } from './modals/edit-experiencia/edit-experiencia.component';
+import { EditProyectoComponent } from './modals/edit-proyecto/edit-proyecto.component';
+import { EditHabilidadesComponent } from './modals/edit-habilidades/edit-habilidades.component';
+import { EditPerfilComponent } from './modals/edit-perfil/edit-perfil.component';
 
 
 
@@ -68,6 +73,11 @@ import { InterceptorService } from './services/interceptor.service';
     AgregarHabilidadesComponent,
     AgregarPerfilComponent,
     EducacionAddComponent,
+    EditEducacionComponent,
+    EditExperienciaComponent,
+    EditProyectoComponent,
+    EditHabilidadesComponent,
+    EditPerfilComponent,
 
 
   ],

@@ -1,0 +1,63 @@
+<!-- Modal -->
+<div class="modal fade" id="modaleditProy" tabindex="-1" aria-labelledby="modaleditProyLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+       <div class="modal-body">
+          <form [formGroup]="formProyect"  novalidate #form="ngForm">
+                <div>
+                    <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Editar Proyecto</h1>
+                    <div>
+                        <label for="urlImagenProyect" class="form-label atributos">URL Imagen del Proyecto</label>
+                        <input type="text" class="form-control" id="urlImagen" name="urlImagen" formControlName="urlImagen"
+                        [(ngModel)]="urlImagen" [ngClass]="{'is-invalid': urlImagenProyect?.errors && urlImagenProyect?.touched,
+                        'is-valid': !urlImagenProyect?.errors && urlImagenProyect?.touched}">
+                        <div *ngIf="urlImagenProyect?.errors && urlImagenProyect?.touched "
+                        class="alert alert-danger">Agrega la Url de la imagen</div>
+
+                    </div>
+
+                    </div>
+                    <div>
+                        <label for="tituloProyect" class="form-label atributos">Titulo del Proyecto</label>
+                        <input type="text" class="form-control" id="tituloProyect" name="tituloProyect" formControlName="titulo"
+                        [(ngModel)]="titulo" [ngClass]="{'is-invalid': tituloProyect?.errors && tituloProyect?.touched,
+                        'is-valid': !tituloProyect?.errors && tituloProyect?.touched}">
+                        <div *ngIf="tituloProyect?.errors && tituloProyect?.touched "
+                        class="alert alert-danger">Agrega un titulo del proyecto
+                                     </div>
+                                 </div>
+                   
+                    <div>
+                        <label for="descripcionProyect" class="form-label atributos">Descripcion del Proyecto</label>
+                        <input type="text" class="form-control" id="descripcion" name="descripcionProyect" formControlName="descripcion"
+                        [(ngModel)]="descripcion" [ngClass]="{'is-invalid': descripcionProyect?.errors && descripcionProyect?.touched,
+                        'is-valid': !descripcionProyect?.errors && descripcionProyect?.touched}">
+                        <div *ngIf="descripcionProyect?.errors && descripcionProyect?.touched "
+                        class="alert alert-danger">Agrega una descripcion del proyecto
+                                     </div>
+                  
+                      </div>
+                      <div>
+                        <label for="urlProyecto" class="form-label atributos">URL del proyecto</label>
+                        <input type="text" class="form-control" id="urlProyect" name="urlProyect" formControlName="urlProyect"
+                        [(ngModel)]="urlProyect" [ngClass]="{'is-invalid': urlProyecto?.errors && urlProyecto?.touched,
+                        'is-valid': !urlProyecto?.errors && urlProyecto?.touched}">
+                        <div *ngIf="urlProyecto?.errors && urlProyecto?.touched "
+                        class="alert alert-danger">Agrega una URL del proyecto
+                                     </div>
+                  
+                      </div>
+
+                      <div class="modal-footer">
+                    
+                        <button type="submit" class="btn btn-primary" [disabled]="tituloProyect?.hasError('required') || 
+                        urlImagenProyect?.hasError('required') || descripcionProyect?.hasError('required') || 
+                        urlProyecto?.hasError('required') ">Guardar Cambios</button>
+                      </div>
+     
+ </form>
+  </div>
