@@ -4,8 +4,10 @@
       <div class="modal-content">
         <div class="modal-header">
         
+
+    <form (ngSubmit)="onEnviar($event)" #form="ngForm">
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
+       
         <div class="modal-body">
             <div> <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                 <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Editar Educacion</h1>
@@ -13,7 +15,7 @@
                     <label for="titulo" class="form-label atributos">Titulo</label>
                     <!--Express 18-->
                     <input class="form-control form-control-lg" formControlName="titulo" id="titulo" type="text"
-                        name="tituloCurso" required formControlName="titulo" [(ngModel)]="titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
+                        name="tituloCurso" required formControlName="titulo" [(ngModel)]="edu.titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
                         'is-valid': !tituloCurso?.errors && tituloCurso?.touched}">
 
 
@@ -27,7 +29,7 @@
                     <label for="institucion" class="form-label atributos">Institucion</label>
                     <input class="form-control form-control-lg" formControlName="institucion" id="institucion"
                         type="text" name="institucionCurso" required formControlName="institucion"
-                        [(ngModel)]="institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
+                        [(ngModel)]="edu.institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
                         'is-valid': !institucionCurso?.errors && institucionCurso?.touched}">
                     <div *ngIf="institucionCurso?.errors && institucionCurso?.touched"
                         class="alert alert-danger">Este Campo es requerido</div>
@@ -37,7 +39,7 @@
                     <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                     <label for="inicio" class="form-label atributos">Inicio</label>
                     <input class="form-control form-control-lg" formControlName="inicio" id="inicio" type="text"
-                        name="inicioCurso" required formControlName="inicio" [(ngModel)]="inicio" [ngClass]="{'is-invalid': inicioCurso?.errors && inicioCurso?.touched,
+                        name="inicioCurso" required formControlName="inicio" [(ngModel)]="edu.inicio" [ngClass]="{'is-invalid': inicioCurso?.errors && inicioCurso?.touched,
                         'is-valid': !inicioCurso?.errors && inicioCurso?.touched}">
                     <div *ngIf="inicioCurso?.errors && inicioCurso?.touched" class="alert alert-danger">Este
                         Campo es requerido</div>
@@ -48,7 +50,7 @@
                     <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                     <label for="fin" class="form-label atributos">Fin</label>
                     <input class="form-control form-control-lg" formControlName="fin" id="fin" type="text"
-                        name="finCurso" required formControlName="fin" [(ngModel)]="fin" [ngClass]="{'is-invalid': finCurso?.errors && finCurso?.touched,
+                        name="finCurso" required formControlName="fin" [(ngModel)]="edu.fin" [ngClass]="{'is-invalid': finCurso?.errors && finCurso?.touched,
                         'is-valid': !finCurso?.errors && finCurso?.touched}">
                     <div *ngIf="finCurso?.errors && finCurso?.touched" class="alert alert-danger">Este Campo es
                         requerido</div>
@@ -67,18 +69,12 @@
                 </div>
                 <div class="modal-footer">
 
-                    <button type="submit" [disabled]="tituloCurso?.hasError('required') 
-                || inicioCurso?.hasError('required') || finCurso?.hasError('required') 
-                || institucionCurso?.hasError('required') || urlCurso?.hasError('required')"
+                    <button type="submit" 
                         class="btn btn-primary">Agregar Educacion</button>
                 </div>
-            </div>
-        </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
-      </div>
-    </div>
+           
  
+      </div>
+      </div>
+ 
+    </form>

@@ -28,9 +28,18 @@ export class EducacionService {
     return this.httpClient.post<any>(this.url + 'nuevo/estudio', educacion);
   }
   public search(id: number): Observable<Educacion> {
-    return this.httpClient.get<Educacion>(this.url + 'buscar/estudio/{id}');
+    return this.httpClient.get<Educacion>(this.url + `buscar/estudio/{id}`);
   }
   public borrar(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.url + `delete/estudio/${id}`);
   }
+
+   public update(id:number , educacion:Educacion):Observable<any>{
+      return this.httpClient.put<any>(this.url + `update/${id}`, educacion);
+   
+  }
+  public detail(id: number): Observable<Educacion>{
+    return this.httpClient.get<Educacion>(this.url + `detail/${id}`);
+  }
+  
 }

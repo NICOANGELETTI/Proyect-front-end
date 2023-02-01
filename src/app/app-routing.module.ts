@@ -4,7 +4,7 @@ import { DashboardComponent } from './componentes/dashboard/dashboard.component'
 import { Error404Component } from './componentes/error404/error404.component';
 import { IndexComponent } from './componentes/index/index.component';
 import { EducacionAddComponent } from './modals/educacion-add/educacion-add.component';
-import { GuardGuard } from './services/guard.guard';
+
 import { LoginComponent } from './modals/login/login.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
@@ -15,7 +15,7 @@ const routes: Routes = [
   {
     path: 'dashboard',
     component: DashboardComponent,
-    canActivate: [GuardGuard],
+    
   }, // Si pongo dashboard me manda a Dashboard.component
   { path: '**', component: Error404Component },
 ];
