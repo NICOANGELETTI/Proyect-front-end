@@ -1,6 +1,6 @@
 # Myportfolioangular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3.
+Proyecto generado con Angular version 14.1.3. y con la version 1.75.0 de Visual Studio Code. 
 
 ## Development server
 
