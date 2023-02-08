@@ -11,6 +11,12 @@
         <div class="modal-body">
             <div> <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                 <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Editar Educacion</h1>
+               
+               
+            <div>
+                <label for="titulo" class="form-label atributos">ID</label>
+                <input type="number" class="form-control" id="floatingInput" formControlName="id" name="id" [(ngModel)]="edu.id">
+            </div>
                 <div>
                     <label for="titulo" class="form-label atributos">Titulo</label>
                     <!--Express 18-->
@@ -27,9 +33,9 @@
                 <div>
                     <!--En cada input ponemos un ngModel y un ngIf(errors) para poder Conectar con base de datos-->
                     <label for="institucion" class="form-label atributos">Institucion</label>
-                    <input class="form-control form-control-lg" formControlName="institucion" id="institucion"
+                    <input class="form-control form-control-lg" formControlName="edu.institucion" id="institucion"
                         type="text" name="institucionCurso" required formControlName="institucion"
-                        [(ngModel)]="edu.institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
+                        [(ngModel)]="institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
                         'is-valid': !institucionCurso?.errors && institucionCurso?.touched}">
                     <div *ngIf="institucionCurso?.errors && institucionCurso?.touched"
                         class="alert alert-danger">Este Campo es requerido</div>
@@ -59,7 +65,7 @@
                 <div>
                     <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                     <label for="url" class="form-label atributos">URL de Imagen Institucion</label>
-                    <input class="form-control form-control-lg" formControlName="url_imagen" id="url_imagen"
+                    <input class="form-control form-control-lg" formControlName="edu.url_imagen" id="url_imagen"
                         type="text" name="urlCurso" required formControlName="url_imagen"
                         [(ngModel)]="url_imagen" [ngClass]="{'is-invalid': urlCurso?.errors && urlCurso?.touched,
                         'is-valid': !urlCurso?.errors && urlCurso?.touched}">

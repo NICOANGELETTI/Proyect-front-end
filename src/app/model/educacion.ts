@@ -1,5 +1,5 @@
 export class Educacion {
-  id: number;
+  id!: number;
 
   titulo: string;
 
@@ -12,14 +12,14 @@ export class Educacion {
   institucion: string;
 
   constructor(
-    id: number,
+   
     url_imagen: string,
     titulo: string,
     inicio: string,
     fin: string,
     institucion: string
   ) {
-    this.id = id;
+    
     this.url_imagen = url_imagen;
     this.titulo = titulo;
     this.inicio = inicio;

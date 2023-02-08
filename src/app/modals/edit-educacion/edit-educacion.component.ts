@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Educacion } from 'src/app/model/educacion';
 import { EducacionService } from '../../services/educacion.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { Habilidades } from '../../model/habilidades';
 
 @Component({
@@ -12,11 +12,11 @@ import { Habilidades } from '../../model/habilidades';
 })
 export class EditEducacionComponent implements OnInit {
   estudios: Educacion[] = [];
-  edu = new Educacion(1, '', '', '', '', '');
+  edu = new Educacion('', '', '', '', '');
 
   form: FormGroup;
   //Instanciar
-  id: '';
+  id?: number;
   titulo: '';
   inicio: '';
   fin: '';
@@ -25,6 +25,7 @@ export class EditEducacionComponent implements OnInit {
   constructor(
     private sEducacion: EducacionService,
     private formBuilder: FormBuilder,
+    private activatedRouter: ActivatedRoute,
     private router: Router
   ) {
     this.form = this.formBuilder.group({
@@ -56,7 +57,9 @@ export class EditEducacionComponent implements OnInit {
   get urlCurso() {
     return this.form.get('url_imagen');
   }
-
+  get idCurso() {
+    return this.form.get('id');
+  }
   cargarEducacion(): void {
     /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
 
@@ -86,6 +89,19 @@ export class EditEducacionComponent implements OnInit {
       }
     );
   }
+
+  /* Esta es del repo de MGBRUNINI 
+  onUpdate(): void{
+    const id = this.activatedRouter.snapshot.params['id'];
+    this.sEducacion.update(id, this.edu).subscribe(
+      data => {
+        this.router.navigate(['']);
+      }, err => {
+        alert("Error al modificar la educacion");
+        this.router.navigate(['']);
+      }
+    )
+  }*/
   onEnviar(event: Event) {
     event.preventDefault;
     if (this.form.valid) {

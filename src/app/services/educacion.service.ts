@@ -42,4 +42,7 @@ export class EducacionService {
     return this.httpClient.get<Educacion>(this.url + `detail/${id}`);
   }
   
+  public getById(id: number):Observable<Educacion[]>{
+    return this.httpClient.get<Educacion[]>(this.url+ `/${id}`);
+  }
 }

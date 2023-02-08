@@ -66,9 +66,11 @@
 .clase2 {
   position: relative;
   width: 100%;
-  display: flex;
+  display: grid;
   text-align: center;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
+
   
 }
 
@@ -76,13 +78,7 @@
 /* background: rgba(11,103,123,0,6); */
 
 
-@media (max-width: 600px) {
-  .clase2 {
-    display: list-item;
-    text-align: center;
-    justify-content: space-between;
-  }
-}
+
 
 .contenedordeboton {
   display: flex;
@@ -182,4 +178,39 @@ a{
   display: flex;
   justify-content: center;
  
+}
+.texto{
+  display: flex;
+  margin-right: 10rem;
+  align-items: center;
+}
+
+@media (min-width: 700px){
+.section{
+  display: flex;
+ 
+
+}
+.section{
+  display: flex;
+}
+.text{
+  color:transparent;
+  background: linear-gradient(white , #17c40e);
+  font-family: AGENCY FB;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  animation: text 5s linear infinite;
+
+}
+@keyframes text {
+  0%{
+    filter:hue-rotate();
+  }
+  100% {
+    filter:hue-rotate(360deg)
+  }
+  
+}
 }
