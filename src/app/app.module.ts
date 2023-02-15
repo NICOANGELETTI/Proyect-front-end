@@ -21,7 +21,7 @@ import { LogoutComponent } from './modals/logout/logout.component';
 import { RedesdashboardComponent } from './componentes/redesdashboard/redesdashboard.component';
 import { SocialbarComponent } from './componentes/socialbar/socialbar.component';
 import { SocialbardashboardComponent } from './componentes/socialbardashboard/socialbardashboard.component';
-import { FormContactComponent } from './componentes/form-contact/form-contact.component';
+
 import { AcordeondeinfoComponent } from './componentes/acordeondeinfo/acordeondeinfo.component';
 import { ProyectosComponent } from './componentes/proyectos/proyectos.component';
 import { Error404Component } from './componentes/error404/error404.component';
@@ -61,7 +61,7 @@ import { EditPerfilComponent } from './modals/edit-perfil/edit-perfil.component'
     RedesdashboardComponent,
     SocialbarComponent,
     SocialbardashboardComponent,
-    FormContactComponent,
+  
     AcordeondeinfoComponent,
     ProyectosComponent,
     Error404Component,

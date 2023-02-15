@@ -28,9 +28,14 @@ export class GuardGuard implements CanActivate {
     let currentUser = this.autenticacionServicio.usuarioAutenticado;
     if (currentUser && currentUser.id) {
       return true;
-    } else {
-      //this.rutas.navigate([/login]);
-      return true;
     }
+    else {   
+      
+      alert('no tienes permiso para entrar')
+      
+      return true ;  
+      
+      
+   }
   }
 }

@@ -11,17 +11,9 @@ import { Habilidades } from '../../model/habilidades';
   styleUrls: ['./edit-educacion.component.css'],
 })
 export class EditEducacionComponent implements OnInit {
-  estudios: Educacion[] = [];
-  edu = new Educacion('', '', '', '', '');
+  form:FormGroup;
+  edu:Educacion;
 
-  form: FormGroup;
-  //Instanciar
-  id?: number;
-  titulo: '';
-  inicio: '';
-  fin: '';
-  institucion: '';
-  url_imagen: '';
   constructor(
     private sEducacion: EducacionService,
     private formBuilder: FormBuilder,
@@ -33,12 +25,14 @@ export class EditEducacionComponent implements OnInit {
       titulo: ['', [Validators.required]],
       inicio: ['', [Validators.required]],
       fin: ['', [Validators.required]],
-      institucion: [''],
+      institucion: ['', [Validators.required]],
       url_imagen: ['', [Validators.required]],
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { 
+  
+ }
   get tituloCurso() {
     return this.form.get('titulo');
   }
@@ -74,40 +68,21 @@ export class EditEducacionComponent implements OnInit {
     );
   }
 
-  onUpdate(): void {
-    let edu = this.form.value;
-    this.sEducacion.update(edu.id, edu).subscribe(
-      (error) => {
-        this.cargarEducacion();
-        this.form.reset();
-      },
-      (data) => {
-        alert('Educacion editada correctamente');
-        console.log(data);
-        this.cargarEducacion();
-        this.form.reset();
-      }
-    );
+  onUpdate():void{
+    this.sEducacion.edit(this.form.value).subscribe(data => {
+      alert("Estudio modificado.");
+      this.router.navigate(['']);
+    }
+    )
   }
 
-  /* Esta es del repo de MGBRUNINI 
-  onUpdate(): void{
-    const id = this.activatedRouter.snapshot.params['id'];
-    this.sEducacion.update(id, this.edu).subscribe(
-      data => {
-        this.router.navigate(['']);
-      }, err => {
-        alert("Error al modificar la educacion");
-        this.router.navigate(['']);
-      }
-    )
-  }*/
-  onEnviar(event: Event) {
+  /* */
+  onEnviar(event:Event){
     event.preventDefault;
-    if (this.form.valid) {
+    if (this.form.valid){
       this.onUpdate();
-    } else {
-      alert('Fallo en la carga,intente nuevamente');
+    }else{
+      alert("falló en la carga, intente nuevamente");
       this.form.markAllAsTouched();
     }
   }

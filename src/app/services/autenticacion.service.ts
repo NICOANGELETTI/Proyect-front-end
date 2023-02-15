@@ -33,5 +33,7 @@ export class AutenticacionService {
         return this.currentUserSubject.value;
       }
     
- 
+      logOut():void{
+        window.sessionStorage.clear();
+      }
 }

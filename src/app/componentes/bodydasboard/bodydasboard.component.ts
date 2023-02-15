@@ -23,6 +23,8 @@ export class BodydasboardComponent implements OnInit {
   habilidad: Habilidades[] = [];
   estudios: Educacion[] = [];
   experiencias: Experiencia[] = [];
+  educacion: any;
+  id?:number;
   form: FormGroup; // el form es una variable
 
   constructor(
@@ -49,7 +51,6 @@ export class BodydasboardComponent implements OnInit {
     this.cargarProyecto();
     this.cargarExperiencia();
     this.cargarPerfil();
-    
   }
   cargarEducacion(): void {
     this.sEducacion.list().subscribe((data) => {
@@ -91,6 +92,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    window.location.reload();
   }
   borrarExp(id: number) {
     this.sExperiencia.borrar(id).subscribe(
@@ -105,13 +107,13 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    window.location.reload();
   }
   borrarTrab(id: number) {
     this.sProyectos.borrar(id).subscribe(
       (data) => {
         alert('se pudo eliminar satisfactoriamente');
         this.cargarProyecto();
-        window.location.reload();
       },
       (error) => {
         alert('se pudo eliminar satisfactoriamente');
@@ -119,6 +121,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    window.location.reload();
   }
   borrarSkill(id: number) {
     this.sHabilidades.borrar(id).subscribe(
@@ -133,6 +136,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    window.location.reload();
   }
-
+  
 }

@@ -45,4 +45,7 @@ export class EducacionService {
   public getById(id: number):Observable<Educacion[]>{
     return this.httpClient.get<Educacion[]>(this.url+ `/${id}`);
   }
+  public edit(Estudio: Educacion):Observable<any>{
+    return this.httpClient.put<any>(this.url + 'update', Estudio);
+    }
 }
