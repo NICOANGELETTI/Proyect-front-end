@@ -11,7 +11,7 @@ Portfolio Web Nicolas Angeletti
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 
-## Instalacion
+## Facility
 In my front end I use version 14.1 of angular and 1.75.0 of visual studio code.
 With Extensions in Visual Studio Code downloaded:
 -angular schematics v5.2.9
