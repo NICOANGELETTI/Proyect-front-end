@@ -3,7 +3,7 @@
 Proyecto generado con Angular version 14.1.3. y con la version 1.75.0 de Visual Studio Code.  
 
 
-## Nombre
+## Name
 Portfolio Web Nicolas Angeletti
 
 ## Development server
