@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AutenticacionService } from 'src/app/services/autenticacion.service';
 import { Router } from '@angular/router';
-import { Persona } from 'src/app/model/persona';
+
 import { Login } from 'src/app/model/login';
 import { AuthserviceService } from '../../AuthService/authservice.service';
 import { LoginUsuario } from '../../model/login-usuario';

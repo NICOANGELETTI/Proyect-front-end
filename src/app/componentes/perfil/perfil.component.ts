@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from '../../services/portfolio.service';
-import { Persona } from '../../model/persona';
-import { PersonaService } from 'src/app/services/persona.service';
+
+import { Perfil } from 'src/app/model/perfil';
+import { PerfilService } from '../../services/perfil.service';
 
 @Component({
   selector: 'app-perfil',
@@ -9,11 +10,11 @@ import { PersonaService } from 'src/app/services/persona.service';
   styleUrls: ['./perfil.component.css'],
 })
 export class PerfilComponent implements OnInit {
-  perfil: Persona[] = [];
+  perfil: Perfil[] = [];
 
   constructor(
     /* Inyectar el servicio para tener acceso en la clase de los metodos*/
-    private  sPersona: PersonaService
+    private  sPerfil: PerfilService
   ) {}
 
   ngOnInit(): void {
@@ -22,7 +23,7 @@ export class PerfilComponent implements OnInit {
       this.cargarPerfil();
     }
     cargarPerfil(): void {
-      this.sPersona.list().subscribe((data) => {
+      this.sPerfil.list().subscribe((data) => {
         this.perfil = data;
       });
     }

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaService } from '../../services/persona.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { PerfilService } from '../../services/perfil.service';
 
 @Component({
   selector: 'app-edit-perfil',
@@ -15,7 +15,7 @@ export class EditPerfilComponent implements OnInit {
   tituloDeveloper: '';
   urlimagenPerfil: '';
 
-  constructor(  private Persona: PersonaService,
+  constructor(  private sPerfil: PerfilService,
     private formBuilder: FormBuilder
   ) {
     this.formPerfil = this.formBuilder.group({

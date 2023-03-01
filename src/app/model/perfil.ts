@@ -7,7 +7,7 @@ export class Perfil {
 
   acercade: string;
 
-  titulo_developer: string;
+  tituloDeveloper: string;
 
   url_imagenperfil: string;
 
@@ -17,13 +17,13 @@ export class Perfil {
     edad: number,
     acercade: string,
     url_imagenperfil: string,
-    titulo_developer: string
+    tituloDeveloper: string
   ) {
     this.edad = edad;
     this.nombre = nombre;
     this.apellido = apellido;
     this.acercade = acercade;
     this.url_imagenperfil = url_imagenperfil;
-    this.titulo_developer = titulo_developer;
+    this.tituloDeveloper = tituloDeveloper;
   }
 }

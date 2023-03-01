@@ -7,18 +7,18 @@ import { Habilidades } from 'src/app/model/habilidades';
 import { Proyectos } from 'src/app/model/proyectos';
 import { Experiencia } from 'src/app/model/experiencia';
 import { Educacion } from 'src/app/model/educacion';
-import { PersonaService } from 'src/app/services/persona.service';
-import { Persona } from 'src/app/model/persona';
 import { FormBuilder } from '@angular/forms';
 import { FormGroup } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { PerfilService } from '../../services/perfil.service';
+import { Perfil } from '../../model/perfil';
 @Component({
   selector: 'app-bodydasboard',
   templateUrl: './bodydasboard.component.html',
   styleUrls: ['./bodydasboard.component.css'],
 })
 export class BodydasboardComponent implements OnInit {
-  perfil: Persona[] = [];
+  perfil: Perfil[] = [];
   proyecto: Proyectos[] = [];
   habilidad: Habilidades[] = [];
   estudios: Educacion[] = [];
@@ -29,7 +29,7 @@ export class BodydasboardComponent implements OnInit {
 
   constructor(
     private formbuilder: FormBuilder,
-    private sPersona: PersonaService,
+    private sPerfil: PerfilService,
     private sEducacion: EducacionService,
     private sHabilidades: HabilidadesService,
     private sProyectos: ProyectosService,
@@ -74,7 +74,7 @@ export class BodydasboardComponent implements OnInit {
     });
   }
   cargarPerfil(): void {
-    this.sPersona.list().subscribe((data) => {
+    this.sPerfil.list().subscribe((data) => {
       this.perfil = data;
     });
   }
@@ -138,5 +138,21 @@ export class BodydasboardComponent implements OnInit {
     );
     window.location.reload();
   }
+  borrarPerfil(id: number) {
+    this.sPerfil.borrar(id).subscribe(
+      (data) => {
+        alert('se pudo eliminar satisfactoriamente');
+        this.cargarHabilidad();
+        window.location.reload();
+      },
+      (error) => {
+        alert('se pudo eliminar satisfactoriamente');
+        this.cargarHabilidad();
+        this.form.reset();
+      }
+    );
+    window.location.reload();
+  }
+  
   
 }

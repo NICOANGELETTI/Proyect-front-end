@@ -38,8 +38,8 @@
                       <app-perfil-add></app-perfil-add>
                     </div>
                     <div *ngFor="let atributo of perfil">
-                      <img class="foto-perfil" src={{atributo.urlimagenPerfil}}>
-                      <p class="info">{{atributo.nombre}} {{atributo.apellido}}</p>
+                      <img class="foto-perfil" src={{atributo.url_imagenperfil}}>
+                      <p class="info">{{atributo.nombre}} {{atributo.apellido}} {{atributo.edad}}</p>
                       <p class="info"> {{atributo.tituloDeveloper
                         }} </p>
 
@@ -51,14 +51,11 @@
                       <h1 class="sobremi">SOBRE MI</h1>
                       <p class="aboutme">
                         {{atributo.acercade}}
-                    </div>
+                   
 
-                    <!--  <h3 class="frase1"> <i>{{frase}}</i></h3> -->
+                  
 
-
-                    <!-- <div><b class="sobremi">{{frase2}}</b></div> -->
-
-                  </div>
+                  
                   <ol class="lista">
 
 
@@ -72,15 +69,20 @@
                     </div>
                     <div class="botoncito">
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"></i></button>
-
-                    </div>
-
-
-                  </ol>
+                        data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash" (click)="borrarPerfil(atributo.id)"></i></button>
+  
+                      </div>
 
 
+                    </ol>
+                  </div>
 
+
+
+
+
+
+                </div>
 
                   <!--EXPERIENCIA-->
                   <div class="tab-pane fade add" id="v-pills-profile" role="tabpanel"

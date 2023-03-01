@@ -34,7 +34,6 @@ import { AgregarProyectoComponent } from './modals/proyecto-add/agregar-proyecto
 import { AgregarHabilidadesComponent } from './modals/habilidades-add/agregar-habilidades.component';
 import { AgregarPerfilComponent } from './modals/perfil-add/agregar-perfil.component';
 import { EducacionAddComponent } from './modals/educacion-add/educacion-add.component';
-import { PersonaService } from './services/persona.service';
 import { InterceptorService } from './services/interceptor.service';
 import { EditEducacionComponent } from './modals/edit-educacion/edit-educacion.component';
 import { EditExperienciaComponent } from './modals/edit-experiencia/edit-experiencia.component';
@@ -90,7 +89,6 @@ import { EditPerfilComponent } from './modals/edit-perfil/edit-perfil.component'
   ],
   providers: [
     PortfolioService,
-    PersonaService,
     { provide: HTTP_INTERCEPTORS, useClass: InterceptorService, multi: true },
   ],
   bootstrap: [AppComponent],

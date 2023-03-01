@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonaService } from '../../services/persona.service';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Perfil } from '../../model/perfil';
+import { PerfilService } from '../../services/perfil.service';
 
 @Component({
   selector: 'app-perfil-add',
@@ -13,10 +14,10 @@ export class AgregarPerfilComponent implements OnInit {
   apellido: '';
   acercade: '';
   tituloDeveloper: '';
-  urlimagenPerfil: '';
+  url_imagenperfil: '';
 
   constructor(
-    private Persona: PersonaService,
+    private sPerfil: PerfilService,
     private formBuilder: FormBuilder
   ) {
     this.formPerfil = this.formBuilder.group({
@@ -52,9 +53,9 @@ export class AgregarPerfilComponent implements OnInit {
   crearnuevoPerfil(): void {
     /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
 
-    this.Persona.agregarPersonas(this.formPerfil.value).subscribe(
+    this.sPerfil.create(this.formPerfil.value).subscribe(
       (data) => {
-        alert('Nuevo perfi agregado');
+        alert('Nuevo perfil agregado');
         window.location.reload();
       },
       (error) => {
