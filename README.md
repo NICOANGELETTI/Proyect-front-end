@@ -4,57 +4,55 @@ Proyecto generado con Angular version 14.1.3. y con la version 1.75.0 de Visual 
 
 
 ## Name
-Portfolio Web Nicolas Angeletti
+Portafolio Web Nicolás Angeletti
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ejecute `ng serve` para un servidor de desarrollo. Navegue a `http://localhost:4200/`. La aplicación se recargará automáticamente si cambia cualquiera de los archivos de origen.
 
 
 ## Facility
-In my front end I use version 14.1 of angular and 1.75.0 of visual studio code.
-With Extensions in Visual Studio Code downloaded:
--angular schematics v5.2.9
--Angular Language service v15.0.1
--angular 10 snippets- typescript,html,angular material,ngRx, RxJS & Flex.
--Prettier-code formatter v0.10.4
-Through the commands "ng g c componentname" perform the creation
-of the different components that are part of my project.
-Also the creation of services to connect my front with my backend
-through the command "ng g service nameservice"
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|p ipe|service|class|guard|interface|enum|module`.
+En mi interfaz utilizo la versión 14.1 de angular y 1.75.0 de código de estudio visual.
+Con Extensiones en Visual Studio Code descargado:
+-esquemas angulares v5.2.9
+-Servicio de lenguaje angular v15.0.1
+-angular 10 fragmentos- mecanografiado, html, material angular, ngRx, RxJS y Flex.
+-Prettier-formateador de código v0.10.4
+A través de los comandos "ng g c nombrecomponente" realizar la creación
+de los diferentes componentes que forman parte de mi proyecto.
+También la creación de servicios para conectar mi front con mi backend
+a través del comando "ng g service nameservice"
+Ejecute `ng generar componente nombre-componente` para generar un nuevo componente. También puede usar `ng generar directiva|p ipe|servicio|clase|guardia|interfaz|enum|módulo`.
 
 ## RoadMap
 
-In the near future I want to incorporate more interactive functions into my website
-more page sections As you carry out personal projects, make a page of
-much more interesting projects, to show my performance with each technology.
-I would also like to make modifications to the "skills" section to achieve a
-more fluid and interactive design. All this will require time that I will not be able to achieve on the day of the delivery date.
-carry out.
+En un futuro próximo quiero incorporar más funciones interactivas a mi sitio web
+más secciones de página A medida que realiza proyectos personales, haga una página de
+proyectos mucho más interesantes, para mostrar mi desempeño con cada tecnología.
+También me gustaría hacer modificaciones en la sección de "habilidades" para lograr un
+diseño más fluido e interactivo. Todo esto requerirá un tiempo que no podré alcanzar el día de la fecha de entrega.
+realizar.
 
 ## Contributing
 
-Open to contributions of all kinds. taking into account that it is a project carried out only by me.
-Taking into account that it is my first experience with the planning, elaboration and development of a real web development project
-and you may have things to improve in your code and functions.
+Abierto a contribuciones de todo tipo. teniendo en cuenta que es un proyecto realizado solo por mi.
+Teniendo en cuenta que es mi primera experiencia con la planificación, elaboración y desarrollo de un proyecto real de desarrollo web
+y es posible que tenga cosas que mejorar en su código y funciones.
  
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecute `ng build` para compilar el proyecto. Los artefactos de compilación se almacenarán en el directorio `dist/`.
 
 ## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Ejecute `ng test` para ejecutar las pruebas unitarias a través de [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ejecute `ng e2e` para ejecutar las pruebas de extremo a extremo a través de una plataforma de su elección. Para usar este comando, primero debe agregar un paquete que implemente capacidades de prueba de un extremo a otro.
 
 ## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-
+Para obtener más ayuda sobre Angular CLI, use `ng help` o consulte la página [Descripción general y referencia de comandos de Angular CLI] (https://angular.io/cli).
 
  
