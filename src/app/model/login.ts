@@ -1,6 +1,6 @@
 export class Login {
 
-
+  //Declaramos los atributos correspondientes en el modelo
     email:string;
     clave:string;
 

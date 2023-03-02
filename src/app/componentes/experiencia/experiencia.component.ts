@@ -9,8 +9,11 @@ import { ExperienciaService } from '../../services/experiencia.service';
   styleUrls: ['./experiencia.component.css'],
 })
 export class ExperienciaComponent implements OnInit {
+  
   experiencias: Experiencia[] = [];
-  constructor(private sExperiencia: ExperienciaService) {}
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sExperiencia: ExperienciaService) {}
 
   ngOnInit(): void {
     this.cargarExperiencia();

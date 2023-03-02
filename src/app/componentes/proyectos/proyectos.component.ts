@@ -11,11 +11,15 @@ import { ProyectosService } from '../../services/proyectos.service';
 export class ProyectosComponent implements OnInit {
   proyecto: Proyectos[] = [];
 
-  constructor(private sProyectos: ProyectosService) {}
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sProyectos: ProyectosService) {}
 
   ngOnInit(): void {
+    //Implementamos el metodo
     this.cargarProyecto();
   }
+  //Realizamos el metodo para traer la lista de proyectos del Backend
   cargarProyecto(): void {
     this.sProyectos.list().subscribe((data) => {
       this.proyecto = data;

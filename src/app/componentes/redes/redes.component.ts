@@ -9,11 +9,15 @@ import { TokenService } from 'src/app/services/token.service';
 })
 export class RedesComponent implements OnInit {
 
+  //Declaramos
   isLogged = false;
 
-  constructor(private router:Router, private tokenService: TokenService) { }
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private router:Router, private tokenService: TokenService) { }
 
   ngOnInit(): void {
+    //Traemos el Token y realizamos el condicional de si estamos logueados o no
     if(this.tokenService.getToken()){
       this.isLogged=true;
     }else{
@@ -21,11 +25,14 @@ export class RedesComponent implements OnInit {
     }
   }
 
+  //Metodo de Logout
+  
   onLogOut():void{
     this.tokenService.logOut();
     window.location.reload();
   }
 
+  //Metodo de Login
   login(){
     this.router.navigate(['/login'])
   }

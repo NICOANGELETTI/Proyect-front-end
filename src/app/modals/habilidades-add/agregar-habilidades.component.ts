@@ -14,9 +14,11 @@ export class AgregarHabilidadesComponent implements OnInit {
   porcentaje: number;
 
   constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
     private sHabilidades: HabilidadesService,
     private formBuilder: FormBuilder
   ) {
+     //Realizamos Formulario Reactivo con sus campos requeridos
     this.formSkills = this.formBuilder.group({
       habilidad: ['', [Validators.required]],
       porcentaje: ['', [Validators.required]],

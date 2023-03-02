@@ -18,9 +18,12 @@ export class EditExperienciaComponent implements OnInit {
   fin: '';
   empresa: '';
   url_imagen: '';
-  constructor(  private sExperiencia: ExperienciaService,
+  constructor( 
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sExperiencia: ExperienciaService,
     private formBuilder: FormBuilder,
     private router : Router) { this.formExp = this.formBuilder.group({
+       //Realizamos Formulario Reactivo con sus campos requeridos
       puesto: ['', [Validators.required]],
       inicio: ['', [Validators.required]],
       fin: ['', [Validators.required]],

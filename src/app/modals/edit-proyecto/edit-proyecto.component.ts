@@ -10,13 +10,17 @@ import { ProyectosService } from 'src/app/services/proyectos.service';
 })
 export class EditProyectoComponent implements OnInit {
   formProyect: FormGroup;
+  //Declaramos
   titulo:'';
   urlImagen:'';
   descripcion:'';
   urlProyect:'';
   
-  constructor(private sProyecto: ProyectosService, private formBuilder: FormBuilder) {
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sProyecto: ProyectosService, private formBuilder: FormBuilder) {
     this.formProyect = this.formBuilder.group({
+       //Realizamos Formulario Reactivo con sus campos requeridos
       titulo: ['', [Validators.required]],
       urlImagen: ['', [Validators.required]],
       descripcion: ['', [Validators.required]],

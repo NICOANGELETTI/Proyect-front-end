@@ -1,5 +1,5 @@
 export class Experiencia {
-   
+    //Declaramos los atributos correspondientes en el modelo
     id:number; 
     
     puesto: string;

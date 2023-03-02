@@ -11,16 +11,20 @@ import { Habilidades } from '../../model/habilidades';
   styleUrls: ['./edit-educacion.component.css'],
 })
 export class EditEducacionComponent implements OnInit {
+  //Declaramos
   form:FormGroup;
   edu:Educacion;
 
   constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
     private sEducacion: EducacionService,
     private formBuilder: FormBuilder,
     private activatedRouter: ActivatedRoute,
     private router: Router
   ) {
+    //Realizamos formulario reactivo
     this.form = this.formBuilder.group({
+       //Realizamos Formulario Reactivo con sus campos requeridos
       id: [''],
       titulo: ['', [Validators.required]],
       inicio: ['', [Validators.required]],
@@ -54,15 +58,18 @@ export class EditEducacionComponent implements OnInit {
   get idCurso() {
     return this.form.get('id');
   }
-  cargarEducacion(): void {
-    /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
 
+  //Realizamos metodo de agregar el estudio correspondiente trayendo del servicio el metodo correspondiente al Backend
+  cargarEducacion(): void {
+   
     this.sEducacion.agregarEstudio(this.form.value).subscribe(
       (data) => {
+        //Pestaña de alerta para avisarnos lo realizado
         alert('Nuevo Curso agregado');
         window.location.reload();
       },
       (error) => {
+        //Pestaña de alerta para avisarnos que no se concreto la peticion
         alert('Se ha producido un error, intente nuevamente');
       }
     );

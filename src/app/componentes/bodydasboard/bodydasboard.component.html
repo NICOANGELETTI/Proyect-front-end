@@ -32,11 +32,16 @@
                   <div class="tab-pane fade show active add" id="v-pills-home" role="tabpanel"
                     aria-labelledby="v-pills-home-tab" tabindex="0">
 
+                      <!--Agregamos boton "+" y Llamamos al modal-->
                     <div class="agregar">
+                    
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop"><i class="fa-solid fa-plus"></i></button>
                       <app-perfil-add></app-perfil-add>
                     </div>
+
+                    <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
+                    Borrar o Editar-->
                     <div *ngFor="let atributo of perfil">
                       <img class="foto-perfil" src={{atributo.url_imagenperfil}}>
                       <p class="info">{{atributo.nombre}} {{atributo.apellido}} {{atributo.edad}}</p>
@@ -51,47 +56,53 @@
                       <h1 class="sobremi">SOBRE MI</h1>
                       <p class="aboutme">
                         {{atributo.acercade}}
-                   
-
-                  
-
-                  
-                  <ol class="lista">
 
 
-                    <div class="botoncito">
-                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#modaleditPerf"><i class="fa-solid fa-pen-to-square"></i>
-                     
-                      </button>
-                      <app-edit-perfil></app-edit-perfil>
-                     
 
+
+
+                      <ol class="lista">
+
+                        <!--Agregamos boton para editar y Llamamos al modal-->
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#modaleditPerf"><i class="fa-solid fa-pen-to-square"></i>
+
+                          </button>
+                          <app-edit-perfil></app-edit-perfil>
+
+
+                        </div>
+                        <!--Agregamos boton para borrar y Llamamos al modal-->
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"
+                              (click)="borrarPerfil(atributo.id)"></i></button>
+
+                        </div>
+
+
+                      </ol>
                     </div>
-                    <div class="botoncito">
-                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash" (click)="borrarPerfil(atributo.id)"></i></button>
-  
-                      </div>
 
 
-                    </ol>
+
+
+
+
                   </div>
-
-
-
-
-
-
-                </div>
 
                   <!--EXPERIENCIA-->
                   <div class="tab-pane fade add" id="v-pills-profile" role="tabpanel"
                     aria-labelledby="v-pills-profile-tab" tabindex="0">
+                    <!--Agregamos boton "+" y Llamamos al modal-->
                     <div class="agregar">
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop2"><i class="fa-solid fa-plus"></i></button>
                       <app-experiencia-add></app-experiencia-add>
                     </div>
+                    <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
+                    Borrar o Editar-->
                     <div class="contenedor" *ngFor="let experiencia of experiencias">
                       <div class="icono">
                         <img class="iconos-empresa" src="{{experiencia.url_imagen}}">
@@ -102,16 +113,17 @@
                         <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
                         <p>{{experiencia.empresa}}</p>
                       </div>
-                      
+
                       <ol class="lista">
 
-
+                    <!--Agregamos boton para editar y Llamamos al modal-->
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                          data-bs-target="#modaleditexp"><i class="fa-solid fa-pen-to-square"></i></button>
+                            data-bs-target="#modaleditexp"><i class="fa-solid fa-pen-to-square"></i></button>
                           <app-edit-experiencia></app-edit-experiencia>
 
                         </div>
+                     <!--Agregamos boton para borrar y Llamamos al modal-->
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop2" (click)="borrarExp(experiencia.id)"><i
@@ -135,7 +147,8 @@
                   <div class="tab-pane fade add" id="v-pills-mesagges" role="tabpanel"
                     aria-labelledby="v-pills-mesagges-tab" tabindex="0">
 
-
+                    
+                   <!--Agregamos boton para "+" y Llamamos al modal-->
                     <div class="agregar">
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop5"><i class="fa-solid fa-plus"></i></button>
@@ -143,7 +156,8 @@
                     </div>
                     <div class="proyecto" *ngFor="let trabajo of proyecto">
 
-
+                  <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
+                    Borrar o Editar-->
                       <div class="contendorimagen">
                         <img class="imagenproyecto" src="{{trabajo.urlImagen}}">
                       </div>
@@ -159,11 +173,13 @@
 
 
                         <div class="botoncito">
-                        
-                              <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#modaleditProy">
-                                <i class="fa-solid fa-pen-to-square"></i></button>
-                                <app-edit-proyecto></app-edit-proyecto>
-                         </div>
+                           <!--Agregamos boton para editar y Llamamos al modal-->
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#modaleditProy">
+                            <i class="fa-solid fa-pen-to-square"></i></button>
+                          <app-edit-proyecto></app-edit-proyecto>
+                        </div>
+                         <!--Agregamos boton para borrar y Llamamos al modal-->
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" (click)="borrarTrab(trabajo.id)"
                             data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i
@@ -186,7 +202,7 @@
                     aria-labelledby="v-pills-messages-tab" tabindex="0">
 
 
-                    <!--Boton de agregar-->
+                    <!--Agregamos boton para "+" y Llamamos al modal-->
                     <div class="agregar">
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop6"><i class="fa-solid fa-plus"></i></button>
@@ -195,6 +211,8 @@
 
                     <div class="contenedor" *ngFor="let estudio of estudios">
 
+                   <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
+                    Borrar o Editar-->
                       <div class="icono">
                         <img class="iconos-empresa atributo" [src]="estudio.url_imagen">
 
@@ -214,16 +232,17 @@
 
                       </div>
 
-                      <!--Boton de editar-->
+                     
                       <ol class="lista">
 
-
+                       <!--Agregamos boton para editar y Llamamos al modal-->
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                           data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square" ></i></button>
-                         
+                            data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"></i></button>
+
                           <app-edit-educacion></app-edit-educacion>
                         </div>
+                        <!--Agregamos boton para borrar y Llamamos al modal-->
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                             data-bs-target="#staticBackdrop2" (click)="borrarEdu(estudio.id)"><i
@@ -242,13 +261,14 @@
                   <div class="tab-pane fade add section row" id="v-pills-settings" role="tabpanel"
                     aria-labelledby="v-pills-settings-tab" tabindex="0">
                     <div class="agregar">
-                      <!--Boton de agregar-->
+                     <!--Agregamos boton para editar y Llamamos al modal-->
                       <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                         data-bs-target="#staticBackdrop4"><i class="fa-solid fa-plus"></i></button>
                       <app-habilidades-add></app-habilidades-add>
 
                     </div>
-
+                  <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
+                    Borrar o Editar-->
                     <div class="primeras-barras habilidad" *ngFor="let Skill of habilidad">
                       <div class="prueba">
                         <h2 class="titulodebarra">{{Skill.habilidad}}</h2>
@@ -257,16 +277,19 @@
                       </div>
                       <ol class="lista">
 
-
-                        <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#modaleditHab"><i class="fa-solid fa-pen-to-square"></i>
-                            
-                          </button>
-                         <app-edit-habilidades></app-edit-habilidades>
-                        </div>
+                        <!--Agregamos boton para editar y Llamamos al modal-->
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2" (click)="borrarSkill(Skill.id)"><i class="fa-solid fa-trash"></i></button>
+                            data-bs-target="#modaleditHab"><i class="fa-solid fa-pen-to-square"></i>
+
+                          </button>
+                          <app-edit-habilidades></app-edit-habilidades>
+                        </div>
+                        <!--Agregamos boton para borrar y Llamamos al modal-->
+                        <div class="botoncito">
+                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                            data-bs-target="#staticBackdrop2" (click)="borrarSkill(Skill.id)"><i
+                              class="fa-solid fa-trash"></i></button>
                           <app-habilidades-add></app-habilidades-add>
                         </div>
 

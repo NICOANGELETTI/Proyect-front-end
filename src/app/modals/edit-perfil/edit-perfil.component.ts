@@ -15,10 +15,13 @@ export class EditPerfilComponent implements OnInit {
   tituloDeveloper: '';
   urlimagenPerfil: '';
 
-  constructor(  private sPerfil: PerfilService,
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sPerfil: PerfilService,
     private formBuilder: FormBuilder
   ) {
     this.formPerfil = this.formBuilder.group({
+       //Realizamos Formulario Reactivo con sus campos requeridos
       nombre: ['', [Validators.required]],
       apellido: ['', [Validators.required]],
       acercade: ['', [Validators.required]],

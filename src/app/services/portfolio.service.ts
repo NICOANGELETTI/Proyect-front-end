@@ -10,7 +10,9 @@ import { Observable } from 'rxjs';
 })
 export class PortfolioService {
 
-  constructor(private http:HttpClient) { }
+  constructor(
+    //Inyectamos servicios que utilizaremos
+    private http:HttpClient) { }
 /* Metodo observable que devuelve datos*/
  getDatos():Observable<any> {
 /*   Se llama al JSON con su path -ruta- o bien en su lugar se puede poner una URL para traer datos de un JSON online */

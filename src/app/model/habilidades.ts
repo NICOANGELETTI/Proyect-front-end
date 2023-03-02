@@ -1,4 +1,5 @@
 export class Habilidades {
+    //Declaramos los atributos correspondientes en el modelo
     id!:number; 
     
     habilidad: string;

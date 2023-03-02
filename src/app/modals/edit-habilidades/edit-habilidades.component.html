@@ -1,4 +1,4 @@
-<!-- Modal -->
+<!-- Modal de Editar Habilidades -->
 <div class="modal fade" id="modaleditHab" tabindex="-1" aria-labelledby="modaleditHab" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -7,12 +7,16 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+             <!-- Implementamos metodo en el formulario-->
             <form [formGroup]="formSkills"  class="w-100">
+        <!--Formulario para reemplazar los valores y editar-->
+         
             <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Editar Habilidad</h1>
             <div>
 
                 <div>
                     <label for="formFileSm" class="form-label atributos">Nombre de la Habilidad</label>
+                      <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                     <input class="form-control form-control-lg" id="habilidad" type="text"  name="nombreSkill"  id="input-nombre" formControlName="habilidad"
                     [(ngModel)]="habilidad" [ngClass]="{'is-invalid': nombreSkill?.errors && nombreSkill?.touched,
                     'is-valid': !nombreSkill?.errors && nombreSkill?.touched}">
@@ -25,6 +29,7 @@
                   
                     <div>
                         <label for="formFileSm" class="form-label atributos">Porcentaje</label>
+                          <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                         <input type="number" class="form-control form-control-lg" name="porcentaje"
                             id="input-porcentaje" formControlName="porcentaje"   [(ngModel)]="porcentaje" [ngClass]="{'is-invalid': porcentajeSkill?.errors && porcentajeSkill?.touched,
                             'is-valid': !porcentajeSkill?.errors && porcentajeSkill?.touched}">

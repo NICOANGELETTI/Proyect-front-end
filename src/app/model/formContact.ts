@@ -1,5 +1,5 @@
 export class formContact {
-   
+     //Declaramos los atributos correspondientes en el modelo
     id!:number; 
     
     nombre: string;

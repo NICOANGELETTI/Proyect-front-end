@@ -1,4 +1,5 @@
 export class Proyectos {
+  //Declaramos los atributos correspondientes en el modelo
   id!: number;
 
   urlImagen: string;

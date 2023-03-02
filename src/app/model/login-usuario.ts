@@ -1,4 +1,5 @@
 export class LoginUsuario {
+  //Declaramos los atributos correspondientes en el modelo
   nombreUsuario: string;
   password: string;
 

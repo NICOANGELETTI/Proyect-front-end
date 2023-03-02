@@ -17,7 +17,12 @@ export class AgregarProyectoComponent implements OnInit {
   urlProyect:'';
   
 
-  constructor(private sProyecto: ProyectosService, private formBuilder: FormBuilder) {
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sProyecto: ProyectosService, 
+    private formBuilder: FormBuilder) {
+
+    //Realizamos Formulario Reactivo con sus campos requeridos
     this.formProyect = this.formBuilder.group({
       titulo: ['', [Validators.required]],
       urlImagen: ['', [Validators.required]],

@@ -20,11 +20,13 @@ export class AgregarExperienciaComponent implements OnInit {
   url_imagen: '';
 
   constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
     private sExperiencia: ExperienciaService,
     private formBuilder: FormBuilder,
     private router : Router
   ) {
     this.formExp = this.formBuilder.group({
+       //Realizamos Formulario Reactivo con sus campos requeridos
       puesto: ['', [Validators.required]],
       inicio: ['', [Validators.required]],
       fin: ['', [Validators.required]],

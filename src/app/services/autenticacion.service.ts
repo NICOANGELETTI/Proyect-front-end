@@ -10,12 +10,14 @@ export class AutenticacionService {
   currentUserSubject:BehaviorSubject<any>;
   sessionStorage: any;
 
-  constructor(private http:HttpClient) {
+  constructor(
+    //Inyectamos servicios que utilizaremos
+    private http:HttpClient) {
     this.currentUserSubject=new BehaviorSubject<any>(JSON.parse(sessionStorage.getItem('currentUser') || '{}' ));
    }
 
 
-    
+    //Metodo Login
    loginPersona(credenciales:any):Observable<any>{
     var httpOptions = {
       headers: new HttpHeaders({

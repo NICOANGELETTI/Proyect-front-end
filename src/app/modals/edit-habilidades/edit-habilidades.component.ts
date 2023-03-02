@@ -12,10 +12,14 @@ export class EditHabilidadesComponent implements OnInit {
   formSkills: FormGroup;
   habilidad: '';
   porcentaje: number;
-  constructor( private sHabilidades: HabilidadesService,
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sHabilidades: HabilidadesService,
     private formBuilder: FormBuilder
   ) {
+    
     this.formSkills = this.formBuilder.group({
+       //Realizamos Formulario Reactivo con sus campos requeridos
       habilidad: ['', [Validators.required]],
       porcentaje: ['', [Validators.required]],
     });

@@ -23,11 +23,13 @@ export class EducacionAddComponent implements OnInit {
  
 
   constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
     private sEducacion: EducacionService,
     private formBuilder: FormBuilder,
     private router : Router
   ) {
     this.form = this.formBuilder.group({
+       //Realizamos Formulario Reactivo con sus campos requeridos
       id: [''],
       titulo: ['', [Validators.required]],
       inicio: ['', [Validators.required]],

@@ -46,12 +46,17 @@ export class BodydasboardComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    //Realizamos la carga en el dashboard de cada seccion
     this.cargarEducacion();
     this.cargarHabilidad();
     this.cargarProyecto();
     this.cargarExperiencia();
     this.cargarPerfil();
   }
+
+  //Implementamos los metodos para traer del back la lista de todas las secciones
+
+
   cargarEducacion(): void {
     this.sEducacion.list().subscribe((data) => {
       this.estudios = data;
@@ -78,6 +83,10 @@ export class BodydasboardComponent implements OnInit {
       this.perfil = data;
     });
   }
+     
+  
+  //Implementamos los metodos "Borrar" para traer el metodo del Servicio para lograr Borrar por ID
+
 
   borrarEdu(id: number) {
     this.sEducacion.borrar(id).subscribe(
@@ -92,6 +101,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    //Al Borrar recargamos la pagina
     window.location.reload();
   }
   borrarExp(id: number) {
@@ -107,6 +117,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    //Al Borrar recargamos la pagina
     window.location.reload();
   }
   borrarTrab(id: number) {
@@ -121,6 +132,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    //Al Borrar recargamos la pagina
     window.location.reload();
   }
   borrarSkill(id: number) {
@@ -136,6 +148,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    //Al Borrar recargamos la pagina
     window.location.reload();
   }
   borrarPerfil(id: number) {
@@ -151,6 +164,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
+    //Al Borrar recargamos la pagina
     window.location.reload();
   }
   

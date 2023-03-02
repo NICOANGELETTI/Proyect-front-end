@@ -11,16 +11,23 @@ import { ExperienciaComponent } from './componentes/experiencia/experiencia.comp
 import { GuardGuard } from './services/guard.guard';
 
 const routes: Routes = [
-  { path: '', component: IndexComponent }, //Si no pongo nada me manda a "/" que es index.html
 
+  //Rutas de mi proyecto
+  // Al insertar la ruta acia me lleva a mi index
+  { path: '', component: IndexComponent }, 
+
+  //Ruta de Login
+  { path: 'login', component: LoginComponent },
+  //Ruta de dashboard con su respectivo "Guard" para proteger la ruta en caso de no estar logueado
   {
     path: 'dashboard',
-    component: DashboardComponent, 
-    
-  }, // Si pongo dashboard me manda a Dashboard.component
-  { path: '**', component: Error404Component },
+    component: DashboardComponent,
+    canActivate: [GuardGuard],
+
+  },
   
-  {path: 'login', component:LoginComponent},
+    //Si ponemos una ruta incorrecta , nos manda a la pagina de Error404 (Pagina no encontrada)
+  { path: '**', component: Error404Component },
 ];
 
 @NgModule({

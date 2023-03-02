@@ -1,3 +1,4 @@
+<!--Modal Agregar Proyectos-->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
@@ -6,12 +7,16 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+
+          <!--Formulario de Perfil para agregar-->
+           <!--Implementamos metodo para cargar-->
           <form [formGroup]="formPerfil"  (ngSubmit)="crearnuevoPerfil()" class="w-100">
         <div>
          
           <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Perfil</h1>
             <div>
               <label for="nombre" class="form-label atributos">Nombre</label>
+               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
               <input class="form-control form-control-lg"  type="text"
               name="nombre"
               id="nombre" formControlName="nombre"   [(ngModel)]="nombre" [ngClass]="{'is-invalid':  nombrePerfil?.errors &&  nombrePerfil?.touched,
@@ -26,6 +31,7 @@
          
             <div>
               <label for="apellido" class="form-label atributos">Apellido</label>
+               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
               <input class="form-control form-control-lg"  type="text"
               name="apellido"
               id="apellido" formControlName="apellido"   [(ngModel)]="apellido" [ngClass]="{'is-invalid':  apellidoPerfil?.errors &&  apellidoPerfil?.touched,
@@ -36,6 +42,7 @@
               </div>
               <div>
                 <label for="tituloDeveloper" class="form-label atributos">Titulo Profesional</label>
+                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                 <input class="form-control form-control-lg"  type="text"
                 name="tituloDeveloper"
                 id="tituloDeveloper" formControlName="tituloDeveloper"   [(ngModel)]="tituloDeveloper" [ngClass]="{'is-invalid':  tituloDeveloperPerfil?.errors &&  tituloDeveloperPerfil?.touched,
@@ -49,6 +56,7 @@
               </div>
             <div>
               <label for="url_imagenperfil" class="form-label atributos">Url Imagen de Perfil</label>
+               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
               <input class="form-control form-control-lg"  type="text" name="url_imagenperfil"
               id="url_imagenperfil" formControlName="url_imagenperfil" 
               [(ngModel)]="url_imagenperfil" [ngClass]="{'is-invalid': url_imagenPerfil?.errors && url_imagenPerfil?.touched,

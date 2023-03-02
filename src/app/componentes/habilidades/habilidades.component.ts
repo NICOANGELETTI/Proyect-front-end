@@ -9,12 +9,15 @@ import { HabilidadesService } from '../../services/habilidades.service';
   styleUrls: ['./habilidades.component.css'],
 })
 export class HabilidadesComponent implements OnInit {
-  constructor(private sHabilidades: HabilidadesService) {}
+  constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
+    private sHabilidades: HabilidadesService) {}
+   //Declaramos  
   habilidad: Habilidades[] = [];
   ngOnInit(): void {
     this.cargarHabilidad();
   }
-
+//Realizo metodo para traer la lista de habilidades del backend
   cargarHabilidad(): void {
     this.sHabilidades.list().subscribe((data) => {
       this.habilidad = data;

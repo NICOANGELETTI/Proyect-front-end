@@ -13,15 +13,18 @@ export class PerfilComponent implements OnInit {
   perfil: Perfil[] = [];
 
   constructor(
-    /* Inyectar el servicio para tener acceso en la clase de los metodos*/
+    //Inyectamos en Constructor los Servicios que usaremos
     private  sPerfil: PerfilService
   ) {}
 
   ngOnInit(): void {
-    //Esto es almacenar en la variable de instancia los datos recuperados por el Servicio
-    
+
+
+    //Cargamos perfil
       this.cargarPerfil();
     }
+
+    //Realizamos el metodo para traer la lista del backend de Perfil
     cargarPerfil(): void {
       this.sPerfil.list().subscribe((data) => {
         this.perfil = data;

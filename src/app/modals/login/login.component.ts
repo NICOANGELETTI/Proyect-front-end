@@ -25,12 +25,14 @@ export class LoginComponent implements OnInit {
   errMsj!: string;
 
   constructor(
+    //Inyectamos en Constructor los Servicios que usaremos
     private tokenService: TokenService,
     private authService: AuthService,
     private router: Router,
 
     private formBuilder: FormBuilder
   ) {
+     //Realizamos Formulario Reactivo con sus campos requeridos
     this.formLogin = this.formBuilder.group({
       nombreUsuario1: ['', [Validators.required, Validators.email]],
       password1: ['', [Validators.required, Validators.minLength(8)]],
@@ -38,6 +40,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    
     if (this.tokenService.getToken()) {
       this.isLogged = true;
       this.isLogginFail = false;
@@ -48,13 +51,14 @@ export class LoginComponent implements OnInit {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
     this.authService.login(this.loginUsuario).subscribe(
       (data) => {
+        
         this.isLogged = true;
         this.isLogginFail = false;
         this.tokenService.setToken(data.token);
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-
+        //Si esta todo correcto en el inicio de sesion nos redirige a la ruta del Dashboard
         this.router.navigate(['/dashboard']);
         
       },

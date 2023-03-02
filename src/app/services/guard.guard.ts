@@ -8,34 +8,34 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 import { AutenticacionService } from './autenticacion.service';
+import { TokenService } from './token.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GuardGuard implements CanActivate {
   constructor(
+    //Inyectamos servicios que utilizaremos
     private autenticacionServicio: AutenticacionService,
-    private rutas: Router
+    private rutas: Router,private auth: TokenService
   ) {}
   canActivate(
     route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot
+    state: RouterStateSnapshot,
+    
   ):
     | boolean
     | UrlTree
     | Observable<boolean | UrlTree>
     | Promise<boolean | UrlTree> {
     let currentUser = this.autenticacionServicio.usuarioAutenticado;
-    if (currentUser && currentUser.id) {
-      return true;
+    if (!this.auth.getToken()) {
+      return this.rutas.navigate(['/']).then(() => false);
+      
     }
-    else {   
-      
-      alert('no tienes permiso para entrar')
-      
-      return true ;  
-      
-      
-   }
-  }
+    
+  return true;
+  
 }
+  }
+

@@ -8,7 +8,9 @@ import { AutenticacionService } from './autenticacion.service';
 })
 export class InterceptorService implements HttpInterceptor {
 
-  constructor(private autenticacionServicio : AutenticacionService) { }
+  constructor(
+    //Inyectamos servicios que utilizaremos
+    private autenticacionServicio : AutenticacionService) { }
 
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     var currentUser = this.autenticacionServicio.usuarioAutenticado;

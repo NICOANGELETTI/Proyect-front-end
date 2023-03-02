@@ -1,4 +1,5 @@
 export class Perfil {
+  //Declaramos los atributos correspondientes en el modelo
   id: number;
 
   nombre: string;
