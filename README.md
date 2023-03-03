@@ -2,6 +2,7 @@
 
 Proyecto generado con Angular version 14.1.3. y con la version 1.75.0 de Visual Studio Code.  
 
+## Aclaracion
 -El Readme, Los Tags,commits,merge de ramas y demas comandos/funcionalidades de Git y Github no estan del todo claros en muchos casos. No queria dejar pasar la oportunidad de mencionar que durante todo este curso me he capacitado y aprendido mas sobre estas funcionalidades para mejorar en un futuro en su implementacion.Debido a eso en el proyecto se puede encontrar algunos errores o malas practicas en los anteriores mencionados.Para mejorar y corregir algunas funcionalidades ya era tarde debido a que el proyecto ya tenia un progreso avanzado y no se habian realizado las buenas practicas a tiempo. Desde ya muchas gracias por tomarse el tiempo de leer.
 
 ## Name
