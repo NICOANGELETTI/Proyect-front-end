@@ -51,7 +51,7 @@ export class AgregarPerfilComponent implements OnInit {
     return this.formPerfil.get('urlimagenPerfil');
   }
 
-  //Copie desde el repo de Josman
+
   crearnuevoPerfil(): void {
     /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
 
