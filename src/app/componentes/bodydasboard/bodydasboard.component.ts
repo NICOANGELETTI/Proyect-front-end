@@ -47,11 +47,14 @@ export class BodydasboardComponent implements OnInit {
 
   ngOnInit(): void {
     //Realizamos la carga en el dashboard de cada seccion
+
     this.cargarEducacion();
     this.cargarHabilidad();
     this.cargarProyecto();
     this.cargarExperiencia();
     this.cargarPerfil();
+  
+
   }
 
   //Implementamos los metodos para traer del back la lista de todas las secciones
@@ -168,5 +171,18 @@ export class BodydasboardComponent implements OnInit {
     window.location.reload();
   }
   
-  
+  cargarDetalle(id: number){
+    this.sEducacion.getById(id).subscribe(
+      {
+        next: (data) => {
+          this.form.setValue(data);
+        },
+        error: (e) => {
+          console.error(e)
+          alert("error al modificar")
+        },
+        complete: () => console.info('complete aqui')
+      }
+    )
+  }
 }

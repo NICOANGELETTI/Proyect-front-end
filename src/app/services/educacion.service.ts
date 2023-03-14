@@ -55,6 +55,7 @@ export class EducacionService {
   }
   //Metodo Editar
   public edit(Estudio: Educacion):Observable<any>{
-    return this.httpClient.put<any>(this.url + 'update', Estudio);
+    return this.httpClient.put<any>(this.url + `update/$`, Estudio);
     }
+   
 }

@@ -9,43 +9,44 @@
             </div>
             <div class="modal-body">
 
-            <!--Formulario de Habilidades para agregar-->
-           <!--Implementamos metodo para cargar-->
+                <!--Formulario de Habilidades para agregar-->
+                <!--Implementamos metodo para cargar-->
                 <form [formGroup]="formSkills" (ngSubmit)="crearNuevaHabilidad()" class="w-100">
-                <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Habilidad</h1>
-                <div>
-
+                    <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Habilidad</h1>
                     <div>
-                        <label for="formFileSm" class="form-label atributos">Nombre de la Habilidad</label>
-                        <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                        <input class="form-control form-control-lg" id="habilidad" type="text"  name="nombreSkill"  id="input-nombre" formControlName="habilidad"
-                        [(ngModel)]="habilidad" [ngClass]="{'is-invalid': nombreSkill?.errors && nombreSkill?.touched,
-                        'is-valid': !nombreSkill?.errors && nombreSkill?.touched}">
-                        <div *ngIf="nombreSkill?.errors && nombreSkill?.touched">
-                            <div *ngIf="nombreSkill?.hasError('required')" class="alert alert-danger" role="alert">
-                                Debe ingresar el nombre de la habilidad.
-                            </div>
 
-                        </div>
-                      
                         <div>
-                            <label for="formFileSm" class="form-label atributos">Porcentaje</label>
+                            <label for="formFileSm" class="form-label atributos">Nombre de la Habilidad</label>
                             <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                            <input type="number" class="form-control form-control-lg" name="porcentaje"
-                                id="input-porcentaje" formControlName="porcentaje"   [(ngModel)]="porcentaje" [ngClass]="{'is-invalid': porcentajeSkill?.errors && porcentajeSkill?.touched,
-                                'is-valid': !porcentajeSkill?.errors && porcentajeSkill?.touched}">
-                            <div *ngIf="porcentajeSkill?.errors && porcentajeSkill?.touched">
-                                <div *ngIf="porcentajeSkill?.hasError('required')" class="alert alert-danger"
-                                    role="alert">
-                                    Debe ingresar el porcentaje de la habilidad.
+                            <input class="form-control form-control-lg" id="habilidad" type="text" name="nombreSkill"
+                                id="input-nombre" formControlName="habilidad" [(ngModel)]="habilidad" [ngClass]="{'is-invalid': nombreSkill?.errors && nombreSkill?.touched,
+                        'is-valid': !nombreSkill?.errors && nombreSkill?.touched}">
+                            <div *ngIf="nombreSkill?.errors && nombreSkill?.touched">
+                                <div *ngIf="nombreSkill?.hasError('required')" class="alert alert-danger" role="alert">
+                                    Debe ingresar el nombre de la habilidad.
                                 </div>
 
                             </div>
-                            <div class="modal-footer">
 
-                                <button type="submit" class="btn btn-primary">Guardar Habilidad</button>
-                            </div>
-                        <!--
+                            <div>
+                                <label for="formFileSm" class="form-label atributos">Porcentaje</label>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <input type="number" class="form-control form-control-lg" name="porcentaje"
+                                    id="input-porcentaje" formControlName="porcentaje" [(ngModel)]="porcentaje"
+                                    [ngClass]="{'is-invalid': porcentajeSkill?.errors && porcentajeSkill?.touched,
+                                'is-valid': !porcentajeSkill?.errors && porcentajeSkill?.touched}">
+                                <div *ngIf="porcentajeSkill?.errors && porcentajeSkill?.touched">
+                                    <div *ngIf="porcentajeSkill?.hasError('required')" class="alert alert-danger"
+                                        role="alert">
+                                        Debe ingresar el porcentaje de la habilidad.
+                                    </div>
+
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="submit" class="btn btn-primary">Guardar Habilidad</button>
+                                </div>
+                                <!--
                             <div>
                                 <div>
                                     <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Educacion
@@ -71,8 +72,8 @@
                                     </div>
                                 </div>
                                 </div>-->
-                                </div>
-                                </div>
-                                </div>
-                        
-                            </form>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>

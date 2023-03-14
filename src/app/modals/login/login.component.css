@@ -1,7 +1,11 @@
 .fondo {
   background-image: url(../../../assets/IMG2/fondo.jpg);
+  background-color: transparent;
+  
 }
-
+.modal-backdrop{
+  background-color: transparent !important;
+}
 * {
   -ms-box-sizing: border-box;
   -moz-box-sizing: border-box;

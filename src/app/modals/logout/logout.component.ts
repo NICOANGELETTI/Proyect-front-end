@@ -5,7 +5,7 @@ import { AutenticacionService } from 'src/app/services/autenticacion.service';
 @Component({
   selector: 'app-logout',
   templateUrl: './logout.component.html',
-  styleUrls: ['./logout.component.css']
+  styleUrls: ['./logout.component.css'],
 })
 export class LogoutComponent implements OnInit {
   modoEdit: any;
@@ -13,24 +13,26 @@ export class LogoutComponent implements OnInit {
   personaService: any;
   constructor(
     //Inyectamos en Constructor los Servicios que usaremos
-    private auth:AutenticacionService, private ruta:Router) { }
+    private auth: AutenticacionService,
+    private ruta: Router
+  ) {}
 
   ngOnInit(): void {
-    this.personaService.verPersonas().subscribe((data: any) =>{
-      this.persona = data
+    this.personaService.verPersonas().subscribe((data: any) => {
+      this.persona = data;
     });
-    if (sessionStorage.getItem('currentUser') == null){
+    if (sessionStorage.getItem('currentUser') == null) {
       this.modoEdit = false;
-    }else if (sessionStorage.getItem('currentUser') == null){
+    } else if (sessionStorage.getItem('currentUser') == null) {
       this.modoEdit = false;
     }
- }
-  cerrarSesion(){
-    sessionStorage.setItem('currentUser', "null");
+  }
+  cerrarSesion() {
+    sessionStorage.setItem('currentUser', 'null');
     this.modoEdit = false;
-    alert("SESIÓN CERRADA");
-  
-    window.sessionStorage.removeItem;
+    alert('La Sesion ha sido cerrada con Exito');
+
+    window.sessionStorage.clear();
     this.ruta.navigate(['/']);
   }
 }

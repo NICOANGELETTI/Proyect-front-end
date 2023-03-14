@@ -23,6 +23,7 @@ export class RedesComponent implements OnInit {
     }else{
       this.isLogged = false;
     }
+    
   }
 
   //Metodo de Logout

@@ -1,94 +1,98 @@
 <!-- Modal Editar Educacion -->
 <div class="modal fade" id="modaledit" tabindex="-1" aria-labelledby="modaleditlLabel" aria-hidden="true">
     <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-        
-        <!-- Implementamos metodo en el formulario-->
-    <form (ngSubmit)="onEnviar($event)" novalidate>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-       
-          <!--Formulario para reemplazar los valores y editar-->
-         
-        <div class="modal-body">
-            <div> 
-                <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Editar Educacion</h1>
-               
-               
-            <div>
-           
-                <input type="hidden" formControlName="id" [ngModel]="edu.id">
-            </div>
-                <div>
-                    <label for="titulo" class="form-label atributos">Titulo</label>
-           <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                    <input class="form-control form-control-lg" formControlName="titulo" id="titulo" type="text"
-                        name="tituloCurso"  formControlName="titulo" [(ngModel)]="edu.titulo"
-                         [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
+        <div class="modal-content">
+            <div class="modal-header">
+
+                <!-- Implementamos metodo en el formulario-->
+                <form novalidate>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                    <!--Formulario para reemplazar los valores y editar-->
+
+                    <div class="modal-body">
+                        <div>
+                            <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Editar Educacion</h1>
+
+
+                            <div>
+
+                               
+                            </div>
+                            <div>
+                                <label for="titulo" class="form-label atributos">Titulo</label>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <input class="form-control form-control-lg" formControlName="titulo" id="titulo"
+                                    type="text" name="tituloCurso" formControlName="titulo"
+                                    [(ngModel)]="educacion.titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
                         'is-valid': !tituloCurso?.errors && tituloCurso?.touched}">
 
-                    <div *ngIf="tituloCurso?.errors && tituloCurso?.touched" class="alert alert-danger">
+                                <div *ngIf="tituloCurso?.errors && tituloCurso?.touched" class="alert alert-danger">
 
-                        Este Campo es requerido</div>
+                                    Este Campo es requerido</div>
 
-                </div>
-                <div>
-                    <!--En cada input ponemos un ngModel y un ngIf(errors) para poder Conectar con base de datos-->
-                    <label for="institucion" class="form-label atributos">Institucion</label>
-                     <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                    <input class="form-control form-control-lg" formControlName="institucion" id="institucion"
-                        type="text" name="institucionCurso"  
-                        [(ngModel)]="edu.institucion" 
-                        [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
+                            </div>
+                            <div>
+                                <!--En cada input ponemos un ngModel y un ngIf(errors) para poder Conectar con base de datos-->
+                                <label for="institucion" class="form-label atributos">Institucion</label>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <input class="form-control form-control-lg" formControlName="institucion"
+                                    id="institucion" type="text" name="institucionCurso"
+                                    [(ngModel)]="educacion.institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
                         'is-valid': !institucionCurso?.errors && institucionCurso?.touched}">
-                    <div *ngIf="institucionCurso?.errors && institucionCurso?.touched"
-                        class="alert alert-danger">Este Campo es requerido</div>
+                                <div *ngIf="institucionCurso?.errors && institucionCurso?.touched"
+                                    class="alert alert-danger">Este Campo es requerido</div>
 
-                </div>
-                <div>
-                    <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                    <label for="inicio" class="form-label atributos">Inicio</label>
-                     <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                    <input class="form-control form-control-lg" formControlName="inicio" id="inicio" type="text"
-                        name="inicioCurso"  formControlName="inicio" [(ngModel)]="edu.inicio" [ngClass]="{'is-invalid': inicioCurso?.errors && inicioCurso?.touched,
+                            </div>
+                            <div>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <label for="inicio" class="form-label atributos">Inicio</label>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <input class="form-control form-control-lg" formControlName="inicio" id="inicio"
+                                    type="text" name="inicioCurso" formControlName="inicio"
+                                    [(ngModel)]="educacion.inicio" [ngClass]="{'is-invalid': inicioCurso?.errors && inicioCurso?.touched,
                         'is-valid': !inicioCurso?.errors && inicioCurso?.touched}">
-                    <div *ngIf="inicioCurso?.errors && inicioCurso?.touched" class="alert alert-danger">Este
-                        Campo es requerido</div>
+                                <div *ngIf="inicioCurso?.errors && inicioCurso?.touched" class="alert alert-danger">Este
+                                    Campo es requerido</div>
 
 
-                </div>
-                <div>
-                    <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                    <label for="fin" class="form-label atributos">Fin</label>
-                     <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                    <input class="form-control form-control-lg" formControlName="fin" id="fin" type="text"
-                        name="finCurso" required formControlName="fin" [(ngModel)]="edu.fin" [ngClass]="{'is-invalid': finCurso?.errors && finCurso?.touched,
+                            </div>
+                            <div>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <label for="fin" class="form-label atributos">Fin</label>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <input class="form-control form-control-lg" formControlName="fin" id="fin" type="text"
+                                    name="finCurso" required formControlName="fin" [(ngModel)]="educacion.fin"
+                                    [ngClass]="{'is-invalid': finCurso?.errors && finCurso?.touched,
                         'is-valid': !finCurso?.errors && finCurso?.touched}">
-                    <div *ngIf="finCurso?.errors && finCurso?.touched" class="alert alert-danger">Este Campo es
-                        requerido</div>
+                                <div *ngIf="finCurso?.errors && finCurso?.touched" class="alert alert-danger">Este Campo
+                                    es
+                                    requerido</div>
 
-                </div>
-                <div>
-                   
-                    <label for="url" class="form-label atributos">URL de Imagen Institucion</label>
-                     <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                    <input class="form-control form-control-lg" formControlName="url_imagen" id="url_imagen"
-                        type="text" name="urlCurso" required formControlName="url_imagen"
-                        [(ngModel)]="edu.url_imagen" [ngClass]="{'is-invalid': urlCurso?.errors && urlCurso?.touched,
+                            </div>
+                            <div>
+
+                                <label for="url" class="form-label atributos">URL de Imagen Institucion</label>
+                                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                                <input class="form-control form-control-lg" formControlName="url_imagen" id="url_imagen"
+                                    type="text" name="urlCurso" required formControlName="url_imagen"
+                                    [(ngModel)]="educacion.url_imagen" [ngClass]="{'is-invalid': urlCurso?.errors && urlCurso?.touched,
                         'is-valid': !urlCurso?.errors && urlCurso?.touched}">
-                    <div *ngIf="urlCurso?.errors && urlCurso?.touched " class="alert alert-danger">Este Campo es
-                        requerido</div>
+                                <div *ngIf="urlCurso?.errors && urlCurso?.touched " class="alert alert-danger">Este
+                                    Campo es
+                                    requerido</div>
 
-                </div>
-                <div class="modal-footer">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                                data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"
+                                  (click)="cargarDetalle(educacion.id)"></i></button>
+    
+                                <button type="submit" class="btn btn-primary" (click)="guardar()">Editar Educacion</button>
+                            </div>
 
-                    <button type="submit" 
-                    
-                                class="btn btn-primary">Editar Educacion</button>
-                </div>
-           
- 
-      </div>
-      </div>
- 
-    </form>
+
+                        </div>
+                    </div>
+
+                </form>

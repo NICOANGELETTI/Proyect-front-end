@@ -9,6 +9,9 @@ import { LoginComponent } from './modals/login/login.component';
 import { EducacionComponent } from './componentes/educacion/educacion.component';
 import { ExperienciaComponent } from './componentes/experiencia/experiencia.component';
 import { GuardGuard } from './services/guard.guard';
+import { EditEducacionComponent } from './modals/edit-educacion/edit-educacion.component';
+import { EditProyectoComponent } from './modals/edit-proyecto/edit-proyecto.component';
+import { EditPerfilComponent } from './modals/edit-perfil/edit-perfil.component';
 
 const routes: Routes = [
 
@@ -25,9 +28,11 @@ const routes: Routes = [
     canActivate: [GuardGuard],
 
   },
-  
+  { path: 'educacion/update/:id', component: EditEducacionComponent},
     //Si ponemos una ruta incorrecta , nos manda a la pagina de Error404 (Pagina no encontrada)
-  { path: '**', component: Error404Component },
+  { path: '**', component: Error404Component }
+  
+  
 ];
 
 @NgModule({

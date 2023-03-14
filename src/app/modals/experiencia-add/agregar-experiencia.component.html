@@ -9,8 +9,8 @@
       </div>
       <div class="modal-body">
 
-          <!--Formulario de Experiencia para agregar-->
-           <!--Implementamos metodo para cargar-->
+        <!--Formulario de Experiencia para agregar-->
+        <!--Implementamos metodo para cargar-->
         <form [formGroup]="formExp" (ngSubmit)="crearNuevoCurso()" novalidate #form="ngForm">
           <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Experiencia</h1>
 
@@ -58,7 +58,7 @@
               <label for="inicio" class="form-label atributos">Inicio</label>
               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
               <input type="text" class="form-control" id="inicio" name="inicioExp" formControlName="inicio"
-              [(ngModel)]="inicio" [ngClass]="{'is-invalid': inicioExp?.errors && inicioExp?.touched,
+                [(ngModel)]="inicio" [ngClass]="{'is-invalid': inicioExp?.errors && inicioExp?.touched,
               'is-valid': !inicioExp?.errors && inicioExp?.touched}">
               <div *ngIf="inicioExp?.errors && inicioExp?.touched">
                 <div *ngIf="inicioExp?.hasError('required')" class="alert alert-danger" role="alert">
@@ -70,8 +70,8 @@
             <div>
               <label for="fin" class="form-label atributos">Fin</label>
               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-              <input type="text" class="form-control" id="fin" name="finExp" formControlName="fin"
-              [(ngModel)]="fin" [ngClass]="{'is-invalid': finExp?.errors && finExp?.touched,
+              <input type="text" class="form-control" id="fin" name="finExp" formControlName="fin" [(ngModel)]="fin"
+                [ngClass]="{'is-invalid': finExp?.errors && finExp?.touched,
               'is-valid': !finExp?.errors && finExp?.touched}">
 
               <div *ngIf="finExp?.errors && finExp?.touched">
@@ -93,7 +93,7 @@
           </div>
 
 
-    <!--
+          <!--
           <div>
             <div>
               <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar Experiencia</h1>

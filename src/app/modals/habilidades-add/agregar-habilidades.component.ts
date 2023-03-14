@@ -18,7 +18,7 @@ export class AgregarHabilidadesComponent implements OnInit {
     private sHabilidades: HabilidadesService,
     private formBuilder: FormBuilder
   ) {
-     //Realizamos Formulario Reactivo con sus campos requeridos
+    //Realizamos Formulario Reactivo con sus campos requeridos
     this.formSkills = this.formBuilder.group({
       habilidad: ['', [Validators.required]],
       porcentaje: ['', [Validators.required]],
@@ -34,7 +34,7 @@ export class AgregarHabilidadesComponent implements OnInit {
     return this.formSkills.get('habilidad');
   }
 
-  //Copie desde el repo de Josman
+ 
   crearNuevaHabilidad(): void {
     /*Acá se obtiene la propiedad y valor de imgCurso y se introduce la url obtenida de la imagen, proveniente de Firebase y se la manda a la base de datos, junto con los demás valores del formulario.*/
 

@@ -14,7 +14,9 @@ export class EditEducacionComponent implements OnInit {
   //Declaramos
   form:FormGroup;
   edu:Educacion;
-
+  educacion: Educacion = null;
+  estudios: Educacion[] = [];
+  
   constructor(
     //Inyectamos en Constructor los Servicios que usaremos
     private sEducacion: EducacionService,
@@ -36,7 +38,8 @@ export class EditEducacionComponent implements OnInit {
 
   ngOnInit(): void { 
   
- }
+   
+  }
   get tituloCurso() {
     return this.form.get('titulo');
   }
@@ -75,22 +78,79 @@ export class EditEducacionComponent implements OnInit {
     );
   }
 
-  onUpdate():void{
-    this.sEducacion.edit(this.form.value).subscribe(data => {
-      alert("Estudio modificado.");
-      this.router.navigate(['']);
+  guardar() {
+    console.log("FUNCIONA!!!")
+    let edu = this.form.value;
+    console.log()
+
+    if (edu.id == '') {
+      this.sEducacion.agregarEstudio(edu).subscribe(
+        data => {
+          alert("Su nueva Educacion fue añadida correctamente");
+          this.cargarEducacion();
+          this.form.reset();
+        }
+      )
+    } else {
+      this.sEducacion.agregarEstudio(edu).subscribe(
+        data => {
+          alert("Experiencia editada!!! BRAVOOOOO!!!!");
+          this.cargarEducacion();
+          this.form.reset();
+        }
+      )
     }
-    )
   }
 
-  /* */
+
+  /*onUpdate(): void{
+    let edu = this.form.value;
+    this.sEducacion.update(edu.id, edu).subscribe(
+      data => {
+        alert('Educacion editada correctamente');
+        window.location.reload();
+        this.form.reset();
+      },
+      error => {
+        alert('Falló al editar la Educacion, intente nuevamente');
+        window.location.reload();
+        this.form.reset();
+      })
+  }
   onEnviar(event:Event){
     event.preventDefault;
     if (this.form.valid){
       this.onUpdate();
+      window.location.reload();
     }else{
       alert("falló en la carga, intente nuevamente");
       this.form.markAllAsTouched();
+      window.location.reload();
     }
+  }*/
+
+  cargarEducacion2():void {
+    this.sEducacion.list().subscribe(data =>{
+      this.estudios = data;
+      console.log(data);
+    });
   }
+
+  //👇 esto es solo para hacer pruebas en local
+  cargarDetalle(id: number){
+    this.sEducacion.getById(id).subscribe(
+      {
+        next: (data) => {
+          this.form.setValue(data);
+        },
+        error: (e) => {
+          console.error(e)
+          alert("error al modificar")
+        },
+        complete: () => console.info('complete aqui')
+      }
+    )
+  }
+  
+  
 }

@@ -127,3 +127,10 @@ i.fa-brands.fa-github.fa-2xl:hover {
   display: flex;
   justify-content: center;
 }
+/*Logramos sacar backdrop de los modales*/
+.modal-backdrop{
+  background-color: transparent !important;
+ width: 0 !important;
+ height: 0 !important;
+
+}

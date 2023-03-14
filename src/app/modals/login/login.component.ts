@@ -60,7 +60,9 @@ export class LoginComponent implements OnInit {
         this.roles = data.authorities;
         //Si esta todo correcto en el inicio de sesion nos redirige a la ruta del Dashboard
         this.router.navigate(['/dashboard']);
+       
         
+
       },
       (err) => {
         this.isLogged = false;
@@ -68,7 +70,8 @@ export class LoginComponent implements OnInit {
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
       }
-    );
+    )
+    
   }
 
   get Password() {
