@@ -2,9 +2,36 @@
 
 Proyecto generado con Angular version 14.1.3. y con la version 1.75.0 de Visual Studio Code.  
 
+## Aclaracion
+-El Readme, Los Tags,commits,merge de ramas y demas comandos/funcionalidades de Git y Github no estan del todo claros en muchos casos. No queria dejar pasar la oportunidad de mencionar que durante todo este curso me he capacitado y aprendido mas sobre estas funcionalidades para mejorar en un futuro en su implementacion.Debido a eso en el proyecto se puede encontrar algunos errores o malas practicas en los anteriores mencionados.Para mejorar y corregir algunas funcionalidades ya era tarde debido a que el proyecto ya tenia un progreso avanzado y no se habian realizado las buenas practicas a tiempo. Desde ya muchas gracias por tomarse el tiempo de leer.
+
+## Componentes Explicacion
+
+    INDEX
+
+Primero que nada en mi index tengo todos los componentes correspondientes a lo que quiero mostrar que son: 
+-Perfil
+-Educacion
+-Experiencia
+-Proyectos
+-Habilidades
+
+En estos componentes traigo de mi base de datos MYSQL los datos correspondientes que quiero mostrar en mi pagina principal.
+
+    DASHBOARD
+    
+   En el componente "BODYDASHBOARD" lo que trate de realizar es dividir en paneles cada seccion correspondiente para poder agregar,eliminar, editar  lo que queramos.
+   El cual tome la decisión tambien que desde este mismo componente de "BODYDASHBOARD" insertar los botones para agregar, eliminar y editar lo que queramos.
+   En el boton eliminar lo tenemos con una funcion llamada (click)="borrarLorem(borrarLorem.id)" para que llame a la funcion del archivo TS y me borre el elemento       correspondiente.
+   En el boton Agregar y Eliminar llamamos al modal correspondiente para poder llenar el formulario reactivo que tenemos para cargar o borrar una educacion , un       proyecto, una experiencia, o lo que queramos cargar. 
+  
+  --ACLARACION IMPORTANTE: Despues de mucho insistir sigo sin poder que desde el Dashboard poder editar correctamente mis diferentes componentes de cada seccion. Desde el Backend lo pude hacer con exito al metodo UPDATE , pero desde el front end insisti muchisimo pero no pude lograr que me edite correctamente. Me costo mucho realizar el proyecto al haber empezado el curso con 0 conocimiento en el mundo IT. Agradezco la compresion.
+   
 
 ## Name
 Portafolio Web Nicolás Angeletti
+
+- Los manuales pueden no estar del todo claros, pero se aprecia bien el subneteo. Están pendientes los importantes.
 
 ## Development server
 
