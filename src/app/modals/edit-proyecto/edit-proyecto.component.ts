@@ -45,4 +45,34 @@ export class EditProyectoComponent implements OnInit {
   get urlProyecto() {
     return this.formProyect.get("urlProyect");
   }
+
+onUpdate():void{
+  let hab = this.formProyect.value;
+    this.sProyecto.update(hab.id, hab).subscribe(
+      data => {
+        alert('Proyecto editado correctamente');
+        window.location.reload();
+        this.formProyect.reset();
+      },
+      error => {
+        alert('Falló al editar la Proyecto, intente nuevamente');
+        window.location.reload();
+        this.formProyect.reset();
+      })
+  }
+    onEnviar(event:Event){
+    event.preventDefault;
+    if (this.formProyect.valid){
+      this.onUpdate();
+    }else{
+      alert("falló en la carga, intente nuevamente");
+      this.formProyect.markAllAsTouched();
+    }
+  }
+  detail(id:number){
+    this.sProyecto.detail(id).subscribe(data =>{
+      this.formProyect.setValue(data);
+      console.log(data);
+    })
+  }
 }

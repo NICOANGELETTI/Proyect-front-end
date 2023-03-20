@@ -8,7 +8,7 @@
         </div>
        <div class="modal-body">
         <!-- Implementamos metodo en el formulario-->
-          <form [formGroup]="formProyect"  novalidate #form="ngForm">
+          <form [formGroup]="formProyect" (ngSubmit)="onEnviar($event)" novalidate #form="ngForm">
             <!--Formulario para reemplazar los valores y editar-->
          
                 <div>

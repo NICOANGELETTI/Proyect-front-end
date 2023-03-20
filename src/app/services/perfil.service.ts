@@ -7,12 +7,13 @@ import { Perfil } from '../model/perfil';
   providedIn: 'root',
 })
 export class PerfilService {
-  url = 'http://localhost:8080/persona/';
+  url = 'https://proyect-back-end.onrender.com/persona/';
   constructor(
     //Inyectamos servicios que utilizaremos
-    private httpClient: HttpClient) {}
+    private httpClient: HttpClient
+  ) {}
 
-    //Metodo para traer la lista de Perfiles
+  //Metodo para traer la lista de Perfiles
   public list(): Observable<Perfil[]> {
     return this.httpClient.get<Perfil[]>(this.url + 'lista');
   }
@@ -28,5 +29,12 @@ export class PerfilService {
   //Metodo para borrar un Perfil
   public borrar(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.url + `delete/persona/${id}`);
+  }
+  //Metodo actualizar
+  public update(id: number, perfil: Perfil): Observable<any> {
+    return this.httpClient.put<any>(this.url + `update/${id}`, perfil);
+  }
+  public detail(id: number): Observable<Perfil> {
+    return this.httpClient.get<Perfil>(this.url + `detail/${id}`);
   }
 }

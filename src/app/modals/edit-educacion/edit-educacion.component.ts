@@ -78,29 +78,7 @@ export class EditEducacionComponent implements OnInit {
     );
   }
 
-  guardar() {
-    console.log("FUNCIONA!!!")
-    let edu = this.form.value;
-    console.log()
 
-    if (edu.id == '') {
-      this.sEducacion.agregarEstudio(edu).subscribe(
-        data => {
-          alert("Su nueva Educacion fue añadida correctamente");
-          this.cargarEducacion();
-          this.form.reset();
-        }
-      )
-    } else {
-      this.sEducacion.agregarEstudio(edu).subscribe(
-        data => {
-          alert("Experiencia editada!!! BRAVOOOOO!!!!");
-          this.cargarEducacion();
-          this.form.reset();
-        }
-      )
-    }
-  }
 
 
   /*onUpdate(): void{
@@ -137,7 +115,7 @@ export class EditEducacionComponent implements OnInit {
   }
 
   //👇 esto es solo para hacer pruebas en local
-  cargarDetalle(id: number){
+  /*cargarDetalle(id: number){
     this.sEducacion.getById(id).subscribe(
       {
         next: (data) => {
@@ -151,6 +129,56 @@ export class EditEducacionComponent implements OnInit {
       }
     )
   }
-  
-  
+  guardar() {
+    console.log("FUNCIONA!!!")
+    let edu = this.form.value;
+    console.log()
+
+    if (edu.id == '') {
+      this.sEducacion.agregarEstudio(edu).subscribe(
+        data => {
+          alert("Su nueva Educacion fue añadida correctamente");
+          this.cargarEducacion();
+          this.form.reset();
+        }
+      )
+    } else {
+      this.sEducacion.agregarEstudio(edu).subscribe(
+        data => {
+          alert("Experiencia editada!!! BRAVOOOOO!!!!");
+          this.cargarEducacion();
+          this.form.reset();
+        }
+      )
+    }
+  }*/
+  onUpdate():void{
+    let edu = this.form.value;
+      this.sEducacion.update(edu.id, edu).subscribe(
+        data => {
+          alert('Educacion editada correctamente');
+          window.location.reload();
+          this.form.reset();
+        },
+        error => {
+          alert('Falló al editar la educacion, intente nuevamente');
+          window.location.reload();
+          this.form.reset();
+        })
+    }
+      onEnviar(event:Event){
+      event.preventDefault;
+      if (this.form.valid){
+        this.onUpdate();
+      }else{
+        alert("falló en la carga, intente nuevamente");
+        this.form.markAllAsTouched();
+      }
+    }
+    detail(id:number){
+      this.sEducacion.detail(id).subscribe(data =>{
+        this.form.setValue(data);
+        console.log(data);
+      })
+    }
 }

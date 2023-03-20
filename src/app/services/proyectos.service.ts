@@ -7,13 +7,13 @@ import { Proyectos } from '../model/proyectos';
   providedIn: 'root',
 })
 export class ProyectosService {
-  url = 'http://localhost:8080/proyecto/';
+  url = 'https://proyect-back-end.onrender.com/proyecto/';
   constructor(
-    
     //Inyectamos servicios que utilizaremos
-    private httpClient: HttpClient) {}
+    private httpClient: HttpClient
+  ) {}
 
-    //Metodo para traer la lista de proyectos
+  //Metodo para traer la lista de proyectos
   public list(): Observable<Proyectos[]> {
     return this.httpClient.get<Proyectos[]>(this.url + 'lista');
   }
@@ -24,8 +24,15 @@ export class ProyectosService {
   /* public search(id: number):Observable<Proyectos>{
     return this.httpClient.get<Proyectos>(this.url + '/buscar/proyecto/{id}');
     }*/
-    //Metodo para borrar un proyecto
+  //Metodo para borrar un proyecto
   public borrar(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.url + `delete/proyecto/${id}`);
+  }
+  //Metodo actualizar
+  public update(id: number, proyectos: Proyectos): Observable<any> {
+    return this.httpClient.put<any>(this.url + `update/${id}`, proyectos);
+  }
+  public detail(id: number): Observable<Proyectos> {
+    return this.httpClient.get<Proyectos>(this.url + `detail/${id}`);
   }
 }

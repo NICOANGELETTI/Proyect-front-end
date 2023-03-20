@@ -8,7 +8,7 @@
             </div>
             <div class="modal-body">
                   <!-- Implementamos metodo en el formulario-->
-                <form [formGroup]="formPerfil" class="w-100">
+                <form (ngSubmit)="onEnviar($event)" [formGroup]="formPerfil" class="w-100">
                     <div>
                        <!--Formulario para reemplazar los valores y editar-->
         

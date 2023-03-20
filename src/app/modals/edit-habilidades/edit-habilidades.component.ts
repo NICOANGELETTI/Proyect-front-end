@@ -12,6 +12,9 @@ export class EditHabilidadesComponent implements OnInit {
   formSkills: FormGroup;
   habilidad: '';
   porcentaje: number;
+  hab:Habilidades;
+  habilidades: Habilidades = null;
+  Habilidades: Habilidades[] = [];
   constructor(
     //Inyectamos en Constructor los Servicios que usaremos
     private sHabilidades: HabilidadesService,
@@ -33,4 +36,35 @@ export class EditHabilidadesComponent implements OnInit {
   get nombreSkill() {
     return this.formSkills.get('habilidad');
   }
+
+  onUpdate():void{
+    let hab = this.formSkills.value;
+      this.sHabilidades.update(hab.id, hab).subscribe(
+        data => {
+          alert('Habilidad editada correctamente');
+          window.location.reload();
+          this.formSkills.reset();
+        },
+        error => {
+          alert('Falló al editar la habilidad, intente nuevamente');
+          window.location.reload();
+          this.formSkills.reset();
+        })
+    }
+      onEnviar(event:Event){
+      event.preventDefault;
+      if (this.formSkills.valid){
+        this.onUpdate();
+      }else{
+        alert("falló en la carga, intente nuevamente");
+        this.formSkills.markAllAsTouched();
+      }
+    }
+    detail(id:number){
+      this.sHabilidades.detail(id).subscribe(data =>{
+        this.formSkills.setValue(data);
+        console.log(data);
+      })
+    }
+
 }

@@ -7,7 +7,7 @@ import { Experiencia } from '../model/experiencia';
   providedIn: 'root',
 })
 export class ExperienciaService {
-  url = 'http://localhost:8080/experiencia/';
+  url = 'https://proyect-back-end.onrender.com/experiencia/';
   constructor(
     //Inyectamos servicios que utilizaremos
     private httpClient: HttpClient) {}
@@ -30,12 +30,16 @@ export class ExperienciaService {
       experiencia
     );
   }
-  //Metodo para actualizar la experiencia
-  public update(experiencia: Experiencia): Observable<any> {
-    return this.httpClient.put<any>(this.url + 'update', experiencia);
-  }
+  //Metodo actualizar
+  public update(id:number , experiencia:Experiencia):Observable<any>{
+    return this.httpClient.put<any>(this.url + `update/${id}`, experiencia);
+ 
+}
   //Metodo para borrar una experiencia
   public borrar(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.url + `delete/experiencia/${id}`);
+  }
+  public detail(id: number): Observable<Experiencia>{
+    return this.httpClient.get<Experiencia>(this.url + `detail/${id}`);
   }
 }

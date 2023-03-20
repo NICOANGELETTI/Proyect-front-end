@@ -51,4 +51,34 @@ export class EditPerfilComponent implements OnInit {
     return this.formPerfil.get('urlimagenPerfil');
   }
 
+  onUpdate():void{
+    let hab = this.formPerfil.value;
+      this.sPerfil.update(hab.id, hab).subscribe(
+        data => {
+          alert('Perfil editada correctamente');
+          window.location.reload();
+          this.formPerfil.reset();
+        },
+        error => {
+          alert('Falló al editar la Perfil, intente nuevamente');
+          window.location.reload();
+          this.formPerfil.reset();
+        })
+    }
+      onEnviar(event:Event){
+      event.preventDefault;
+      if (this.formPerfil.valid){
+        this.onUpdate();
+      }else{
+        alert("falló en la carga, intente nuevamente");
+        this.formPerfil.markAllAsTouched();
+      }
+    }
+    detail(id:number){
+      this.sPerfil.detail(id).subscribe(data =>{
+        this.formPerfil.setValue(data);
+        console.log(data);
+      })
+    }
+
 }

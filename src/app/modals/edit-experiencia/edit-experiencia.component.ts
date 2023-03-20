@@ -51,4 +51,35 @@ export class EditExperienciaComponent implements OnInit {
   get urlExp() {
     return this.formExp.get('url_imagen');
   }
+
+
+  onUpdate():void{
+    let exp = this.formExp.value;
+      this.sExperiencia.update(exp.id, exp).subscribe(
+        data => {
+          alert('Experiencia editada correctamente');
+          window.location.reload();
+          this.formExp.reset();
+        },
+        error => {
+          alert('Falló al editar la Experiencia, intente nuevamente');
+          window.location.reload();
+          this.formExp.reset();
+        })
+    }
+      onEnviar(event:Event){
+      event.preventDefault;
+      if (this.formExp.valid){
+        this.onUpdate();
+      }else{
+        alert("falló en la carga, intente nuevamente");
+        this.formExp.markAllAsTouched();
+      }
+    }
+    detail(id:number){
+      this.sExperiencia.detail(id).subscribe(data =>{
+        this.formExp.setValue(data);
+        console.log(data);
+      })
+    }
 }

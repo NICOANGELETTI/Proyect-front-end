@@ -5,7 +5,7 @@
             <div class="modal-header">
 
                 <!-- Implementamos metodo en el formulario-->
-                <form novalidate>
+                <form (ngSubmit)="onEnviar($event)" novalidate>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 
                     <!--Formulario para reemplazar los valores y editar-->
@@ -15,10 +15,11 @@
                             <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Editar Educacion</h1>
 
 
-                            <div>
-
-                               
-                            </div>
+                            <div >
+                                <label class="col-sm-2 col-form-label">ID</label>
+                                  <input type="number" class="form-control" id="floatingInput" formControlName="id" name="id" [(ngModel)]="educacion.id">
+                                
+                              </div>
                             <div>
                                 <label for="titulo" class="form-label atributos">Titulo</label>
                                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
@@ -85,10 +86,9 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                                data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"
-                                  (click)="cargarDetalle(educacion.id)"></i></button>
-    
-                                <button type="submit" class="btn btn-primary" (click)="guardar()">Editar Educacion</button>
+                                    data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"></i></button>
+
+                                <button type="submit" class="btn btn-primary">Editar Educacion</button>
                             </div>
 
 
