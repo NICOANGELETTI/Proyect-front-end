@@ -24,7 +24,7 @@ export class BodydasboardComponent implements OnInit {
   estudios: Educacion[] = [];
   experiencias: Experiencia[] = [];
   educacion: any;
-  id?:number;
+  id?: number;
   form: FormGroup; // el form es una variable
 
   constructor(
@@ -53,12 +53,9 @@ export class BodydasboardComponent implements OnInit {
     this.cargarProyecto();
     this.cargarExperiencia();
     this.cargarPerfil();
-  
-
   }
 
   //Implementamos los metodos para traer del back la lista de todas las secciones
-
 
   cargarEducacion(): void {
     this.sEducacion.list().subscribe((data) => {
@@ -86,10 +83,8 @@ export class BodydasboardComponent implements OnInit {
       this.perfil = data;
     });
   }
-     
-  
-  //Implementamos los metodos "Borrar" para traer el metodo del Servicio para lograr Borrar por ID
 
+  //Implementamos los metodos "Borrar" para traer el metodo del Servicio para lograr Borrar por ID
 
   borrarEdu(id: number) {
     this.sEducacion.borrar(id).subscribe(
@@ -97,6 +92,7 @@ export class BodydasboardComponent implements OnInit {
         alert('se pudo eliminar satisfactoriamente');
         this.cargarEducacion();
         window.location.reload();
+        alert('se pudo eliminar satisfactoriamente');
       },
       (error) => {
         alert('se pudo eliminar satisfactoriamente');
@@ -170,19 +166,17 @@ export class BodydasboardComponent implements OnInit {
     //Al Borrar recargamos la pagina
     window.location.reload();
   }
-  
-  cargarDetalle(id: number){
-    this.sEducacion.getById(id).subscribe(
-      {
-        next: (data) => {
-          this.form.setValue(data);
-        },
-        error: (e) => {
-          console.error(e)
-          alert("error al modificar")
-        },
-        complete: () => console.info('complete aqui')
-      }
-    )
+
+  cargarDetalle(id: number) {
+    this.sEducacion.getById(id).subscribe({
+      next: (data) => {
+        this.form.setValue(data);
+      },
+      error: (e) => {
+        console.error(e);
+        alert('error al modificar');
+      },
+      complete: () => console.info('complete aqui'),
+    });
   }
 }

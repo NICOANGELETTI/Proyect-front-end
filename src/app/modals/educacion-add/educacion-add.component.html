@@ -11,7 +11,7 @@
 
 
             <!--Formulario de Educacion para agregar-->
-           <!--Implementamos metodo para cargar-->
+            <!--Implementamos metodo para cargar-->
             <form [formGroup]="form" (ngSubmit)="cargarEducacion()" name="educacionForm">
                 <div *ngFor="let estudio of estudios">
                     <button type="button" class="btn btn-sm btn-outline-danger pl-1 pr-1 m-0">
@@ -20,11 +20,11 @@
                 </div>
                 <div class="modal-body">
 
-                    <div> 
+                    <div>
                         <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Educacion</h1>
                         <div>
                             <label for="titulo" class="form-label atributos">Titulo</label>
-                          
+
                             <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                             <input class="form-control form-control-lg" formControlName="titulo" id="titulo" type="text"
                                 name="tituloCurso" required formControlName="titulo" [(ngModel)]="titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
@@ -81,10 +81,7 @@
                         </div>
                         <div class="modal-footer">
 
-                            <button type="submit" [disabled]="tituloCurso?.hasError('required') 
-                        || inicioCurso?.hasError('required') || finCurso?.hasError('required') 
-                        || institucionCurso?.hasError('required') || urlCurso?.hasError('required')"
-                                class="btn btn-primary">Agregar Educacion</button>
+                            <button type="submit" class="btn btn-primary">Agregar Educacion</button>
                         </div>
                     </div>
                 </div>

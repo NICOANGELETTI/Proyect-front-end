@@ -11,13 +11,13 @@
 <div class="borde">
     <!--Contenedor donde llamamos de la base de datos nuestros atributos-->
     <div id="contenedor">
-        
-        <section id="Experiencia">
-          
-           
-            <div class="contenedor" *ngFor="let experiencia of experiencias">
+
+        <section id="Experiencia" *ngFor="let experiencia of experiencias">
+
+
+            <div class="contenedor">
                 <div class="icono">
-                    <img class="iconos-empresa" src="{{experiencia.url_imagen}}">
+                    <img class="iconos-empresa" [src]="experiencia.url_imagen">
 
                 </div>
                 <div class="info">
@@ -26,7 +26,8 @@
                     <p>{{experiencia.empresa}}</p>
                 </div>
 
-            </div> 
-            
+            </div>
+
         </section>
-    
+    </div>
+</div>

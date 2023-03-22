@@ -32,7 +32,7 @@ export class LoginComponent implements OnInit {
 
     private formBuilder: FormBuilder
   ) {
-     //Realizamos Formulario Reactivo con sus campos requeridos
+    //Realizamos Formulario Reactivo con sus campos requeridos
     this.formLogin = this.formBuilder.group({
       nombreUsuario1: ['', [Validators.required, Validators.email]],
       password1: ['', [Validators.required, Validators.minLength(8)]],
@@ -40,7 +40,6 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
     if (this.tokenService.getToken()) {
       this.isLogged = true;
       this.isLogginFail = false;
@@ -51,7 +50,6 @@ export class LoginComponent implements OnInit {
     this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password);
     this.authService.login(this.loginUsuario).subscribe(
       (data) => {
-        
         this.isLogged = true;
         this.isLogginFail = false;
         this.tokenService.setToken(data.token);
@@ -59,10 +57,9 @@ export class LoginComponent implements OnInit {
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
         //Si esta todo correcto en el inicio de sesion nos redirige a la ruta del Dashboard
-        this.router.navigate(['/dashboard']);
-       
-        
 
+        this.router.navigate(['/dashboard']);
+        alert('Credenciales Correctas. Bienvenido al dashboard');
       },
       (err) => {
         this.isLogged = false;
@@ -70,8 +67,7 @@ export class LoginComponent implements OnInit {
         this.errMsj = err.error.mensaje;
         console.log(this.errMsj);
       }
-    )
-    
+    );
   }
 
   get Password() {
@@ -89,8 +85,6 @@ export class LoginComponent implements OnInit {
   get MailValid() {
     return false;
   }
-
-
 }
 /* 
 // Detenemos la propagación o ejecución del compotamiento submit de un form

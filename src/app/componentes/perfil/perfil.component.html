@@ -1,8 +1,10 @@
 <!--SECCION DE PERFIL-->
 
 <!--Contenedor donde llamamos de la base de datos nuestros atributos-->
-<div *ngFor="let atributo of perfil">
-  <img class="foto-perfil" src={{atributo.url_imagenperfil}}>
+<section *ngFor="let atributo of perfil">
+<div>
+  <img class="foto-perfil" src="../../../assets/IMG2/Foto Perfil portfolio.jpeg">
+  </div>
   <p class="info">{{atributo.nombre}} {{atributo.apellido}} {{atributo.edad}}</p>
   <p class="info"> {{ atributo.tituloDeveloper }} </p>
 
@@ -26,17 +28,21 @@
 
 
     <!-- <div><b class="sobremi">{{frase2}}</b></div> -->
+  </section>
+  
 
-</div>
+
 
 
 
 <!--SECCION iNTERMEDIA-->
+
 <section class="sectorintermedio">
+  <!--
   <div class="contenedordeboton">
     <a href="#contacto" class="btn btn-primary btn-lg active botondecontacto" role="button"
       aria-pressed="true">CONTACTO</a>
-  </div>
+  </div>-->
 
   <!--Insertamos seccion intermedia con imagenes-->
   <div class="clase2">

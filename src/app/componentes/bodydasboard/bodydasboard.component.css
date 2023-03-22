@@ -130,3 +130,11 @@ div[role="progressbar"]::before {
 .contenedortitulotext{
   color:white;
 }
+.iconos-empresa{
+  width: 8rem ;
+  height: 8rem;
+ 
+}
+img.iconos-empresa {
+  border-radius: 1rem;
+}

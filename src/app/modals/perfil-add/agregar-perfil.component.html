@@ -54,21 +54,23 @@
             
              
               </div>
-            <div>
-              <label for="url_imagenperfil" class="form-label atributos">Url Imagen de Perfil</label>
-               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-              <input class="form-control form-control-lg"  type="text" name="url_imagenperfil"
+            <!--<div>
+              <label for="url_imagenPerfil" class="form-label atributos">Url Imagen de Perfil</label>
+               
+              <input class="form-control form-control-lg"  type="text" name="url_imagenPerfil"
               id="url_imagenperfil" formControlName="url_imagenperfil" 
               [(ngModel)]="url_imagenperfil" [ngClass]="{'is-invalid': url_imagenPerfil?.errors && url_imagenPerfil?.touched,
                         'is-valid': !url_imagenPerfil?.errors && url_imagenPerfil?.touched}">
               
-                      </div>
+                     
           
             <div *ngIf="url_imagenPerfil?.errors && url_imagenPerfil?.touched "
             class="alert alert-danger">Agrega una imagen de perfil
           </div>
 
-          
+        </div>-->
+
+    
             <div>
               <label for="acercade" class="form-label atributos">Acerca de Mi</label>
               <textarea class="form-control form-control-lg"  type="text"

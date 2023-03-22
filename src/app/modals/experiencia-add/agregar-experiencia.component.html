@@ -29,7 +29,7 @@
 
             </div>
             <div>
-              <label for="url_imagen" class="form-label atributos">Url Logo de la Empresa</label>
+              <label for="url" class="form-label atributos">Url Logo de la Empresa</label>
               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
               <input type="text" class="form-control" id="url_imagen" name="urlExp" formControlName="url_imagen"
                 [(ngModel)]="url_imagen" [ngClass]="{'is-invalid': urlExp?.errors && urlExp?.touched,
@@ -39,8 +39,7 @@
                   Debe ingresar la imagen de la Institución.
                 </div>
               </div>
-
-            </div>
+              </div>
             <div>
               <label for="puesto" class="form-label atributos">Puesto</label>
               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
@@ -83,12 +82,7 @@
 
             <div class="modal-footer">
 
-              <button [disabled]="empresaExp?.hasError('required') ||
-           
-            puestoExp?.hasError('required') ||
-             urlExp?.hasError('required') ||
-              inicioExp?.hasError('required') ||
-               finExp?.hasError('required')" type="submit" class="btn btn-primary">Guardar Experiencia</button>
+              <button type="submit" class="btn btn-primary">Guardar Experiencia</button>
             </div>
           </div>
 

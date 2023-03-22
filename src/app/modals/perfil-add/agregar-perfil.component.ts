@@ -14,7 +14,7 @@ export class AgregarPerfilComponent implements OnInit {
   apellido: '';
   acercade: '';
   tituloDeveloper: '';
-  url_imagenperfil: '';
+  
 
   constructor(
     //Inyectamos en Constructor los Servicios que usaremos
@@ -27,7 +27,7 @@ export class AgregarPerfilComponent implements OnInit {
       apellido: ['', [Validators.required]],
       acercade: ['', [Validators.required]],
       tituloDeveloper: ['', [Validators.required]],
-      url_imagenPerfil: ['', [Validators.required]],
+      
     });
   }
 
@@ -48,7 +48,7 @@ export class AgregarPerfilComponent implements OnInit {
   }
 
   get url_imagenPerfil() {
-    return this.formPerfil.get('urlimagenPerfil');
+    return this.formPerfil.get('url_imagenPerfil');
   }
 
 

@@ -1,28 +1,27 @@
 /*SECCION DE PERFIL (INDEX)*/
 #perfil {
-  background-image:url(../../../assets/IMG2/fondosecciones.jpg) !important;
-  background-repeat:round ;
+  background-image: url(../../../assets/IMG2/fondosecciones.jpg) !important;
+  background-repeat: round;
   margin: 4rem;
   border-radius: 0.8rem;
   font-family: "Agency FB";
   color: white;
-  border-style:double;
+  border-style: double;
   border-width: 0.4rem 0.4rem 0.4rem 0.4rem;
   border-top-color: #4e4141;
-  border-right-color:  #4e4141;
-  border-bottom-color:  #4e4141;
-  border-left-color:#4e4141;
+  border-right-color: #4e4141;
+  border-bottom-color: #4e4141;
+  border-left-color: #4e4141;
   border-radius: 0.8rem;
 }
 .foto-perfil {
   width: 15rem;
   height: 15rem;
   border-radius: 1.5rem;
- /*  padding: 1rem;
+  /*  padding: 1rem;
   margin: 1rem; */
   display: flex;
   margin-inline: auto;
- 
 }
 
 .about {
@@ -30,10 +29,8 @@
   font-size: 3rem;
   text-align: center;
   color: rgb(36, 203, 108);
- margin-left: 10rem;
-
+  margin-left: 10rem;
 }
-
 
 /*SECCION INTERMEDIA DE CONTACTO*/
 .fotoenelperfil {
@@ -42,25 +39,13 @@
   border-radius: 1.8rem;
   text-align: center;
   margin: 2rem;
-  box-shadow: 10px 15px 25px
-  rgba(0,0,0,0.50);
-  cursor:pointer;
+  box-shadow: 10px 15px 25px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 .secondphoto {
   width: 35rem;
   height: 17.6rem;
   text-align: center;
-}
-.botondecontacto {
-  margin-left: 44rem;
-  color: var(--bs-btn-active-color);
-  background-color: rgb(36, 203, 108) !important;
-  border-color: white !important;
-  font-family: "Agency FB" !important;
-  font-size: 2rem !important;
-  
-
-
 }
 
 .clase2 {
@@ -70,15 +55,9 @@
   text-align: center;
   justify-content: center;
   align-items: center;
-
-  
 }
 
-
 /* background: rgba(11,103,123,0,6); */
-
-
-
 
 .contenedordeboton {
   display: flex;
@@ -86,131 +65,113 @@
 }
 
 .sectorintermedio {
-  margin:4rem;
+  margin: 4rem;
 }
 
-.info{
+.info {
   font-size: 2rem;
   display: flex;
   justify-content: center;
- padding: 1rem;
- color: aliceblue;
- font-family: "Agency FB" ;
-
+  padding: 1rem;
+  color: aliceblue;
+  font-family: "Agency FB";
 }
-.sobremi{
- /*  margin-left: 5rem; */
+.sobremi {
+  /*  margin-left: 5rem; */
   color: white;
-  font-family: "Agency FB" ;
+  font-family: "Agency FB";
   text-align: center;
   font-size: 5rem;
-  margin-top:8rem;
+  margin-top: 8rem;
 }
-.aboutme{
+.aboutme {
   font-size: 2rem;
-  color:white;
-  padding:6rem;
-  
-padding-left: 5rem;
-margin-left: 5rem;
-   text-align: center; 
-   
-   
-  
+  color: white;
+  padding: 6rem;
+
+  padding-left: 5rem;
+  margin-left: 5rem;
+  text-align: center;
 }
-.frase1{
-  padding:15rem;
-  color:white;
+.frase1 {
+  padding: 15rem;
+  color: white;
   font-size: 3rem;
 }
-.linea{
-
-color:white;
+.linea {
+  color: white;
 }
-.contenedorlinea{
+.contenedorlinea {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.icon-linkedin2:hover{
+.icon-linkedin2:hover {
   color: white;
 }
-.icon-facebook:hover{
+.icon-facebook:hover {
   color: white;
 }
-.icon-github:hover{
+.icon-github:hover {
   color: white;
 }
-.icon-instagram:hover{
+.icon-instagram:hover {
   color: white;
 }
-.icon-linkedin2:before{
-  
+.icon-linkedin2:before {
   display: flex;
   justify-content: center;
   font-size: 3.5rem;
-  
 }
-.icon-facebook:before{
+.icon-facebook:before {
   display: flex;
   justify-content: center;
   font-size: 3.5rem;
 }
 
-.icon-github:before{
+.icon-github:before {
   display: flex;
   justify-content: center;
   font-size: 3.5rem;
 }
-.icon-instagram:before{
+.icon-instagram:before {
   display: flex;
   justify-content: center;
   font-size: 3.5rem;
 }
-a{
+a {
   text-decoration: none;
-  margin-left:2.5rem ;
+  margin-left: 2.5rem;
   color: rgb(36, 203, 108);
-
 }
 
-.contenedorRedes{
+.contenedorRedes {
   display: flex;
   justify-content: center;
- 
 }
-.texto{
+.texto {
   display: flex;
   margin-right: 10rem;
   align-items: center;
 }
 
-@media (min-width: 700px){
-.section{
-  display: flex;
- 
-
-}
-.section{
+.section {
   display: flex;
 }
-.text{
-  color:transparent;
-  background: linear-gradient(white , #17c40e);
+.text {
+  color: transparent;
+  background: linear-gradient(white, #17c40e);
   font-family: AGENCY FB;
   background-clip: text;
   -webkit-background-clip: text;
   -moz-background-clip: text;
   animation: text 5s linear infinite;
-
 }
 @keyframes text {
-  0%{
-    filter:hue-rotate();
+  0% {
+    filter: hue-rotate();
   }
   100% {
-    filter:hue-rotate(360deg)
+    filter: hue-rotate(360deg);
   }
-  
-}
 }

@@ -43,7 +43,7 @@
                     <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
                     Borrar o Editar-->
                     <div *ngFor="let atributo of perfil">
-                      <img class="foto-perfil" src={{atributo.url_imagenperfil}}>
+                      <img class="foto-perfil" [src]="atributo.url_imagenperfil">
                       <p class="info">{{atributo.nombre}} {{atributo.apellido}} {{atributo.edad}}</p>
                       <p class="info"> {{atributo.tituloDeveloper
                         }} </p>
@@ -53,8 +53,8 @@
                       <div class="contenedorlinea">
                         <hr class="linea" size="20px" width="70%" />
                       </div>
-                      <h1 class="sobremi">SOBRE MI</h1>
-                      <p class="aboutme">
+
+                      <p class="info">
                         {{atributo.acercade}}
 
 
@@ -125,8 +125,7 @@
                         </div>
                         <!--Agregamos boton para borrar y Llamamos al modal-->
                         <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2" (click)="borrarExp(experiencia.id)"><i
+                          <button type="button" class="btn btn-primary atributos" (click)="borrarExp(experiencia.id)"><i
                               class="fa-solid fa-trash"></i></button>
 
                         </div>
@@ -154,12 +153,13 @@
                         data-bs-target="#staticBackdrop5"><i class="fa-solid fa-plus"></i></button>
                       <app-proyecto-add></app-proyecto-add>
                     </div>
-                    <div class="proyecto" *ngFor="let trabajo of proyecto">
+                    
+                    <div class="contenedor" *ngFor="let trabajo of proyecto">
 
                       <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
                     Borrar o Editar-->
-                      <div class="contendorimagen">
-                        <img class="imagenproyecto" src="{{trabajo.urlImagen}}">
+                      <div class="icono">
+                        <img class="iconos-empresa" src="{{trabajo.urlImagen}}">
                       </div>
                       <div class="contenedortitulotext">
                         <h1 class="tituloproyect">{{trabajo.titulo}}</h1>
@@ -214,7 +214,7 @@
                       <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
                     Borrar o Editar-->
                       <div class="icono">
-                        <img class="iconos-empresa atributo" [src]="estudio.url_imagen">
+                        <img class="iconos-empresa" [src]="estudio.url_imagen">
 
 
 
