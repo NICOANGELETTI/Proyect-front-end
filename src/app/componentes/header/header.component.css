@@ -17,6 +17,13 @@
     height: 50rem !important;
 }
 
+@media only screen and (max-width: 600px) and (min-width: 300px){
+    img.banner.d-block.w-100 {
+        width: 5rem;
+        height: 55rem;
+    }
+  }
+
 
 /* .botoncarrusel{
     margin-top: -20rem;

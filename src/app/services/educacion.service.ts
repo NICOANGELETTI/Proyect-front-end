@@ -40,11 +40,7 @@ export class EducacionService {
   public borrar(id: number): Observable<any> {
     return this.httpClient.delete<any>(this.url + `delete/estudio/${id}`);
   }
-  //Metodo actualizar
-   public update(id:number , educacion:Educacion):Observable<any>{
-      return this.httpClient.put<any>(this.url + `update/${id}`, educacion);
-   
-  }
+
 
   public detail(id: number): Observable<Educacion>{
     return this.httpClient.get<Educacion>(this.url + `detail/${id}`);
@@ -53,9 +49,10 @@ export class EducacionService {
   public getById(id: number):Observable<Educacion[]>{
     return this.httpClient.get<Educacion[]>(this.url+ `/${id}`);
   }
-  //Metodo Editar
-  public edit(Estudio: Educacion):Observable<any>{
-    return this.httpClient.put<any>(this.url + `update/$`, Estudio);
-    }
+  //Metodo actualizar
+  public update(id:number , educacion:Educacion):Observable<any>{
+    return this.httpClient.put<any>(this.url + `update/${id}`, educacion);
+ 
+}
    
 }

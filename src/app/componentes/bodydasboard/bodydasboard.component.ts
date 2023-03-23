@@ -92,7 +92,7 @@ export class BodydasboardComponent implements OnInit {
         alert('se pudo eliminar satisfactoriamente');
         this.cargarEducacion();
         window.location.reload();
-        alert('se pudo eliminar satisfactoriamente');
+        
       },
       (error) => {
         alert('se pudo eliminar satisfactoriamente');

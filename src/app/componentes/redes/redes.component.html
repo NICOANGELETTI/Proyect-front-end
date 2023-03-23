@@ -10,7 +10,7 @@
 <!--Insertamos Logout para cerrar sesion-->
 <li class="list-group-item">
 
-  <i class="fa-solid fa-user-lock fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal"
+  <i class="fa-solid fa-user-lock fa-2xl" type="button" routerLink="/login"
     ></i>
   <button type=button class="fa-solid fa-right-from-bracket fa-2xl"  data-bs-toggle="modal" 
     data-bs-target="#exampleModal" (click)="onLogOut()" *ngIf="isLogged"></button>

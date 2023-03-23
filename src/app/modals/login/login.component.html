@@ -1,9 +1,5 @@
 <!--Modal Login-->
-  <div class="modal fondo" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog ">
-      <div class="modal-content ">
-        <div class="modal-header">
-          </div>
+
           
     <form #f="ngForm" (ngSubmit)="onLogin()" novalidate class="clase">
   
@@ -35,10 +31,7 @@
     </div>
     
   </form>
-  </div>
-  </div>
-  </div>
-
+ 
  <script>
   $(".input").focusin(function () {
   $(this).find("span").animate({ opacity: "0" }, 200);

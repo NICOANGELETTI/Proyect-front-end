@@ -14,10 +14,9 @@ import { EditProyectoComponent } from './modals/edit-proyecto/edit-proyecto.comp
 import { EditPerfilComponent } from './modals/edit-perfil/edit-perfil.component';
 
 const routes: Routes = [
-
   //Rutas de mi proyecto
   // Al insertar la ruta acia me lleva a mi index
-  { path: '', component: IndexComponent }, 
+  { path: '', component: IndexComponent },
 
   //Ruta de Login
   { path: 'login', component: LoginComponent },
@@ -26,13 +25,10 @@ const routes: Routes = [
     path: 'dashboard',
     component: DashboardComponent,
     canActivate: [GuardGuard],
-
   },
-  { path: 'educacion/update/:id', component: EditEducacionComponent},
-    //Si ponemos una ruta incorrecta , nos manda a la pagina de Error404 (Pagina no encontrada)
-  { path: '**', component: Error404Component }
-  
-  
+  { path: 'educacion/update/:id', component: EditEducacionComponent },
+  //Si ponemos una ruta incorrecta , nos manda a la pagina de Error404 (Pagina no encontrada)
+  { path: '**', component: Error404Component },
 ];
 
 @NgModule({

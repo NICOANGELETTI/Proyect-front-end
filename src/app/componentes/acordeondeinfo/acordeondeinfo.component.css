@@ -94,3 +94,9 @@ h1 {
    font-family: 'Agency FB' ;
   font-size: 1.5rem;
   }
+  @media only screen and (max-width: 600px) and (min-width: 300px){
+    .acordeon {
+        width: 30rem;
+        
+    }
+  }
