@@ -1,0 +1,25 @@
+[debug] [2023-03-23T05:23:17.297Z] ----------------------------------------------------------------------
+[debug] [2023-03-23T05:23:17.299Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\nicoc\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-03-23T05:23:17.300Z] CLI Version:   11.25.1
+[debug] [2023-03-23T05:23:17.300Z] Platform:      win32
+[debug] [2023-03-23T05:23:17.300Z] Node Version:  v16.17.0
+[debug] [2023-03-23T05:23:17.301Z] Time:          Thu Mar 23 2023 02:23:17 GMT-0300 (hora estándar de Argentina)
+[debug] [2023-03-23T05:23:17.301Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-03-23T05:23:17.369Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-03-23T05:23:17.370Z] > authorizing via signed-in user (nicoangeletti01@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\nicoc\OneDrive\Escritorio\portfolio-front-end
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+

@@ -147,6 +147,6 @@ body {
   color: white;
   font-size: 2rem;
 }
-form.clase.ng-dirty.ng-touched.ng-valid {
+form {
   height: 40rem !important;
 }
