@@ -23,8 +23,8 @@ export class BodydasboardComponent implements OnInit {
   habilidad: Habilidades[] = [];
   estudios: Educacion[] = [];
   experiencias: Experiencia[] = [];
-  educacion: any;
-  id?: number;
+  
+  
   form: FormGroup; // el form es una variable
 
   constructor(
@@ -47,12 +47,17 @@ export class BodydasboardComponent implements OnInit {
 
   ngOnInit(): void {
     //Realizamos la carga en el dashboard de cada seccion
-
     this.cargarEducacion();
+
     this.cargarHabilidad();
+
     this.cargarProyecto();
+
     this.cargarExperiencia();
+
     this.cargarPerfil();
+
+    
   }
 
   //Implementamos los metodos para traer del back la lista de todas las secciones
@@ -100,8 +105,7 @@ export class BodydasboardComponent implements OnInit {
         this.form.reset();
       }
     );
-    //Al Borrar recargamos la pagina
-    window.location.reload();
+    
   }
   borrarExp(id: number) {
     this.sExperiencia.borrar(id).subscribe(
@@ -111,13 +115,11 @@ export class BodydasboardComponent implements OnInit {
         window.location.reload();
       },
       (error) => {
-        alert('se pudo eliminar satisfactoriamente');
-        this.cargarExperiencia();
-        this.form.reset();
+        alert('no se pudo eliminar');
+      
       }
     );
-    //Al Borrar recargamos la pagina
-    window.location.reload();
+ 
   }
   borrarTrab(id: number) {
     this.sProyectos.borrar(id).subscribe(
@@ -126,13 +128,11 @@ export class BodydasboardComponent implements OnInit {
         this.cargarProyecto();
       },
       (error) => {
-        alert('se pudo eliminar satisfactoriamente');
-        this.cargarProyecto();
-        this.form.reset();
+        alert('no se pudo eliminar ');
+        
       }
     );
-    //Al Borrar recargamos la pagina
-    window.location.reload();
+   
   }
   borrarSkill(id: number) {
     this.sHabilidades.borrar(id).subscribe(
@@ -142,13 +142,11 @@ export class BodydasboardComponent implements OnInit {
         window.location.reload();
       },
       (error) => {
-        alert('se pudo eliminar satisfactoriamente');
-        this.cargarHabilidad();
-        this.form.reset();
+        alert('no se pudo eliminar');
+        
       }
     );
-    //Al Borrar recargamos la pagina
-    window.location.reload();
+   
   }
   borrarPerfil(id: number) {
     this.sPerfil.borrar(id).subscribe(
@@ -158,13 +156,11 @@ export class BodydasboardComponent implements OnInit {
         window.location.reload();
       },
       (error) => {
-        alert('se pudo eliminar satisfactoriamente');
-        this.cargarHabilidad();
-        this.form.reset();
+        alert('no se pudo eliminar ');
+       
       }
     );
-    //Al Borrar recargamos la pagina
-    window.location.reload();
+   
   }
 
   cargarDetalle(id: number) {

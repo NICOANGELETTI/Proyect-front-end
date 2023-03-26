@@ -44,7 +44,7 @@
                     Borrar o Editar-->
                     <div *ngFor="let atributo of perfil">
                       <img class="foto-perfil" [src]="atributo.url_imagenperfil">
-                      <p class="info">{{atributo.nombre}} {{atributo.apellido}} {{atributo.edad}}</p>
+                      <p class="info">{{atributo.nombre}} {{atributo.apellido}} </p>
                       <p class="info"> {{atributo.tituloDeveloper
                         }} </p>
 
@@ -209,29 +209,25 @@
                       <app-educacion-add></app-educacion-add>
                     </div>
 
-                    <div class="contenedor" *ngFor="let estudio of estudios">
+                   
 
                       <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
                     Borrar o Editar-->
+                    <div class="contenedor" *ngFor="let estudio of estudios">
                       <div class="icono">
-                        <img class="iconos-empresa" [src]="estudio.url_imagen">
-
+                        <img class="iconos-empresa" src="{{estudio.url_imagen}}">
+                      </div>
 
 
                         <div class="info">
-
                           <p class="atributo">{{estudio.titulo}} </p>
-
-                          <p class="atributo">{{ estudio.inicio }} - {{ estudio.fin }} </p>
-
+                          <p class="atributo">{{estudio.inicio}} - {{estudio.fin }}</p>
                           <p class="atributo">{{ estudio.institucion }}</p>
 
                         </div>
+                      
 
-
-
-                      </div>
-
+                     
 
                       <ol class="lista">
 
@@ -239,7 +235,7 @@
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                             data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"
-                              (click)="cargarDetalle(estudio.id)"></i></button>
+                              ></i></button>
 
                           <app-edit-educacion></app-edit-educacion>
                         </div>
@@ -319,7 +315,6 @@
         <app-proyecto-add></app-proyecto-add>
         <app-habilidades-add></app-habilidades-add>
         <app-perfil-add></app-perfil-add>
-
           </div>-->
             </div>
 

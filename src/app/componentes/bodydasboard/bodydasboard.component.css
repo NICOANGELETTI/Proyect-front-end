@@ -138,3 +138,11 @@ div[role="progressbar"]::before {
 img.iconos-empresa {
   border-radius: 1rem;
 }
+#Experiencia{
+  display: flex;
+  justify-content: space-between;
+  margin:2rem;
+  border-radius: 0.8rem;
+  color: white;
+  margin-top:2rem;
+}

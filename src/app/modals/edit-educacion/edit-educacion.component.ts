@@ -153,15 +153,15 @@ export class EditEducacionComponent implements OnInit {
     }
   }*/
   onUpdate():void{
-    let edu = this.form.value;
-      this.sEducacion.update(edu.id, edu).subscribe(
+    let exp = this.form.value;
+      this.sEducacion.update(exp.id, exp).subscribe(
         data => {
           alert('Educacion editada correctamente');
           window.location.reload();
           this.form.reset();
         },
         error => {
-          alert('Falló al editar la educacion, intente nuevamente');
+          alert('Falló al editar la Educacion, intente nuevamente');
           window.location.reload();
           this.form.reset();
         })

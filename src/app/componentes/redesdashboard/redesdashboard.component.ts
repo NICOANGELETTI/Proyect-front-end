@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TokenService } from 'src/app/services/token.service';
 
 @Component({
   selector: 'app-redesdashboard',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RedesdashboardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private tokenService:TokenService) { }
 
   ngOnInit(): void {
   }
-
+  onLogOut():void{
+    this.tokenService.logOut();
+    window.location.reload();
+  }
 }

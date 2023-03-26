@@ -1,127 +1,116 @@
 <!--Modal Agregar Proyectos-->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5 tituloModal" id="staticBackdropLabel">Perfil</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5 tituloModal" id="staticBackdropLabel">Perfil</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
-          <!--Formulario de Perfil para agregar-->
-           <!--Implementamos metodo para cargar-->
-          <form [formGroup]="formPerfil"  (ngSubmit)="crearnuevoPerfil()" class="w-100">
-        <div>
-         
-          <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Perfil</h1>
+        <!--Formulario de Perfil para agregar-->
+        <!--Implementamos metodo para cargar-->
+        <form [formGroup]="formPerfil" (ngSubmit)="crearnuevoPerfil()" class="w-100">
+          <div>
+
+            <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Agregar Perfil</h1>
             <div>
               <label for="nombre" class="form-label atributos">Nombre</label>
-               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-              <input class="form-control form-control-lg"  type="text"
-              name="nombre"
-              id="nombre" formControlName="nombre"   [(ngModel)]="nombre" [ngClass]="{'is-invalid':  nombrePerfil?.errors &&  nombrePerfil?.touched,
-              'is-valid': !nombrePerfil?.errors &&  nombrePerfil?.touched}">
-              <div *ngIf="nombrePerfil?.errors && nombrePerfil?.touched "
-              class="alert alert-danger">Agrega un nombre
+              <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+              <input class="form-control form-control-lg" type="text" name="nombre" id="nombre" formControlName="nombre"
+                [(ngModel)]="nombre" [ngClass]="{'is-invalid':  nombrePerfil?.errors &&  nombrePerfil?.touched,
+            'is-valid': !nombrePerfil?.errors &&  nombrePerfil?.touched}">
+              <div *ngIf="nombrePerfil?.errors && nombrePerfil?.touched " class="alert alert-danger">Agrega un nombre
 
               </div>
 
-            
-        
-         
-            <div>
-              <label for="apellido" class="form-label atributos">Apellido</label>
-               <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-              <input class="form-control form-control-lg"  type="text"
-              name="apellido"
-              id="apellido" formControlName="apellido"   [(ngModel)]="apellido" [ngClass]="{'is-invalid':  apellidoPerfil?.errors &&  apellidoPerfil?.touched,
-              'is-valid': !apellidoPerfil?.errors &&  apellidoPerfil?.touched}">
-              <div *ngIf="apellidoPerfil?.errors && apellidoPerfil?.touched "
-              class="alert alert-danger">Agrega un apellido
 
-              </div>
+
+
               <div>
-                <label for="tituloDeveloper" class="form-label atributos">Titulo Profesional</label>
-                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
-                <input class="form-control form-control-lg"  type="text"
-                name="tituloDeveloper"
-                id="tituloDeveloper" formControlName="tituloDeveloper"   [(ngModel)]="tituloDeveloper" [ngClass]="{'is-invalid':  tituloDeveloperPerfil?.errors &&  tituloDeveloperPerfil?.touched,
-                'is-valid': !tituloDeveloperPerfil?.errors &&  tituloDeveloperPerfil?.touched}">
-                <div *ngIf="tituloDeveloperPerfil?.errors && tituloDeveloperPerfil?.touched "
-                class="alert alert-danger">Agrega un titulo profesional a tu Portfolio
-  
+                <label for="apellido" class="form-label atributos">Apellido</label>
+                <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                <input class="form-control form-control-lg" type="text" name="apellido" id="apellido"
+                  formControlName="apellido" [(ngModel)]="apellido" [ngClass]="{'is-invalid':  apellidoPerfil?.errors &&  apellidoPerfil?.touched,
+            'is-valid': !apellidoPerfil?.errors &&  apellidoPerfil?.touched}">
+                <div *ngIf="apellidoPerfil?.errors && apellidoPerfil?.touched " class="alert alert-danger">Agrega un
+                  apellido
+
                 </div>
-            
+                <div>
+                  <label for="tituloDeveloper" class="form-label atributos">Titulo Profesional</label>
+                  <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
+                  <input class="form-control form-control-lg" type="text" name="tituloDeveloper" id="tituloDeveloper"
+                    formControlName="tituloDeveloper" [(ngModel)]="tituloDeveloper" [ngClass]="{'is-invalid':  tituloDeveloperPerfil?.errors &&  tituloDeveloperPerfil?.touched,
+              'is-valid': !tituloDeveloperPerfil?.errors &&  tituloDeveloperPerfil?.touched}">
+                  <div *ngIf="tituloDeveloperPerfil?.errors && tituloDeveloperPerfil?.touched "
+                    class="alert alert-danger">Agrega un titulo profesional a tu Portfolio
+
+                  </div>
+
+
+                </div>
+                <!--<div>
+            <label for="url_imagenPerfil" class="form-label atributos">Url Imagen de Perfil</label>
              
-              </div>
-            <!--<div>
-              <label for="url_imagenPerfil" class="form-label atributos">Url Imagen de Perfil</label>
-               
-              <input class="form-control form-control-lg"  type="text" name="url_imagenPerfil"
-              id="url_imagenperfil" formControlName="url_imagenperfil" 
-              [(ngModel)]="url_imagenperfil" [ngClass]="{'is-invalid': url_imagenPerfil?.errors && url_imagenPerfil?.touched,
-                        'is-valid': !url_imagenPerfil?.errors && url_imagenPerfil?.touched}">
-              
-                     
-          
-            <div *ngIf="url_imagenPerfil?.errors && url_imagenPerfil?.touched "
-            class="alert alert-danger">Agrega una imagen de perfil
-          </div>
-
-        </div>-->
-
-    
-            <div>
-              <label for="acercade" class="form-label atributos">Acerca de Mi</label>
-              <textarea class="form-control form-control-lg"  type="text"
-              name="acercade"
-              id="acercade" formControlName="acercade" 
-
-              [(ngModel)]="acercade" [ngClass]="{'is-invalid': acercadePerfil?.errors && acercadePerfil?.touched,
-                        'is-valid': !acercadePerfil?.errors && acercadePerfil?.touched}"></textarea>
-              </div>
-              <div *ngIf="acercadePerfil?.errors && acercadePerfil?.touched "
-              class="alert alert-danger">Agrega un breve "sobre mi"
-            </div>
-  
-           
+            <input class="form-control form-control-lg"  type="text" name="url_imagenPerfil"
+            id="url_imagenperfil" formControlName="url_imagenperfil" 
+            [(ngModel)]="url_imagenperfil" [ngClass]="{'is-invalid': url_imagenPerfil?.errors && url_imagenPerfil?.touched,
+                      'is-valid': !url_imagenPerfil?.errors && url_imagenPerfil?.touched}">
+            
+                   
         
-        <div class="modal-footer">
-          
-          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+          <div *ngIf="url_imagenPerfil?.errors && url_imagenPerfil?.touched "
+          class="alert alert-danger">Agrega una imagen de perfil
         </div>
-       
-        <!--
-      
-      <div>
-          <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar perfil</h1>
-          
-          <div class="selectEliminar">
+
+      </div>-->
 
 
-      <select name="Estado" class="eduEliminar">
+                <div>
+                  <label for="acercade" class="form-label atributos">Acerca de Mi</label>
+                  <textarea class="form-control form-control-lg" type="text" name="acercade" id="acercade"
+                    formControlName="acercade" [(ngModel)]="acercade" [ngClass]="{'is-invalid': acercadePerfil?.errors && acercadePerfil?.touched,
+                      'is-valid': !acercadePerfil?.errors && acercadePerfil?.touched}"></textarea>
+                </div>
+                <div *ngIf="acercadePerfil?.errors && acercadePerfil?.touched " class="alert alert-danger">Agrega un
+                  breve "sobre mi"
+                </div>
 
-          <option class="atributos">Per 1</option>
 
-          <option class="atributos ">Per 2</option>
 
-          <option class="atributos ">Per 3</option>
+                <div class="modal-footer">
 
-        </select>
-      
-        </div>
-  <div class="botonEliminar">
-          <button type="submit" class="btn btn-primary ">Eliminar Educacion</button>
-  </div>
+                  <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                </div>
+
+                <!--
+    
+    <div>
+        <h1 class="modal-title fs-5 agregar" id="staticBackdropLabel">Eliminar perfil</h1>
+        
+        <div class="selectEliminar">
+
+
+    <select name="Estado" class="eduEliminar">
+
+        <option class="atributos">Per 1</option>
+
+        <option class="atributos ">Per 2</option>
+
+        <option class="atributos ">Per 3</option>
+
+      </select>
+    
+      </div>
+<div class="botonEliminar">
+        <button type="submit" class="btn btn-primary ">Eliminar Educacion</button>
+</div>
 </div>-->
-</div>
+              </div>
 
-</div>
+            </div>
 
-</div>
-</form>
-
-
-
-
-
+          </div>
+        </form>

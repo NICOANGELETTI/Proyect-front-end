@@ -1,7 +1,7 @@
 export class Educacion {
 
   //Declaramos los atributos correspondientes en el modelo
-  id?: number;
+  id: number;
 
   titulo: string;
 

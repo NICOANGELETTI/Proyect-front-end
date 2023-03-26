@@ -26,7 +26,7 @@ const routes: Routes = [
     component: DashboardComponent,
     canActivate: [GuardGuard],
   },
-  { path: 'educacion/update/:id', component: EditEducacionComponent },
+
   //Si ponemos una ruta incorrecta , nos manda a la pagina de Error404 (Pagina no encontrada)
   { path: '**', component: Error404Component },
 ];
