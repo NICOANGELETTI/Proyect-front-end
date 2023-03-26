@@ -75,8 +75,7 @@
                         </div>
                         <!--Agregamos boton para borrar y Llamamos al modal-->
                         <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2"><i class="fa-solid fa-trash"
+                          <button type="button" class="btn btn-primary atributos"><i class="fa-solid fa-trash"
                               (click)="borrarPerfil(atributo.id)"></i></button>
 
                         </div>
@@ -109,9 +108,9 @@
 
                       </div>
                       <div class="info">
-                        <p>{{experiencia.puesto}}</p>
-                        <p>{{experiencia.inicio}} - {{experiencia.fin}}</p>
-                        <p>{{experiencia.empresa}}</p>
+                        <p>{{experiencia.puesto}} -</p>
+                        <p>{{experiencia.inicio}} - {{experiencia.fin}} -</p>
+                        <p> {{experiencia.empresa}}</p>
                       </div>
 
                       <ol class="lista">
@@ -162,11 +161,11 @@
                         <img class="iconos-empresa" src="{{trabajo.urlImagen}}">
                       </div>
                       <div class="contenedortitulotext">
-                        <h1 class="tituloproyect">{{trabajo.titulo}}</h1>
+                        <h1 class="tituloproyect">{{trabajo.titulo}} -</h1>
                         <hr class="linea" size="8px" width="50%" />
-                        <p class="textoproyect">{{trabajo.descripcion}}</p>
+                        <p class="textoproyect">{{trabajo.descripcion}} -</p>
 
-                        <p class="textoproyect">{{trabajo.urlProyect}}</p>
+                        <p class="textoproyect">{{trabajo.urlProyect}} -</p>
 
                       </div>
                       <ol class="lista">
@@ -182,9 +181,9 @@
                         <!--Agregamos boton para borrar y Llamamos al modal-->
                         <div class="botoncito">
                           <button type="button" class="btn btn-primary atributos" (click)="borrarTrab(trabajo.id)"
-                            data-bs-toggle="modal" data-bs-target="#staticBackdrop2"><i
+                          ><i
                               class="fa-solid fa-trash"></i></button>
-                          <app-proyecto-add></app-proyecto-add>
+                        
                         </div>
 
 
@@ -217,8 +216,8 @@
               
                               </div>
                               <div class="info">
-                                  <p>{{estudio.titulo}} </p>
-                                  <p>{{estudio.inicio}} - {{estudio.fin}} </p>
+                                  <p>{{estudio.titulo}}- </p>
+                                  <p> {{estudio.inicio}} - {{estudio.fin}}- </p>
                                   <p>{{estudio.institucion}}</p>
                               </div>
                               <ol class="lista">
@@ -233,22 +232,23 @@
                                 </div>
                                 <!--Agregamos boton para borrar y Llamamos al modal-->
                                 <div class="botoncito">
-                                  <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                                    data-bs-target="#staticBackdrop2" (click)="borrarEdu(estudio.id)"><i
+                                  <button type="button" class="btn btn-primary atributos" (click)="borrarEdu(estudio.id)"><i
                                       class="fa-solid fa-trash"></i></button>
         
                                 </div>
         
         
                               </ol>
-        
-                            </div>
+        </div>
+        </section>
+      </div>
+        </div>
+                            
                          
               
                           
 
-                    </section>
-
+                   
 
                   <!--Habilidades-->
                   <div class="tab-pane fade add section row" id="v-pills-settings" role="tabpanel"
@@ -280,10 +280,9 @@
                         </div>
                         <!--Agregamos boton para borrar y Llamamos al modal-->
                         <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2" (click)="borrarSkill(Skill.id)"><i
+                          <button type="button" class="btn btn-primary atributos"  (click)="borrarSkill(Skill.id)"><i
                               class="fa-solid fa-trash"></i></button>
-                          <app-habilidades-add></app-habilidades-add>
+                          
                         </div>
 
 
@@ -293,11 +292,10 @@
 
 
 
-                  </div>
-                </div>
+          </div>
+                    </div>
 
 
-              </div>
               <!--
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Perfil</button>
             <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Experiencia</button>
