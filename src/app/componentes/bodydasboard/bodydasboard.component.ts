@@ -35,7 +35,14 @@ export class BodydasboardComponent implements OnInit {
     private sProyectos: ProyectosService,
     private sExperiencia: ExperienciaService
   ) {
-    
+    this.form = this.formbuilder.group({
+      id: [''],
+      titulo: ['', [Validators.required]],
+      inicio: ['', [Validators.required]],
+      fin: ['', [Validators.required]],
+      institucion: [''],
+      url_imagen: ['', [Validators.required]],
+    });
   }
 
   ngOnInit(): void {

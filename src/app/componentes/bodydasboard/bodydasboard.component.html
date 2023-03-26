@@ -223,22 +223,18 @@
                               </div>
                               <ol class="lista">
 
-                                <!--Agregamos boton para editar y Llamamos al modal 
-                                -->
+                                <!--Agregamos boton para editar y Llamamos al modal-->
                                 <div class="botoncito">
                                   <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
                                     data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"
                                       ></i></button>
-
-
-                              <!--Aca esta el problema-->
-                              
+        
                                   <app-edit-educacion></app-edit-educacion>
                                 </div>
                                 <!--Agregamos boton para borrar y Llamamos al modal-->
                                 <div class="botoncito">
-                                  <button type="button" class="btn btn-primary atributos" 
-                                    (click)="borrarEdu(estudio.id)"><i
+                                  <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop2" (click)="borrarEdu(estudio.id)"><i
                                       class="fa-solid fa-trash"></i></button>
         
                                 </div>
