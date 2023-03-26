@@ -14,8 +14,12 @@ export class EditEducacionComponent implements OnInit {
   //Declaramos
   form:FormGroup;
   edu:Educacion;
-  educacion: Educacion = null;
-  estudios: Educacion[] = [];
+  titulo: '';
+  inicio: '';
+  fin: '';
+  institucion: '';
+  url_imagen: '';
+  
   
   constructor(
     //Inyectamos en Constructor los Servicios que usaremos
@@ -27,7 +31,7 @@ export class EditEducacionComponent implements OnInit {
     //Realizamos formulario reactivo
     this.form = this.formBuilder.group({
        //Realizamos Formulario Reactivo con sus campos requeridos
-      id: [''],
+    
       titulo: ['', [Validators.required]],
       inicio: ['', [Validators.required]],
       fin: ['', [Validators.required]],
@@ -63,20 +67,7 @@ export class EditEducacionComponent implements OnInit {
   }
 
   //Realizamos metodo de agregar el estudio correspondiente trayendo del servicio el metodo correspondiente al Backend
-  cargarEducacion(): void {
-   
-    this.sEducacion.agregarEstudio(this.form.value).subscribe(
-      (data) => {
-        //Pestaña de alerta para avisarnos lo realizado
-        alert('Nuevo Curso agregado');
-        window.location.reload();
-      },
-      (error) => {
-        //Pestaña de alerta para avisarnos que no se concreto la peticion
-        alert('Se ha producido un error, intente nuevamente');
-      }
-    );
-  }
+  
 
 
 
@@ -107,12 +98,7 @@ export class EditEducacionComponent implements OnInit {
     }
   }*/
 
-  cargarEducacion2():void {
-    this.sEducacion.list().subscribe(data =>{
-      this.estudios = data;
-      console.log(data);
-    });
-  }
+  
 
   //👇 esto es solo para hacer pruebas en local
   /*cargarDetalle(id: number){
@@ -175,10 +161,5 @@ export class EditEducacionComponent implements OnInit {
         this.form.markAllAsTouched();
       }
     }
-    detail(id:number){
-      this.sEducacion.detail(id).subscribe(data =>{
-        this.form.setValue(data);
-        console.log(data);
-      })
-    }
+   
 }

@@ -198,60 +198,60 @@
                   <!--Educacion-->
 
 
-                  <div class="tab-pane fade add elcointener" id="v-pills-messages" role="tabpanel"
+                  <div class="tab-pane fade add" id="v-pills-messages" role="tabpanel"
                     aria-labelledby="v-pills-messages-tab" tabindex="0">
+                          <!--Agregamos boton para "+" y Llamamos al modal-->
+                            <div class="agregar">
+                            <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                              data-bs-target="#staticBackdrop6"><i class="fa-solid fa-plus"></i></button>
+                            <app-educacion-add></app-educacion-add>
+                          </div>
+
+                    <div id="contenedor">
+                      <section id="Educacion" *ngFor="let estudio of educacion">
+              
+                          <div class="contenedor" >
+              
+                              <div class="icono">
+                                  <img class="iconos-empresa" src="{{estudio.url_imagen}}">
+              
+                              </div>
+                              <div class="info">
+                                  <p>{{estudio.titulo}} </p>
+                                  <p>{{estudio.inicio}} - {{estudio.fin}} </p>
+                                  <p>{{estudio.institucion}}</p>
+                              </div>
+                              <ol class="lista">
+
+                                <!--Agregamos boton para editar y Llamamos al modal 
+                                -->
+                                <div class="botoncito">
+                                  <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
+                                    data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"
+                                      ></i></button>
 
 
-                    <!--Agregamos boton para "+" y Llamamos al modal-->
-                    <div class="agregar">
-                      <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop6"><i class="fa-solid fa-plus"></i></button>
-                      <app-educacion-add></app-educacion-add>
-                    </div>
+                              <!--Aca esta el problema-->
+                              
+                                  <app-edit-educacion></app-edit-educacion>
+                                </div>
+                                <!--Agregamos boton para borrar y Llamamos al modal-->
+                                <div class="botoncito">
+                                  <button type="button" class="btn btn-primary atributos" 
+                                    (click)="borrarEdu(estudio.id)"><i
+                                      class="fa-solid fa-trash"></i></button>
+        
+                                </div>
+        
+        
+                              </ol>
+        
+                            </div>
+                         
+              
+                          
 
-                   
-
-                      <!--Llamamos en el Dashboard lo que tenemos tambien en el Index para desde alli
-                    Borrar o Editar-->
-                    <div class="contenedor" *ngFor="let estudio of estudios">
-                      <div class="icono">
-                        <img class="iconos-empresa" src="{{estudio.url_imagen}}">
-                      </div>
-
-
-                        <div class="info">
-                          <p class="atributo">{{estudio.titulo}} </p>
-                          <p class="atributo">{{estudio.inicio}} - {{estudio.fin }}</p>
-                          <p class="atributo">{{ estudio.institucion }}</p>
-
-                        </div>
-                      
-
-                     
-
-                      <ol class="lista">
-
-                        <!--Agregamos boton para editar y Llamamos al modal-->
-                        <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#modaledit"><i class="fa-solid fa-pen-to-square"
-                              ></i></button>
-
-                          <app-edit-educacion></app-edit-educacion>
-                        </div>
-                        <!--Agregamos boton para borrar y Llamamos al modal-->
-                        <div class="botoncito">
-                          <button type="button" class="btn btn-primary atributos" data-bs-toggle="modal"
-                            data-bs-target="#staticBackdrop2" (click)="borrarEdu(estudio.id)"><i
-                              class="fa-solid fa-trash"></i></button>
-
-                        </div>
-
-
-                      </ol>
-
-                    </div>
-                  </div>
+                    </section>
 
 
                   <!--Habilidades-->

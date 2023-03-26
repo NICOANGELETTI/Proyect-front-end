@@ -21,7 +21,7 @@ export class BodydasboardComponent implements OnInit {
   perfil: Perfil[] = [];
   proyecto: Proyectos[] = [];
   habilidad: Habilidades[] = [];
-  estudios: Educacion[] = [];
+  educacion: Educacion[] = [];
   experiencias: Experiencia[] = [];
   
   
@@ -35,14 +35,7 @@ export class BodydasboardComponent implements OnInit {
     private sProyectos: ProyectosService,
     private sExperiencia: ExperienciaService
   ) {
-    this.form = this.formbuilder.group({
-      id: [''],
-      titulo: ['', [Validators.required]],
-      inicio: ['', [Validators.required]],
-      fin: ['', [Validators.required]],
-      institucion: [''],
-      url_imagen: ['', [Validators.required]],
-    });
+    
   }
 
   ngOnInit(): void {
@@ -64,7 +57,7 @@ export class BodydasboardComponent implements OnInit {
 
   cargarEducacion(): void {
     this.sEducacion.list().subscribe((data) => {
-      this.estudios = data;
+      this.educacion = data;
     });
   }
 
@@ -163,16 +156,5 @@ export class BodydasboardComponent implements OnInit {
    
   }
 
-  cargarDetalle(id: number) {
-    this.sEducacion.getById(id).subscribe({
-      next: (data) => {
-        this.form.setValue(data);
-      },
-      error: (e) => {
-        console.error(e);
-        alert('error al modificar');
-      },
-      complete: () => console.info('complete aqui'),
-    });
-  }
+ 
 }

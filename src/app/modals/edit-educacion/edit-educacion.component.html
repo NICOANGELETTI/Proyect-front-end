@@ -21,7 +21,7 @@
                                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                                 <input class="form-control form-control-lg" formControlName="titulo" id="titulo"
                                     type="text" name="tituloCurso" formControlName="titulo"
-                                    [(ngModel)]="educacion.titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
+                                    [(ngModel)]="titulo" [ngClass]="{'is-invalid': tituloCurso?.errors && tituloCurso?.touched,
                         'is-valid': !tituloCurso?.errors && tituloCurso?.touched}">
 
                                 <div *ngIf="tituloCurso?.errors && tituloCurso?.touched" class="alert alert-danger">
@@ -35,7 +35,7 @@
                                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                                 <input class="form-control form-control-lg" formControlName="institucion"
                                     id="institucion" type="text" name="institucionCurso"
-                                    [(ngModel)]="educacion.institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
+                                    [(ngModel)]="institucion" [ngClass]="{'is-invalid': institucionCurso?.errors && institucionCurso?.touched,
                         'is-valid': !institucionCurso?.errors && institucionCurso?.touched}">
                                 <div *ngIf="institucionCurso?.errors && institucionCurso?.touched"
                                     class="alert alert-danger">Este Campo es requerido</div>
@@ -47,7 +47,7 @@
                                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                                 <input class="form-control form-control-lg" formControlName="inicio" id="inicio"
                                     type="text" name="inicioCurso" formControlName="inicio"
-                                    [(ngModel)]="educacion.inicio" [ngClass]="{'is-invalid': inicioCurso?.errors && inicioCurso?.touched,
+                                    [(ngModel)]="inicio" [ngClass]="{'is-invalid': inicioCurso?.errors && inicioCurso?.touched,
                         'is-valid': !inicioCurso?.errors && inicioCurso?.touched}">
                                 <div *ngIf="inicioCurso?.errors && inicioCurso?.touched" class="alert alert-danger">Este
                                     Campo es requerido</div>
@@ -59,7 +59,7 @@
                                 <label for="fin" class="form-label atributos">Fin</label>
                                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                                 <input class="form-control form-control-lg" formControlName="fin" id="fin" type="text"
-                                    name="finCurso" required formControlName="fin" [(ngModel)]="educacion.fin"
+                                    name="finCurso" required formControlName="fin" [(ngModel)]="fin"
                                     [ngClass]="{'is-invalid': finCurso?.errors && finCurso?.touched,
                         'is-valid': !finCurso?.errors && finCurso?.touched}">
                                 <div *ngIf="finCurso?.errors && finCurso?.touched" class="alert alert-danger">Este Campo
@@ -73,7 +73,7 @@
                                 <!--En cada input ponemos un ngModel para poder Conectar con base de datos-->
                                 <input class="form-control form-control-lg" formControlName="url_imagen" id="url_imagen"
                                     type="text" name="urlCurso" required formControlName="url_imagen"
-                                    [(ngModel)]="educacion.url_imagen" [ngClass]="{'is-invalid': urlCurso?.errors && urlCurso?.touched,
+                                    [(ngModel)]="url_imagen" [ngClass]="{'is-invalid': urlCurso?.errors && urlCurso?.touched,
                         'is-valid': !urlCurso?.errors && urlCurso?.touched}">
                                 <div *ngIf="urlCurso?.errors && urlCurso?.touched " class="alert alert-danger">Este
                                     Campo es
